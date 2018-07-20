@@ -1,8 +1,8 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const bodyParser = require('mongoose');
+const bodyParser = require('body-parser');
 const expressJWT = require('express-jwt');
-const port = process.env.PORT || 3000;
+const PORT = process.env.PORT || 5000;
 
 const app = express();
 require('dotenv').config();
@@ -19,5 +19,5 @@ app.use('/auth', require('./routes/auth'));
 app.use('api/cost', require('./routes/cost'));
 
 app.listen(PORT, () => {
-    console.log(`App is listening on port ${PORT}`);
+    console.log(`[+] App is listening on port ${PORT}`);
 });

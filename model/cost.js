@@ -45,7 +45,7 @@ const categorySchema = Schema({
     }
 });
 
-module.exports = mongoose.model('cost', CategorySchema);
+module.exports = mongoose.model('cost', categorySchema);
 
 
 
