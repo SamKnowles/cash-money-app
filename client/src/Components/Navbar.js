@@ -1,17 +1,50 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { logout } from '../Redux/auth';
 import '../Styles/navbar.css';
 
-function Navbar() {
-    return (
-        <div className='nav-wrapper'>
-            <Link className='nav-link' to='/'>Body</Link>
-            <Link className='nav-link' to='/entertainment'>Entertainment</Link>
-            <Link className='nav-link' to='/loans'>Loans</Link>
-            <Link className='nav-link' to='/transportation'>Transportation</Link>
-            <Link className='nav-link' to='/housing'>Housing</Link>
-        </div>
-    )
+
+
+class Navbar extends Component {
+    constructor(props) {
+        super(props)
+    }
+
+    render() {
+        const isAuthenticated = this.props.auth.isAuthenticated;
+        return (
+            <div className='nav-wrapper'>
+                <div className="navbar-item">
+                    {isAuthenticated ? null : <div className="nav-link"><Link to="/login">Login</Link></div>}
+                </div>
+                <div className="navbar-item">
+                    {isAuthenticated ? null : <div className="nav-link"><Link to="/signup">Sign Up</Link></div>}
+                </div>
+                <div className="navbar-item">
+                    {isAuthenticated ? <div className="nav-link"><Link to="/home">Home</Link></div> : null}
+                </div>
+                <div className="navbar-item">
+                    {isAuthenticated ? <div className="nav-link"><Link to="/home">Entertainment</Link></div> : null}
+                </div>
+                <div className="navbar-item">
+                    {isAuthenticated ? <div className="nav-link"><Link to="/home">Loans</Link></div> : null}
+                </div>
+                <div className="navbar-item">
+                    {isAuthenticated ? <div className="nav-link"><Link to="/home">Transportation</Link></div> : null}
+                </div>
+                <div className="navbar-item">
+                    {isAuthenticated ? <div className="nav-link"><Link to="/home">Housing</Link></div> : null}
+                </div>
+                <div className="navbar-item">
+                    {isAuthenticated ? <div className="nav-link"><button onClick={this.props.logout}>Logout</button></div> : null}
+                </div>
+            </div>
+        )
+    }
 }
 
-export default Navbar
+const mapStateToProps = (state) => {
+    return state;
+}
+export default connect(mapStateToProps, { logout })(Navbar);

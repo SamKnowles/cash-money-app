@@ -1,9 +1,11 @@
 import React, { Component } from 'react'
+import { connect } from "react-redux";
+import { addArticle, } from "../Redux/budget";
 
 export default class Form extends Component {
     constructor(props) {
         super(props);
-        let { labels } = props;
+        let { categories } = props;
         this.state = {
             inputs: {
                 mortgageRent: {
@@ -51,8 +53,8 @@ export default class Form extends Component {
     }
 
     componentDidMount() {
-        let { labels } = this.props;
-        labels.forEach(label => {
+        let { categories } = this.props;
+        categories.forEach(label => {
             this.setState(prevState => {
                 return {
                     inputs: {
@@ -99,20 +101,26 @@ export default class Form extends Component {
     //     });
     //     alert(this.state.inputs.sumTotal);
     // }
+    handleClick = (e) => {
+        e.preventDefault()
+        console.log(this.state.inputs)
+        this.props.addCategory(this.state.inputs)
+    }
+
     render() {
         return (
             <form>
                 <div className='input-wrapper'>
-                    {this.state.labels.map((label, i) => {
+                    {this.state.categories.map((category, i) => {
                         return (
-                            <div className='rent' key={label + i}>
-                                <label>{label}</label>
-                                <input type="number" name={label} value={this.state.inputs[label]} onChange={this.handleChange} />
+                            <div className='rent' key={category + i}>
+                                <label>{category}</label>
+                                <input type="number" name={category} value={this.state.inputs[category]} onChange={this.handleChange} />
                             </div>
                         );
                     })}
                     <div className='total-wrapper'>{this.sumFunction()}</div>
-                    <button type='submit' onClick={this.handleSubmit}>Submit</button>
+                    <button type='submit' onClick={this.handleClick}>Submit</button>
                 </div>
             </form>
         )
@@ -120,3 +128,4 @@ export default class Form extends Component {
 }
 
 
+export default connect(state => state, { addCategory })(Form);

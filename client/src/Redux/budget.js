@@ -1,4 +1,11 @@
-import axios from 'axios'
+import axios from "axios";
+
+let articleAxios = axios.create();
+articleAxios.interceptors.request.use((config) => {
+    const token = localStorage.getItem("token");
+    config.headers.Authorization = `Bearer ${token}`;
+    return config;
+})
 
 const budgetReducer = (prevBudget = [], action) => {
     switch (action.type) {

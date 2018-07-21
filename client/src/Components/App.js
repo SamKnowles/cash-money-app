@@ -1,5 +1,7 @@
 import React from 'react';
-import { Switch, Route } from 'react-router-dom'
+import { Route, Switch, withRouter, Redirect } from "react-router-dom";
+import {connect} from "react-redux";
+import {verifyUser} from '../redux/auth';
 import Body from '../Components/Body';
 import Navbar from './Navbar';
 import Footer from './Footer';
@@ -11,21 +13,47 @@ import Profile from './Profile';
 import '../Styles/app.css'
 
 
-function App() {
-    return (
-        <div className='app-wrapper'>
+
+class App extends Component {
+    componentDidMount = () => {
+        this.props.verifyUser()
+    }
+
+    render () {
+        const isAuthenticated = this.props.isAuthenticated;
+        return (
+            <div className="app-wrapper">
             <Navbar />
             <Switch>
-                <Route exact path='/' component={Body} />
-                <Route path='/entertainment' component={Entertainment} />
-                <Route path='/housing' component={Housing} />
-                <Route path='/loans' component={Loans} />
-                <Route path='/transportation' component={Transportation} />
-                <Route path='/profile' component={Profile} />
+            <Route exact path="/" render={(props) => {
+                return isAuthenticated ?
+                <Redirect to="/profile"/> :
+                <Signup {...props} />
+            }}/>
+             <Route path="/login" render={(props) => {
+                return isAuthenticated ?
+                <Redirect to="/profile"/> :
+                <Login {...props} />
+            }}/>
+             <Route path="/signup" render={(props) => {
+                return isAuthenticated ?
+                <Redirect to="/profile"/> :
+                <Signup {...props} />
+            }}/>
+                <Route path="/profile" component={Profile}/> 
+                <ProtectedRoute path="/home" component={Home}/>
+
             </Switch>
             <Footer />
         </div>
     )
 }
 
-export default App;
+
+
+
+const mapStateToProps = (state) => {
+    return state
+}
+
+export default withRouter(connect(mapStateToProps, { verifyUser })(App))
