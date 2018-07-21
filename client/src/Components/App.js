@@ -1,7 +1,5 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom'
-import '../Styles/app.css'
-
 import Body from '../Components/Body';
 import Navbar from './Navbar';
 import Footer from './Footer';
@@ -9,6 +7,8 @@ import Entertainment from './Entertainment';
 import Loans from './Loans';
 import Housing from './Housing';
 import Transportation from './Transportation';
+import Profile from './Profile';
+import '../Styles/app.css'
 
 
 function App() {
@@ -21,6 +21,7 @@ function App() {
                 <Route path='/housing' component={Housing} />
                 <Route path='/loans' component={Loans} />
                 <Route path='/transportation' component={Transportation} />
+                <Route path='/profile' component={Profile} />
             </Switch>
             <Footer />
         </div>
