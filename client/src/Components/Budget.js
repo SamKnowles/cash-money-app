@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {loadProfile} from "../Redux/budget"
+import { loadProfile } from "../Redux/budget"
 
 export default class Budget extends Component {
     constructor(props) {
@@ -12,11 +12,15 @@ export default class Budget extends Component {
 
     render() {
         console.log(this.props)
-        let {categories} = this.props
+        let { categories } = this.props
+
         return (
-            <div>
-                
+            <div className="main-view-wrapper">
+
+
             </div>
         )
     }
 }
+
+export default connect(state => state, { loadProfile })(Budget)
