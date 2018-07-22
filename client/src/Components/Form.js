@@ -54,12 +54,12 @@ export default class Form extends Component {
 
     componentDidMount() {
         let { categories } = this.props;
-        categories.forEach(label => {
+        categories.forEach(category => {
             this.setState(prevState => {
                 return {
                     inputs: {
                         ...prevState.inputs,
-                        [label]: ''
+                        [category]: ''
                     }
                 }
             }

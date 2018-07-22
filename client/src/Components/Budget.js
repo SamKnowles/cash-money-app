@@ -2,18 +2,15 @@ import React, { Component } from 'react'
 import { loadProfile } from "../Redux/budget"
 
 export default class Budget extends Component {
-    constructor(props) {
-        super(props)
-    }
 
     componentDidMount() {
-        this.props.loadProfile()
+        this.props.loadProfile();
     }
 
     render() {
-        console.log(this.props)
-        let { categories } = this.props
-
+        let { data } = this.props;
+        map((game, i) => {
+            return <AllTheNumBers key={i + AllTheNumBers.title} {...game} index={i}></AllTheNumBers>
         return (
             <div className="main-view-wrapper">
 
@@ -21,6 +18,10 @@ export default class Budget extends Component {
             </div>
         )
     }
+}
+
+const mapStateToProps = (state) => {
+    return state.budget
 }
 
 export default connect(state => state, { loadProfile })(Budget)
