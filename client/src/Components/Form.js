@@ -5,7 +5,7 @@ import { addCategory } from "../Redux/budget";
 class Form extends Component {
     constructor(props) {
         super(props);
-        let { mortgageRent, phone, electricity, gas, waterSewer, internet, wasteRemoval, maintenance, supplies, other, actual, projected } = props;
+        let { housing, transportation, entertainment, loans, projected, actual } = props;
         this.state = {
             inputs: {
                 housing: {
@@ -72,6 +72,7 @@ class Form extends Component {
     handleChange = e => {
         let { name, value } = e.target;
         this.setState(prevState => {
+            console.log(this.props)
             return {
                 inputs: {
                     ...prevState.inputs,
