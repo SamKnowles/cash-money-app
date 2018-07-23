@@ -6,7 +6,7 @@ export default class Loans extends Component {
     render() {
         return (
             <div className='form-wrapper'>
-                <Form labels={['Personal', 'Student', 'Credit card', 'Other']}></Form>
+                <Form loans={['Personal', 'Student', 'Credit card', 'Other']}></Form>
             </div>
         )
     }

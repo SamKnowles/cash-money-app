@@ -7,7 +7,7 @@ export default class Entertainment extends Component {
     render() {
         return (
             <div className='form-wrapper'>
-                <Form labels={['Movies', 'Music', 'Dating', 'Exercise', 'Restaurants', 'Other']}></Form>
+                <Form entertainment={['Movies', 'Music', 'Dating', 'Exercise', 'Restaurants', 'Other']}></Form>
             </div>
         )
     }

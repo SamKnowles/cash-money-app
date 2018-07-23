@@ -12,6 +12,7 @@ import Signup from './Signup';
 import Login from './Login';
 import ProtectedRoute from './ProtectedRoute';
 import Budget from './Budget';
+import FormSequence from "./FormSequence";
 import '../Styles/app.css';
 
 
@@ -44,6 +45,10 @@ class App extends Component {
                     }} />
                     <Route path="/profile" component={Profile} />
                     <ProtectedRoute path="/budget" component={Budget} />
+                    <Route path="/form" component={FormSequence} />
+                    {/* <Route path="/loans" component={Loans} />
+                    <Route path="/entertainment" component={Entertainment} />
+                    <Route path="/transportation" component={Transportation} /> */}
 
                 </Switch>
             </div>

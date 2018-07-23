@@ -1,87 +1,92 @@
 import React, { Component } from 'react'
 import { connect } from "react-redux";
 import { addCategory } from "../Redux/budget";
+
+import { Switch, Route, Link, withRouter } from "react-router-dom";
+
 import '../Styles/body.css'
 
 class Form extends Component {
     constructor(props) {
         super(props);
-        console.log(this.props.labels)
-        let { housing, transportation, entertainment, loans, projected, actual, categories } = props;
+        let { housing, transportation, entertainment, loans } = props;
         this.state = {
             inputs: {
                 housing: {
                     mortgageRent: {
-                        projected: projected || '',
-                        actual: actual || ''
+                        projected: '',
+
                     },
                     phone: {
-                        projected: projected || '',
-                        actual: actual || ''
+                        projected: '',
+
                     },
                     electricity: {
-                        projected: projected || '',
-                        actual: actual || ''
+                        projected: '',
+
                     },
                     gas: {
-                        projected: projected || '',
-                        actual: actual || ''
+                        projected: '',
+
                     },
                     waterSewer: {
-                        projected: projected || '',
-                        actual: actual || ''
+                        projected: '',
+
                     },
                     internet: {
-                        projected: projected || '',
-                        actual: actual || ''
+                        projected: '',
+
                     },
                     wasteRemoval: {
-                        projected: projected || '',
-                        actual: actual || ''
+                        projected: '',
+
                     },
                     maintenance: {
-                        projected: projected || '',
-                        actual: actual || ''
+                        projected: '',
+
                     },
                     supplies: {
-                        projected: projected || '',
-                        actual: actual || ''
+                        projected: '',
+
                     },
                     other: {
-                        projected: projected || '',
-                        actual: actual || ''
-                    },
-                    categories: categories || [],
-                    inputs: {}
+                        projected: '',
+
+                    }
                 }
             }
         }
     }
-
+    componentWillReceiveProps(nextProps){
+        console.log(nextProps);
+    }
     componentDidMount() {
-        let { categories } = this.props;
-        console.log('hello')
-        categories.forEach(category => {
-            this.setState(prevState => {
-                return {
-                    inputs: {
-                        ...prevState.inputs,
-                        [category]: ''
-                    }
-                }
-            }
-            );
-        });
+        // let { categories } = this.props;
+        // categories.forEach(category => {
+        //     this.setState(prevState => {
+        //         return {
+        //             inputs: {
+        //                 ...prevState.inputs,
+        //                 [category]: ''
+        //             }
+        //         }
+        //     }
+        //     );
+        // });
     }
 
     handleChange = e => {
         let { name, value } = e.target;
         this.setState(prevState => {
-            console.log(this.props)
             return {
                 inputs: {
                     ...prevState.inputs,
-                    [name]: value
+                    housing: {
+                        [name]: {
+                            actual: prevState.inputs.housing[name].actual,
+                            projected: value
+                        }
+                    }
                 }
             }
         });
@@ -111,29 +116,65 @@ class Form extends Component {
     // }
     handleClick = (e) => {
         e.preventDefault()
-        console.log(this.state.inputs)
         this.props.addCategory(this.state.inputs)
     }
 
     render() {
+        console.log(this.props)
+        
+        let { housing } = this.state.inputs;
         return (
-            <form>
-                <div className='input-wrapper'>
-                    {this.state.categories.map((category, i) => {
-                        return (
-                            <div className='rent' key={category + i}>
-                                <label>{category}</label>
-                                <input type="number" name={category} value={this.state.inputs[category]} onChange={this.handleChange} />
-                            </div>
-                        );
-                    })}
-                    <div className='total-wrapper'>{this.sumFunction()}</div>
-                    <button type='submit' onClick={this.handleClick}>Submit</button>
-                </div>
-            </form>
+            <Switch>
+                <Route  path='/form/home' component={(props) => {
+                    return (
+                        <div>
+                            <h1>housing</h1>
+                            <form action="">
+                                <input type="text"/>
+                                <input type="text"/>
+                                <input type="text"/>
+                            </form>
+                            <Link to="/form/transportation">trans</Link>
+                        </div>
+                    )
+                }} />
+                <Route path='/form/transportation' component={(props) => {
+                    return (
+                        <div>
+                            <h1>transportation</h1>
+                            <Link to="/form/loans">loans</Link>
+                        </div>
+                    )
+                }} />
+                <Route path='/form/loans' component={(props) => {
+                    return (
+                        <div>
+                            <h1>loans</h1>
+                            <button>Submit</button>
+                        </div>
+                    )
+                }} />
+
+            </Switch>
+            // {/* <form>
+            //     <div className='input-wrapper'>
+            //         <input type="text" placeholder='Projected Mortgage Rent' value={housing.mortgageRent.projected} onChange={this.handleChange} name='mortgageRent' />
+
+            //         {this.state.categories.map((category, i) => {
+            //             return (
+            //                 <div className='rent' key={category + i}>
+            //                     <label>{category}</label>
+            //                     <input type="number" name={category} value={this.state.inputs[category]} onChange={this.handleChange} />
+            //                 </div>
+            //             );
+            //         })}
+            //         <div className='total-wrapper'>{this.sumFunction()}</div>
+            //         <button type='submit' onClick={this.handleClick}>Submit</button>
+            //     </div>
+            // </form> */}
         )
     }
 }
 
 
-export default connect(state => state, { addCategory })(Form);
+export default withRouter(connect(state => state, { addCategory })(Form));
