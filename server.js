@@ -2,7 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const expressJWT = require('express-jwt');
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 6000;
 
 const app = express();
 require('dotenv').config();

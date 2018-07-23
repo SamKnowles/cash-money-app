@@ -11,3 +11,4 @@ export default class Housing extends Component {
         )
     }
 }
+

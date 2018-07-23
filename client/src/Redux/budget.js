@@ -7,21 +7,19 @@ articleAxios.interceptors.request.use((config) => {
     return config;
 })
 
-const budgetReducer = (prevBudget = [], action) => {
+const budgetReducer = (data = [], action) => {
     switch (action.type) {
         case "LOAD_PROFILE":
             return {
-                ...profile,
                 data: action.profile,
                 loading: false
             }
         case "ADD_CATEGORY": 
             return {
-                ...profile, 
-                data: [...prevBudget, action.profile],
+                data: [...data, action.profile],
         }
         default:
-            return prevBudget;
+            return data;
     }
 }
 

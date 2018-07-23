@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import SignupForm from "./SignupForm";
 import { connect } from "react-redux";
 import { signup } from "../../../redux/auth";
-import "./signup.css"
+import "../Styles/signup.css"
 
 
 

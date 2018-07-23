@@ -1,52 +1,54 @@
 import React, { Component } from 'react'
 import { connect } from "react-redux";
-import { addArticle, } from "../Redux/budget";
+import { addCategory } from "../Redux/budget";
 
-export default class Form extends Component {
+class Form extends Component {
     constructor(props) {
         super(props);
-        let { categories } = props;
+        let { mortgageRent, phone, electricity, gas, waterSewer, internet, wasteRemoval, maintenance, supplies, other, actual, projected } = props;
         this.state = {
             inputs: {
-                mortgageRent: {
-                    projected: projected || '',
-                    actual: actual || ''
-                },
-                phone: {
-                    projected: projected || '',
-                    actual: actual || ''
-                },
-                electricity: {
-                    projected: projected || '',
-                    actual: actual || ''
-                },
-                gas: {
-                    projected: projected || '',
-                    actual: actual || ''
-                },
-                waterSewer: {
-                    projected: projected || '',
-                    actual: actual || ''
-                },
-                internet: {
-                    projected: projected || '',
-                    actual: actual || ''
-                },
-                wasteRemoval: {
-                    projected: projected || '',
-                    actual: actual || ''
-                },
-                maintenance: {
-                    projected: projected || '',
-                    actual: actual || ''
-                },
-                supplies: {
-                    projected: projected || '',
-                    actual: actual || ''
-                },
-                other: {
-                    projected: projected || '',
-                    actual: actual || ''
+                housing: {
+                    mortgageRent: {
+                        projected: projected || '',
+                        actual: actual || ''
+                    },
+                    phone: {
+                        projected: projected || '',
+                        actual: actual || ''
+                    },
+                    electricity: {
+                        projected: projected || '',
+                        actual: actual || ''
+                    },
+                    gas: {
+                        projected: projected || '',
+                        actual: actual || ''
+                    },
+                    waterSewer: {
+                        projected: projected || '',
+                        actual: actual || ''
+                    },
+                    internet: {
+                        projected: projected || '',
+                        actual: actual || ''
+                    },
+                    wasteRemoval: {
+                        projected: projected || '',
+                        actual: actual || ''
+                    },
+                    maintenance: {
+                        projected: projected || '',
+                        actual: actual || ''
+                    },
+                    supplies: {
+                        projected: projected || '',
+                        actual: actual || ''
+                    },
+                    other: {
+                        projected: projected || '',
+                        actual: actual || ''
+                    }
                 }
             }
         }
