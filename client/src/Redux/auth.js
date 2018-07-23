@@ -10,40 +10,53 @@ userAxios
         return config
     });
 
-    export function signup(userInfo) {
-        return dispatch => {
-            axios.post("/auth/signup", userInfo)
-                .then(response => {
-                    const {token, user} = response.data;
-                    // add token to local storage
-                    localStorage.token = token;
-                    localStorage.user = JSON.stringify(user);
-                    dispatch(authenticate(user));
-                })
-                .catch(err => {
-                    console.error(err);
-                    // dispatch(signupError("signup", err.response.status));
-                });
-        }
+export function verifyUser() {
+    return (dispatch) => {
+        userAxios.get("/api/profile/")
+            .then((response) => {
+                let { success, user } = response.data
+                dispatch(authenticate(user, success));
+            })
+            .catch((err) => {
+                console.error(err)
+            })
     }
+}
 
-    export function login(credentials) {
-        return dispatch => {
-            axios.post("/auth/login", credentials)
-                .then(response => {
-                    const {token, user} = response.data;
-                    localStorage.token = token;
-                    localStorage.user = JSON.stringify(user);
-                    dispatch(authenticate(user));
-                })
-                .catch((err) => {
-                    console.error(err);
-                    // dispatch(signupError("login", err.response.status));
-                });
-        }
+export function signup(userInfo) {
+    return dispatch => {
+        axios.post("/auth/signup", userInfo)
+            .then(response => {
+                const { token, user } = response.data;
+                // add token to local storage
+                localStorage.token = token;
+                localStorage.user = JSON.stringify(user);
+                dispatch(authenticate(user));
+            })
+            .catch(err => {
+                console.error(err);
+                // dispatch(signupError("signup", err.response.status));
+            });
     }
+}
 
-    // Action creators
+export function login(credentials) {
+    return dispatch => {
+        axios.post("/auth/login", credentials)
+            .then(response => {
+                const { token, user } = response.data;
+                localStorage.token = token;
+                localStorage.user = JSON.stringify(user);
+                dispatch(authenticate(user));
+            })
+            .catch((err) => {
+                console.error(err);
+                // dispatch(signupError("login", err.response.status));
+            });
+    }
+}
+
+// Action creators
 function authenticate(user) {
     return {
         type: "AUTHENTICATE",

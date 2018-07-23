@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import ProfileForm from "./ProfileForm.js";
 import { connect } from "react-redux";
-import { editProfile } from "../../../redux/profile";
+import { editProfile } from "../Redux/profile";
 
 class Profile extends Component {
     constructor(props) {

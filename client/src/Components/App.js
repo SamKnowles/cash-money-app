@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Route, Switch, withRouter, Redirect } from "react-router-dom";
 import { connect } from "react-redux";
-import { verifyUser } from '../redux/auth';
+import { verifyUser } from '../Redux/auth';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import Entertainment from './Entertainment';
