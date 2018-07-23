@@ -6,7 +6,7 @@ const jwt = require('jsonwebtoken');
 authRouter.post('/signup', (req, res) => {
     User.findOne({username: req.body.username}, (err, existingUser) => {
         if (err) return res.status(500).send({success: false, err});
-        if (esistingUser !== null) {
+        if (existingUser !== null) {
             return res.status(400).send({success: false, err: 'That username is already taken'});
         }
         const newUser = new User(req.body);
@@ -18,7 +18,7 @@ authRouter.post('/signup', (req, res) => {
     });
 });
 
-authRouter.post('login', (req, res) => {
+authRouter.post('/login', (req, res) => {
     User.findOne({username: req.body.username.toLowerCase()}, (err, user) => {
         if (err) return res.status(500).send(err);
         if (!user || user.password !== req.body.password) {

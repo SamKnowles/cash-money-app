@@ -2,6 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const expressJWT = require('express-jwt');
+const morgan = require ('morgan');
 const PORT = process.env.PORT || 6000;
 
 const app = express();
@@ -14,6 +15,7 @@ mongoose.connect('mongodb://localhost/budget',
     console.log('Connected to Mongo');
 });
 
+app.use(morgan('dev'));
 app.use(bodyParser.json());
 app.use('/auth', require('./routes/auth'));
 app.use('api/cost', require('./routes/cost'));

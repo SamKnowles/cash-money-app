@@ -1,11 +1,13 @@
 import React, { Component } from 'react'
 import { connect } from "react-redux";
 import { addCategory } from "../Redux/budget";
+import '../Styles/body.css'
 
 class Form extends Component {
     constructor(props) {
         super(props);
-        let { housing, transportation, entertainment, loans, projected, actual } = props;
+        console.log(this.props.labels)
+        let { housing, transportation, entertainment, loans, projected, actual, categories } = props;
         this.state = {
             inputs: {
                 housing: {
@@ -48,7 +50,9 @@ class Form extends Component {
                     other: {
                         projected: projected || '',
                         actual: actual || ''
-                    }
+                    },
+                    categories: categories || [],
+                    inputs: {}
                 }
             }
         }
@@ -56,6 +60,7 @@ class Form extends Component {
 
     componentDidMount() {
         let { categories } = this.props;
+        console.log('hello')
         categories.forEach(category => {
             this.setState(prevState => {
                 return {

@@ -3,7 +3,6 @@ import { Route, Switch, withRouter, Redirect } from "react-router-dom";
 import { connect } from "react-redux";
 import { verifyUser } from '../Redux/auth';
 import Navbar from './Navbar';
-import Footer from './Footer';
 import Entertainment from './Entertainment';
 import Loans from './Loans';
 import Housing from './Housing';
@@ -44,10 +43,9 @@ class App extends Component {
                             <Signup {...props} />
                     }} />
                     <Route path="/profile" component={Profile} />
-                    <ProtectedRoute path="/home" component={Budget} />
+                    <ProtectedRoute path="/budget" component={Budget} />
 
                 </Switch>
-                <Footer />
             </div>
         )
     }

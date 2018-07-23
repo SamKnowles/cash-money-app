@@ -1,5 +1,7 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import Form from '../Components/Form';
+import '../Styles/body.css';
+
 
 export default class Entertainment extends Component {
     render() {
