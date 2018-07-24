@@ -9,7 +9,7 @@ import '../Styles/body.css'
 class Form extends Component {
     constructor(props) {
         super(props);
-        let { housing, transportation, entertainment, loans } = props;
+        let { housing } = props;
         this.state = {
             inputs: {
                 housing: {

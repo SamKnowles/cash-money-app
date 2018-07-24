@@ -87,6 +87,16 @@ class FormSequence extends Component {
                                         <Link to="/form/transportation">trans</Link>
                                     </form>
                                 )
+                                case "entertainment":
+                                return (
+                                    <form action="">
+                                        <h3>Entertainment</h3>
+                                        <input type="text" />
+                                        <input type="text" />
+                                        <input name="rent" value={this.state.housing.rent} type="text" onChange={e => this.handleChange(e, props.match.params.category)} />
+                                        <Link to="/form/housing">housing</Link>
+                                    </form>
+                                )
                         }
                     }} />
                 </Switch>

@@ -35,7 +35,8 @@ const categorySchema = Schema({
         vacation: {projected: Number, actual: {default: 0, type: Number}},
         theater: {projected: Number, actual: {default: 0, type: Number}},
         sports: {projected: Number, actual: {default: 0, type: Number}},
-        winterSports: {projected: Number, actual: {default: 0, type: Number}}
+        winterSports: {projected: Number, actual: {default: 0, type: Number}},
+        other: {projected: Number, actual: {default: 0, type: Number}}
     },
     loans: {
         personal: {projected: Number, actual: {default: 0, type: Number}},
