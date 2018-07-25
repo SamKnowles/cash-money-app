@@ -38,7 +38,7 @@ class LoansForm extends Component {
             }
         }
     }
-    componentWillReceiveProps(nextProps){
+    componentWillReceiveProps(nextProps) {
         console.log(nextProps);
     }
     componentDidMount() {
@@ -69,18 +69,18 @@ class LoansForm extends Component {
 
     render() {
         console.log(this.props)
-        
+
         let { loans } = this.state.inputs;
         return (
             <Switch>
-                <Route  path='/form/home' component={(props) => {
+                <Route path='/form/home' component={(props) => {
                     return (
                         <div>
                             <h1>loans</h1>
                             <form action="">
-                                <input type="text"/>
-                                <input type="text"/>
-                                <input type="text"/>
+                                <input type="text" />
+                                <input type="text" />
+                                <input type="text" />
                             </form>
                             <Link to="/form/transportation">trans</Link>
                         </div>

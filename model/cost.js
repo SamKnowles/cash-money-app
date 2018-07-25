@@ -30,7 +30,7 @@ const categorySchema = Schema({
         other: {projected: Number, actual: {default: 0, type: Number}}
     },
     entertainment: {
-        mvoies: {projected: Number, actual: {default: 0, type: Number}},
+        movies: {projected: Number, actual: {default: 0, type: Number}},
         music: {projected: Number, actual: {default: 0, type: Number}},
         vacation: {projected: Number, actual: {default: 0, type: Number}},
         theater: {projected: Number, actual: {default: 0, type: Number}},
