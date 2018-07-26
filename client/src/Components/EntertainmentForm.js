@@ -38,72 +38,22 @@ class EntertainmentForm extends Component {
             }
         }
     }
-    componentWillReceiveProps(nextProps){
-        console.log(nextProps);
-    }
-    componentDidMount() {
 
-    }
-
-    handleChange = e => {
-        let { name, value } = e.target;
-        this.setState(prevState => {
-            return {
-                inputs: {
-                    ...prevState.inputs,
-                    entertainment: {
-                        [name]: {
-                            actual: prevState.inputs.entertainment[name].actual,
-                            projected: value
-                        }
-                    }
-                }
-            }
-        });
-    }
-
-    handleClick = (e) => {
-        e.preventDefault()
-        this.props.addCategory(this.state.inputs)
-    }
 
     render() {
         console.log(this.props)
-        
         let { entertainment } = this.state.inputs;
         return (
-            <Switch>
-                <Route  path='/form/home' component={(props) => {
-                    return (
-                        <div>
-                            <h1>entertainment</h1>
-                            <form action="">
-                                <input type="text"/>
-                                <input type="text"/>
-                                <input type="text"/>
-                            </form>
-                            <Link to="/form/transportation">trans</Link>
-                        </div>
-                    )
-                }} />
-                <Route path='/form/transportation' component={(props) => {
-                    return (
-                        <div>
-                            <h1>transportation</h1>
-                            <Link to="/form/loans">loans</Link>
-                        </div>
-                    )
-                }} />
-                <Route path='/form/loans' component={(props) => {
-                    return (
-                        <div>
-                            <h1>loans</h1>
-                            <button>Submit</button>
-                        </div>
-                    )
-                }} />
-
-            </Switch>
+            <div>
+                <h1>entertainment</h1>
+                <form action="">
+                    <input type="text" />
+                    <input type="text" />
+                    <input type="text" />
+                </form>
+                <Link to="/form/transportation">trans</Link>
+            </div>
+        )
         )
     }
 }
