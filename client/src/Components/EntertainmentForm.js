@@ -6,54 +6,24 @@ import { Switch, Route, Link, withRouter } from "react-router-dom";
 
 import '../Styles/body.css'
 
-class EntertainmentForm extends Component {
-    constructor(props) {
-        super(props);
-        let { entertainment } = props;
-        this.state = {
-            inputs: {
-                entertainment: {
-                    movies: {
-                        projected: '',
-                    },
-                    music: {
-                        projected: '',
-                    },
-                    vacation: {
-                        projected: '',
-                    },
-                    theater: {
-                        projected: '',
-                    },
-                    sports: {
-                        projected: '',
-                    },
-                    winterSports: {
-                        projected: '',
-                    },
-                    other: {
-                        projected: '',
-                    },
-                }
-            }
-        }
-    }
-
-
+class HousingForm extends Component {
     render() {
-        console.log(this.props)
-        let { entertainment } = this.state.inputs;
+        let { formData, handleChange } = this.props;
         return (
             <div>
-                <h1>entertainment</h1>
-                <form action="">
-                    <input type="text" />
-                    <input type="text" />
-                    <input type="text" />
-                </form>
+                <h1>housing</h1>
+                <input name="mortgageRent" type="text" value={formData.rent} onChange={e => handleChange(e, "housing")} />
+                <input name="phone" value={formData.phone} type="text" onChange={e => this.handleChange(e, 'housing')} />
+                <input name="gas" value={formData.gas} type="text" onChange={e => this.handleChange(e, 'housing')} />
+                <input name="electricity" value={formData.electricity} type="text" onChange={e => this.handleChange(e, 'housing')} />
+                <input name="waterSewer" value={formData.waterSewer} type="text" onChange={e => this.handleChange(e, 'housing')} />
+                <input name="internet" value={formData.internet} type="text" onChange={e => this.handleChange(e, 'housing')} />
+                <input name="wasteRemoval" value={formData.wasteRemoval} type="text" onChange={e => this.handleChange(e, 'housing')} />
+                <input name="maintenance" value={formData.maintenance} type="text" onChange={e => this.handleChange(e, 'housing')} />
+                <input name="supplies" value={formData.supplies} type="text" onChange={e => this.handleChange(e, 'housing')} />
+                <input name="other" value={formData.other} type="text" onChange={e => this.handleChange(e, 'housing')} />
                 <Link to="/form/transportation">trans</Link>
             </div>
-        )
         )
     }
 }

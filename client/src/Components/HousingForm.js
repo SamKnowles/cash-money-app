@@ -12,18 +12,16 @@ class HousingForm extends Component {
         return (
             <div>
                 <h1>housing</h1>
-                    <input name="rent"type="text" value={formData.rent}onChange={e => handleChange(e, "housing")}/>
-                    <input type="text" />
-                    <input name="mortgageRent" value={this.state.housing.mortgageRent} type="text" onChange={e => this.handleChange(e, props.match.params.category)} />
-                                        <input name="phone" value={this.state.housing.phone} type="text" onChange={e => this.handleChange(e, props.match.params.category)} />
-                                        <input name="gas" value={this.state.housing.gas} type="text" onChange={e => this.handleChange(e, props.match.params.category)} />
-                                        <input name="electricity" value={this.state.housing.electricity} type="text" onChange={e => this.handleChange(e, props.match.params.category)} />
-                                        <input name="waterSewer" value={this.state.housing.waterSewer} type="text" onChange={e => this.handleChange(e, props.match.params.category)} />
-                                        <input name="internet" value={this.state.housing.internet} type="text" onChange={e => this.handleChange(e, props.match.params.category)} />
-                                        <input name="wasteRemoval" value={this.state.housing.wasteRemoval} type="text" onChange={e => this.handleChange(e, props.match.params.category)} />
-                                        <input name="maintenance" value={this.state.housing.maintenance} type="text" onChange={e => this.handleChange(e, props.match.params.category)} />
-                                        <input name="supplies" value={this.state.housing.supplies} type="text" onChange={e => this.handleChange(e, props.match.params.category)} />
-                                        <input name="other" value={this.state.housing.other} type="text" onChange={e => this.handleChange(e, props.match.params.category)} />
+                <input name="mortgageRent" type="text" value={formData.rent} onChange={e => handleChange(e, "housing")} />
+                <input name="phone" value={formData.phone} type="text" onChange={e => this.handleChange(e, 'housing')} />
+                <input name="gas" value={formData.gas} type="text" onChange={e => this.handleChange(e, 'housing')} />
+                <input name="electricity" value={formData.electricity} type="text" onChange={e => this.handleChange(e, 'housing')} />
+                <input name="waterSewer" value={formData.waterSewer} type="text" onChange={e => this.handleChange(e, 'housing')} />
+                <input name="internet" value={formData.internet} type="text" onChange={e => this.handleChange(e, 'housing')} />
+                <input name="wasteRemoval" value={formData.wasteRemoval} type="text" onChange={e => this.handleChange(e, 'housing')} />
+                <input name="maintenance" value={formData.maintenance} type="text" onChange={e => this.handleChange(e, 'housing')} />
+                <input name="supplies" value={formData.supplies} type="text" onChange={e => this.handleChange(e, 'housing')} />
+                <input name="other" value={formData.other} type="text" onChange={e => this.handleChange(e, 'housing')} />
                 <Link to="/form/transportation">trans</Link>
             </div>
         )

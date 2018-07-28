@@ -13,11 +13,106 @@ class FormSequence extends Component {
         super(props);
         this.state = {
             housing: {
-                rent: ""
+                mortgageRent: {
+                    projected: '',
+                },
+                phone: {
+                    projected: '',
+                },
+                gas: {
+                    projected: '',
+                },
+                electricity: {
+                    projected: '',
+                },
+                waterSewer: {
+                    projected: '',
+                },
+                internet: {
+                    projected: '',
+                },
+                wasteRemoval: {
+                    projected: '',
+                },
+                maintenance: {
+                    projected: '',
+                },
+                supplies: {
+                    projected: '',
+                },
+                other: {
+                    projected: ''
+                }
             },
-            loans: {},
-            transporation: {},
-            entertainment: {}
+            loans: {
+                vehiclePayment: {
+                    projected: '',
+                },
+                busTrainUber: {
+                    projected: '',
+                },
+                insurance: {
+                    projected: '',
+                },
+                licensing: {
+                    projected: '',
+                },
+                fuel: {
+                    projected: '',
+                },
+                maintenance: {
+                    projected: '',
+                },
+                other: {
+                    projected: ''
+                }
+            },
+            transporation: {
+                vehiclePayment: {
+                    projected: '',
+                },
+                busTrainUber: {
+                    projected: '',
+                },
+                insurance: {
+                    projected: '',
+                },
+                licensing: {
+                    projected: '',
+                },
+                fuel: {
+                    projected: '',
+                },
+                maintenance: {
+                    projected: '',
+                },
+                other: {
+                    projected: '',
+                }
+            },
+            entertainment: {
+                movies: {
+                    projected: '',
+                },
+                music: {
+                    projected: '',
+                },
+                vacation: {
+                    projected: '',
+                },
+                theater: {
+                    projected: '',
+                },
+                sports: {
+                    projected: '',
+                },
+                winterSports: {
+                    projected: '',
+                },
+                other: {
+                    projected: '',
+                }
+            },
         }
 
     }
@@ -41,7 +136,7 @@ class FormSequence extends Component {
             }
         })
     }
-    
+
     handleSubmit = e => {
         e.preventDefault();
         alert(JSON.stringify(this.state));
@@ -60,7 +155,7 @@ class FormSequence extends Component {
                                 </div>
                             )
                         }} />
-                        <Route path='/form/housing' render={props => <HousingForm handleChange={this.handleChange}formData={this.state.housing} />} />} />
+                        <Route path='/form/housing' render={props => <HousingForm handleChange={this.handleChange} formData={this.state.housing} />} />} />
                         <Route path='/form/loans' render={props => <HousingForm formData={this.state.housing} />} />} />
                         <Route path='/form/transportation' render={props => <HousingForm formData={this.state.housing} />} />} />
                         <Route path='/form/entertainment' render={props => <HousingForm formData={this.state.housing} />} />} />
