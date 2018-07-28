@@ -6,22 +6,19 @@ import { Switch, Route, Link, withRouter } from "react-router-dom";
 
 import '../Styles/body.css'
 
-class HousingForm extends Component {
+class EntertainmentForm extends Component {
     render() {
         let { formData, handleChange } = this.props;
         return (
             <div>
-                <h1>housing</h1>
-                <input name="mortgageRent" type="text" value={formData.rent} onChange={e => handleChange(e, "housing")} />
-                <input name="phone" value={formData.phone} type="text" onChange={e => this.handleChange(e, 'housing')} />
-                <input name="gas" value={formData.gas} type="text" onChange={e => this.handleChange(e, 'housing')} />
-                <input name="electricity" value={formData.electricity} type="text" onChange={e => this.handleChange(e, 'housing')} />
-                <input name="waterSewer" value={formData.waterSewer} type="text" onChange={e => this.handleChange(e, 'housing')} />
-                <input name="internet" value={formData.internet} type="text" onChange={e => this.handleChange(e, 'housing')} />
-                <input name="wasteRemoval" value={formData.wasteRemoval} type="text" onChange={e => this.handleChange(e, 'housing')} />
-                <input name="maintenance" value={formData.maintenance} type="text" onChange={e => this.handleChange(e, 'housing')} />
-                <input name="supplies" value={formData.supplies} type="text" onChange={e => this.handleChange(e, 'housing')} />
-                <input name="other" value={formData.other} type="text" onChange={e => this.handleChange(e, 'housing')} />
+                <h1>Entertainment</h1>
+                <input name="movies" value={formData.movies} type="text" onChange={e => this.handleChange(e, "entertainment")} />
+                <input name="music" value={formData.music} type="text" onChange={e => this.handleChange(e, "entertainment")} />
+                <input name="vacation" value={formData.vacation} type="text" onChange={e => this.handleChange(e, "entertainment")} />
+                <input name="theater" value={formData.theater} type="text" onChange={e => this.handleChange(e, "entertainment")} />
+                <input name="sports" value={formData.sports} type="text" onChange={e => this.handleChange(e, "entertainment")} />
+                <input name="winterSports" value={formData.winterSports} type="text" onChange={e => this.handleChange(e, "entertainment")} />
+                <input name="other" value={formData.other} type="text" onChange={e => this.handleChange(e, "entertainment")} />
                 <Link to="/form/transportation">trans</Link>
             </div>
         )

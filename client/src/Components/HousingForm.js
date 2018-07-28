@@ -11,7 +11,7 @@ class HousingForm extends Component {
         let { formData, handleChange } = this.props;
         return (
             <div>
-                <h1>housing</h1>
+                <h1>Housing</h1>
                 <input name="mortgageRent" type="text" value={formData.rent} onChange={e => handleChange(e, "housing")} />
                 <input name="phone" value={formData.phone} type="text" onChange={e => this.handleChange(e, 'housing')} />
                 <input name="gas" value={formData.gas} type="text" onChange={e => this.handleChange(e, 'housing')} />

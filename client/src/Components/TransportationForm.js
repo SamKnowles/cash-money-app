@@ -7,103 +7,20 @@ import { Switch, Route, Link, withRouter } from "react-router-dom";
 import '../Styles/body.css'
 
 class TransportationForm extends Component {
-    constructor(props) {
-        super(props);
-        let { trans } = props;
-        this.state = {
-            inputs: {
-                trans: {
-                    vehiclePayment: {
-                        projected: '',
-                    },
-                    busTrainUber: {
-                        projected: '',
-                    },
-                    insurance: {
-                        projected: '',
-                    },
-                    licensing: {
-                        projected: '',
-                    },
-                    fuel: {
-                        projected: '',
-                    },
-                    maintenance: {
-                        projected: '',
-                    },
-                    other: {
-                        projected: '',
-                    },
-                }
-            }
-        }
-    }
-    componentWillReceiveProps(nextProps){
-        console.log(nextProps);
-    }
-    componentDidMount() {
-
-    }
-
-    handleChange = e => {
-        let { name, value } = e.target;
-        this.setState(prevState => {
-            return {
-                inputs: {
-                    ...prevState.inputs,
-                    trans: {
-                        [name]: {
-                            actual: prevState.inputs.trans[name].actual,
-                            projected: value
-                        }
-                    }
-                }
-            }
-        });
-    }
-
-    handleClick = (e) => {
-        e.preventDefault()
-        this.props.addCategory(this.state.inputs)
-    }
-
     render() {
-        console.log(this.props)
-        
-        let { trans } = this.state.inputs;
+        let { formData, handleChange } = this.props;
         return (
-            <Switch>
-                <Route  path='/form/home' component={(props) => {
-                    return (
-                        <div>
-                            <h1>trans</h1>
-                            <form action="">
-                                <input type="text"/>
-                                <input type="text"/>
-                                <input type="text"/>
-                            </form>
-                            <Link to="/form/transportation">trans</Link>
-                        </div>
-                    )
-                }} />
-                <Route path='/form/transportation' component={(props) => {
-                    return (
-                        <div>
-                            <h1>transportation</h1>
-                            <Link to="/form/loans">loans</Link>
-                        </div>
-                    )
-                }} />
-                <Route path='/form/loans' component={(props) => {
-                    return (
-                        <div>
-                            <h1>loans</h1>
-                            <button>Submit</button>
-                        </div>
-                    )
-                }} />
-
-            </Switch>
+            <div>
+                <h1>Transportation</h1>
+                <input name="vehiclePayment" value={formData.vehiclePayment} type="text" onChange={e => this.handleChange(e, "transportation")} />
+                <input name="busTrainUber" value={formData.busTrainUber} type="text" onChange={e => this.handleChange(e, "transportation")} />
+                <input name="insurance" value={formData.insurance} type="text" onChange={e => this.handleChange(e, "transportation")} />
+                <input name="licensing" value={formData.licensing} type="text" onChange={e => this.handleChange(e, "transportation")} />
+                <input name="fuel" value={formData.fuel} type="text" onChange={e => this.handleChange(e, "transportation")} />
+                <input name="maintenance" value={formData.maintenance} type="text" onChange={e => this.handleChange(e, "transportation")} />
+                <input name="other" value={formData.other} type="text" onChange={e => this.handleChange(e, "transportation")} />
+                <Link to="/form/transportation">trans</Link>
+            </div>
         )
     }
 }
