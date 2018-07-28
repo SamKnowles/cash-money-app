@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import HousingForm from './HousingForm';
 import EntertainmentForm from './EntertainmentForm';
 import LoansForm from './LoansForm';
-import Transportation from './TransportationForm';
+import TransportationForm from './TransportationForm';
 
 import { Switch, Route, Link, withRouter } from "react-router-dom";
 
@@ -156,9 +156,9 @@ class FormSequence extends Component {
                             )
                         }} />
                         <Route path='/form/housing' render={props => <HousingForm handleChange={this.handleChange} formData={this.state.housing} />} />} />
-                        <Route path='/form/loans' render={props => <HousingForm formData={this.state.housing} />} />} />
-                        <Route path='/form/transportation' render={props => <HousingForm formData={this.state.housing} />} />} />
-                        <Route path='/form/entertainment' render={props => <HousingForm formData={this.state.housing} />} />} />
+                        <Route path='/form/transportation' render={props => <TransportationForm handleChange={this.handleChange} formData={this.state.transporation} />} />} />
+                        <Route path='/form/loans' render={props => <LoansForm handleChange={this.handleChange} formData={this.state.loans} />} />} />
+                        <Route path='/form/entertainment' render={props => <EntertainmentForm handleChange={this.handleChange} formData={this.state.entertainment} />} />} />
                 </Switch>
                 </form>
             </div>

@@ -19,7 +19,7 @@ class TransportationForm extends Component {
                 <input name="fuel" value={formData.fuel} type="text" onChange={e => this.handleChange(e, "transportation")} />
                 <input name="maintenance" value={formData.maintenance} type="text" onChange={e => this.handleChange(e, "transportation")} />
                 <input name="other" value={formData.other} type="text" onChange={e => this.handleChange(e, "transportation")} />
-                <Link to="/form/transportation">trans</Link>
+                <Link to="/form/loans">loans</Link>
             </div>
         )
     }
