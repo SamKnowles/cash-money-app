@@ -9,17 +9,18 @@ import '../Styles/body.css'
 class EntertainmentForm extends Component {
     render() {
         let { formData, handleChange } = this.props;
+        console.log(formData)
         return (
             <div>
                 <h1>Entertainment</h1>
-                <input name="movies" value={formData.movies} type="text" onChange={e => this.handleChange(e, "entertainment")} />
-                <input name="music" value={formData.music} type="text" onChange={e => this.handleChange(e, "entertainment")} />
-                <input name="vacation" value={formData.vacation} type="text" onChange={e => this.handleChange(e, "entertainment")} />
-                <input name="theater" value={formData.theater} type="text" onChange={e => this.handleChange(e, "entertainment")} />
-                <input name="sports" value={formData.sports} type="text" onChange={e => this.handleChange(e, "entertainment")} />
-                <input name="winterSports" value={formData.winterSports} type="text" onChange={e => this.handleChange(e, "entertainment")} />
-                <input name="other" value={formData.other} type="text" onChange={e => this.handleChange(e, "entertainment")} />
-                <Link to="/form/transportation">trans</Link>
+                <input name="movies" value={formData.movies} type="number" onChange={e => handleChange(e, "entertainment")} />
+                <input name="music" value={formData.music} type="number" onChange={e => handleChange(e, "entertainment")} />
+                <input name="vacation" value={formData.vacation} type="number" onChange={e => handleChange(e, "entertainment")} />
+                <input name="theater" value={formData.theater} type="number" onChange={e => handleChange(e, "entertainment")} />
+                <input name="sports" value={formData.sports} type="number" onChange={e => handleChange(e, "entertainment")} />
+                <input name="winterSports" value={formData.winterSports} type="number" onChange={e => handleChange(e, "entertainment")} />
+                <input name="other" value={formData.other} type="number" onChange={e => handleChange(e, "entertainment")} />
+                <Link to="/form/housing">Housing</Link>
             </div>
         )
     }

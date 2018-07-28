@@ -9,20 +9,21 @@ import '../Styles/body.css'
 class HousingForm extends Component {
     render() {
         let { formData, handleChange } = this.props;
+        console.log(formData);
         return (
             <div>
                 <h1>Housing</h1>
-                <input name="mortgageRent" type="text" value={formData.rent} onChange={e => handleChange(e, "housing")} />
-                <input name="phone" value={formData.phone} type="text" onChange={e => this.handleChange(e, 'housing')} />
-                <input name="gas" value={formData.gas} type="text" onChange={e => this.handleChange(e, 'housing')} />
-                <input name="electricity" value={formData.electricity} type="text" onChange={e => this.handleChange(e, 'housing')} />
-                <input name="waterSewer" value={formData.waterSewer} type="text" onChange={e => this.handleChange(e, 'housing')} />
-                <input name="internet" value={formData.internet} type="text" onChange={e => this.handleChange(e, 'housing')} />
-                <input name="wasteRemoval" value={formData.wasteRemoval} type="text" onChange={e => this.handleChange(e, 'housing')} />
-                <input name="maintenance" value={formData.maintenance} type="text" onChange={e => this.handleChange(e, 'housing')} />
-                <input name="supplies" value={formData.supplies} type="text" onChange={e => this.handleChange(e, 'housing')} />
-                <input name="other" value={formData.other} type="text" onChange={e => this.handleChange(e, 'housing')} />
-                <Link to="/form/transportation">trans</Link>
+                <input name="mortgageRent" type="number" value={formData.mortgageRent} onChange={e => handleChange(e, 'housing')} />
+                <input name="phone" value={formData.phone} type="number" onChange={e => handleChange(e, 'housing')} />
+                <input name="gas" value={formData.gas} type="number" onChange={e => handleChange(e, 'housing')} />
+                <input name="electricity" value={formData.electricity} type="number" onChange={e => handleChange(e, 'housing')} />
+                <input name="waterSewer" value={formData.waterSewer} type="number" onChange={e => handleChange(e, 'housing')} />
+                <input name="internet" value={formData.internet} type="number" onChange={e => handleChange(e, 'housing')} />
+                <input name="wasteRemoval" value={formData.wasteRemoval} type="number" onChange={e => handleChange(e, 'housing')} />
+                <input name="maintenance" value={formData.maintenance} type="number" onChange={e => handleChange(e, 'housing')} />
+                <input name="supplies" value={formData.supplies} type="number" onChange={e => handleChange(e, 'housing')} />
+                <input name="other" value={formData.other} type="number" onChange={e => handleChange(e, 'housing')} />
+                <Link to="/form/transportation">transportation</Link>
             </div>
         )
     }

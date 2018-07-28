@@ -67,7 +67,7 @@ class FormSequence extends Component {
                     projected: ''
                 }
             },
-            transporation: {
+            transportation: {
                 vehiclePayment: {
                     projected: '',
                 },
@@ -142,7 +142,6 @@ class FormSequence extends Component {
         alert(JSON.stringify(this.state));
     }
     render() {
-        console.log(this.state)
         return (
             <div>
                 <form action="">
@@ -156,7 +155,7 @@ class FormSequence extends Component {
                             )
                         }} />
                         <Route path='/form/housing' render={props => <HousingForm handleChange={this.handleChange} formData={this.state.housing} />} />} />
-                        <Route path='/form/transportation' render={props => <TransportationForm handleChange={this.handleChange} formData={this.state.transporation} />} />} />
+                        <Route path='/form/transportation' render={props => <TransportationForm handleChange={this.handleChange} formData={this.state.transportation} />} />} />
                         <Route path='/form/loans' render={props => <LoansForm handleChange={this.handleChange} formData={this.state.loans} />} />} />
                         <Route path='/form/entertainment' render={props => <EntertainmentForm handleChange={this.handleChange} formData={this.state.entertainment} />} />} />
                 </Switch>
