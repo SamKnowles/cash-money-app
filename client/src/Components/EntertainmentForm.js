@@ -7,9 +7,10 @@ import { Switch, Route, Link, withRouter } from "react-router-dom";
 import '../Styles/body.css'
 
 class EntertainmentForm extends Component {
+
+
     render() {
         let { formData, handleChange } = this.props;
-        console.log(formData)
         return (
             <div>
                 <h1>Entertainment</h1>

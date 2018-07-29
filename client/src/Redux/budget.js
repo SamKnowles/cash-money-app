@@ -7,44 +7,46 @@ articleAxios.interceptors.request.use((config) => {
     return config;
 })
 
-const budgetReducer = (data = [], action) => {
+const budgetReducer = (profile = { data: [] }, action) => {
     switch (action.type) {
         case "LOAD_PROFILE":
             return {
+                ...profile,
                 data: action.profile,
-                loading: false
             }
-        case "ADD_CATEGORY": 
+        case "ADD_CATEGORY":
             return {
-                data: [...data, action.profile],
-        }
+                ...profile,
+                data: [...profile.data, action.category],
+            }
         default:
-            return data;
+            return profile;
     }
 }
 
 export function loadProfile() {
     return dispatch => {
         axios.get('/profile')
-        .then(response => {
-            dispatch({
-                type: "LOAD_PROFILE",
-                profile: response.data
+            .then(response => {
+                dispatch({
+                    type: "LOAD_PROFILE",
+                    profile: response.data
+                })
             })
-        })
-        .catch(err => {
-            console.log(err)
-        })
+            .catch(err => {
+                console.log(err)
+            })
     }
 }
+
 
 export function addCategory(category) {
-    return {
-        type: 'ADD_CATEGORY',
-        category
+    return dispatch => {
+        axios.post('../routes/cost', category)
+            .then(response => dispatch({ type: "ADD_CATEGORY", category: response.data }))
+            .catch(err => console.log(err))
     }
 }
-
 
 
 export default budgetReducer;

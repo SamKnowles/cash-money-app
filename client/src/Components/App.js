@@ -19,7 +19,7 @@ import '../Styles/app.css';
 
 class App extends Component {
     componentDidMount = () => {
-        this.props.verifyUser()
+        // this.props.verifyUser()
     }
 
     render() {

@@ -4,6 +4,8 @@ import HousingForm from './HousingForm';
 import EntertainmentForm from './EntertainmentForm';
 import LoansForm from './LoansForm';
 import TransportationForm from './TransportationForm';
+import { addCategory } from '../Redux/budget';
+import { connect } from "react-redux";
 
 import { Switch, Route, Link, withRouter } from "react-router-dom";
 
@@ -138,9 +140,13 @@ class FormSequence extends Component {
     }
 
     handleSubmit = e => {
+        const { addCategory} = this.props;
+        addCategory(this.state.housing);
+        console.log('we are here, we are here');
         e.preventDefault();
-        alert(JSON.stringify(this.state));
+        // alert(JSON.stringify(this.state));
     }
+
     render() {
         return (
             <div>
@@ -154,7 +160,7 @@ class FormSequence extends Component {
                                 </div>
                             )
                         }} />
-                        <Route path='/form/housing' render={props => <HousingForm handleChange={this.handleChange} formData={this.state.housing} />} />} />
+                        <Route path='/form/housing' render={props => <HousingForm handleChange={this.handleChange} handleSubmit={this.handleSubmit} formData={this.state.housing} />} />} />
                         <Route path='/form/transportation' render={props => <TransportationForm handleChange={this.handleChange} formData={this.state.transportation} />} />} />
                         <Route path='/form/loans' render={props => <LoansForm handleChange={this.handleChange} formData={this.state.loans} />} />} />
                         <Route path='/form/entertainment' render={props => <EntertainmentForm handleChange={this.handleChange} formData={this.state.entertainment} />} />} />
@@ -169,4 +175,4 @@ FormSequence.propTypes = {
 
 }
 
-export default FormSequence
+export default withRouter(connect(state => state, { addCategory })(FormSequence));

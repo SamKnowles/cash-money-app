@@ -1,26 +1,29 @@
 const express = require('express');
 const costRouter = express.Router();
-const Cost = require('../model/cost');
+const costModel = require('../model/cost');
 
-costRouter.get('/')
+costRouter.route('/')
+
+    .post((req, res) => {
+        let category = new costModel(req.body);
+        // newCost.userId = req.user._id;
+        category.save(req.body, (err, savedBudget) => {
+            if (err) return res.status(500).send(err);
+            res.send(savedBudget);
+        });
+    })
+
     .get((req, res) => {
-        Cost.find({ userId: req.user._id }, (err, foundCost) => {
+        costModel.find({ userId: req.user._id }, (err, foundCost) => {
             if (err) return res.status(500).send(err);
             res.status(500).send(foundCost);
         });
     })
 
-costRouter.post('/'), (req, res) => {
-    const newCost = new Cost(req.body);
-    newCost.userId = req.user._id;
-    newCost.save((err) => {
-        if (err) return res.status(500).send(err);
-        return res.send(newCost)
-    });
-}
+
 
 costRouter.put('/:id'), (req, res) => {
-    Cost.findByIdAndUpdate(req.params.id, req.body, { new: true }, (err, updatedCost) => {
+    costModel.findByIdAndUpdate(req.params.id, req.body, { new: true }, (err, updatedCost) => {
         if (err) return res.status(500).send(err);
         return res.send(updatedCost);
     });

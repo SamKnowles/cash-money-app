@@ -8,7 +8,7 @@ import '../Styles/body.css'
 
 class HousingForm extends Component {
     render() {
-        let { formData, handleChange } = this.props;
+        let { formData, handleChange, handleSubmit } = this.props;
         console.log(formData);
         return (
             <div>
@@ -23,7 +23,7 @@ class HousingForm extends Component {
                 <input name="maintenance" value={formData.maintenance} type="number" onChange={e => handleChange(e, 'housing')} />
                 <input name="supplies" value={formData.supplies} type="number" onChange={e => handleChange(e, 'housing')} />
                 <input name="other" value={formData.other} type="number" onChange={e => handleChange(e, 'housing')} />
-                <Link to="/form/transportation">transportation</Link>
+                <Link to="/form/transportation" onClick={handleSubmit}>transportation</Link>
             </div>
         )
     }
