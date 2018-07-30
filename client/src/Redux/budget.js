@@ -1,36 +1,36 @@
 import axios from "axios";
 
-let articleAxios = axios.create();
-articleAxios.interceptors.request.use((config) => {
-    const token = localStorage.getItem("token");
-    config.headers.Authorization = `Bearer ${token}`;
-    return config;
-})
+// let budgetAxios = axios.create();
+// budgetAxios.interceptors.request.use((config) => {
+//     const token = localStorage.getItem("token");
+//     config.headers.Authorization = `Bearer ${token}`;
+//     return config;
+// })
 
-const budgetReducer = (profile = { data: [] }, action) => {
+const budgetReducer = (budget = { data: [] }, action) => {
     switch (action.type) {
-        case "LOAD_PROFILE":
+        case "LOAD_BUDGET":
             return {
-                ...profile,
-                data: action.profile,
+                ...budget,
+                data: action.budget,
             }
         case "ADD_CATEGORY":
             return {
-                ...profile,
-                data: [...profile.data, action.category],
+                ...budget,
+                data: [...budget.data, action.category],
             }
         default:
-            return profile;
+            return budget;
     }
 }
 
-export function loadProfile() {
+export function loadBudget() {
     return dispatch => {
-        axios.get('/profile')
+        axios.get('/budget')
             .then(response => {
                 dispatch({
-                    type: "LOAD_PROFILE",
-                    profile: response.data
+                    type: "LOAD_BUDGET",
+                    budget: response.data
                 })
             })
             .catch(err => {
@@ -42,7 +42,7 @@ export function loadProfile() {
 
 export function addCategory(category) {
     return dispatch => {
-        axios.post('../routes/cost', category)
+        axios.post('/budget/', category)
             .then(response => dispatch({ type: "ADD_CATEGORY", category: response.data }))
             .catch(err => console.log(err))
     }

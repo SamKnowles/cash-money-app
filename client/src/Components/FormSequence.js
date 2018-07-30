@@ -140,10 +140,9 @@ class FormSequence extends Component {
     }
 
     handleSubmit = e => {
+        e.preventDefault();        
         const { addCategory} = this.props;
         addCategory(this.state.housing);
-        console.log('we are here, we are here');
-        e.preventDefault();
         // alert(JSON.stringify(this.state));
     }
 
