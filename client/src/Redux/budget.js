@@ -42,11 +42,16 @@ export function loadBudget() {
 
 export function addCategory(category) {
     return dispatch => {
-        axios.post('/budget/', category)
-            .then(response => dispatch({ type: "ADD_CATEGORY", category: response.data }))
-            .catch(err => console.log(err))
+        axios.post('/routes/budget', category)
+            .then(response => {
+                dispatch({
+                    type: "ADD_CATEGORY",
+                    category: response.data
+                })
+                    .catch(err =>
+                        console.log(err))
+            })
     }
 }
-
 
 export default budgetReducer;
