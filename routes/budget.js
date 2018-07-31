@@ -2,10 +2,11 @@ const express = require('express');
 const budgetRouter = express.Router();
 const budgetModel = require('../model/budget');
 
-budgetRouter.route('/budget')
+budgetRouter.route('/')
     .post((req, res) => {
+        console.log(req.body);
         let category = new budgetModel(req.body);
-        // newBudget.userId = req.user._id;
+        category.user = req.user._id;
         category.save(req.body, (err, savedBudget) => {
             if (err) return res.status(500).send(err);
             res.send(savedBudget);

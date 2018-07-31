@@ -133,16 +133,16 @@ class FormSequence extends Component {
             return {
                 [category]: {
                     ...prevState[category],
-                    [name]: value
+                    [name]: { projected: value }
                 }
             }
         })
     }
 
     handleSubmit = e => {
-        e.preventDefault();        
-        const { addCategory} = this.props;
-        addCategory(this.state.housing);
+        e.preventDefault();
+        const { addCategory } = this.props;
+        addCategory(this.state);
         // alert(JSON.stringify(this.state));
     }
 
@@ -160,9 +160,9 @@ class FormSequence extends Component {
                             )
                         }} />
                         <Route path='/form/housing' render={props => <HousingForm handleChange={this.handleChange} handleSubmit={this.handleSubmit} formData={this.state.housing} />} />} />
-                        <Route path='/form/transportation' render={props => <TransportationForm handleChange={this.handleChange} formData={this.state.transportation} />} />} />
-                        <Route path='/form/loans' render={props => <LoansForm handleChange={this.handleChange} formData={this.state.loans} />} />} />
-                        <Route path='/form/entertainment' render={props => <EntertainmentForm handleChange={this.handleChange} formData={this.state.entertainment} />} />} />
+                        <Route path='/form/transportation' render={props => <TransportationForm handleChange={this.handleChange} handleSubmit={this.handleSubmit} formData={this.state.transportation} />} />} />
+                        <Route path='/form/loans' render={props => <LoansForm handleChange={this.handleChange} handleSubmit={this.handleSubmit} formData={this.state.loans} />} />} />
+                        <Route path='/form/entertainment' render={props => <EntertainmentForm handleChange={this.handleChange} handleSubmit={this.handleSubmit} formData={this.state.entertainment} />} />} />
                 </Switch>
                 </form>
             </div>

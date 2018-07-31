@@ -17,8 +17,10 @@ mongoose.connect('mongodb://localhost/budget',
 
 app.use(morgan('dev'));
 app.use(bodyParser.json());
-// app.use('/auth', require('./routes/auth'));
-// app.use('api/budget', require('./routes/budget'));
+app.use('/auth', require('./routes/auth'));
+
+app.use("/api", expressJWT({secret: process.env.SECRET}))
+app.use('/api/budget', require('./routes/budget'));
 
 app.listen(PORT, () => {
     console.log(`[+] App is listening on port ${PORT}`);

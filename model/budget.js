@@ -5,7 +5,7 @@ const categorySchema = Schema({
     user: {
         type: Schema.Types.ObjectId,
         ref: "User",
-        required: true
+        // required: true
     },
     income: {projected: Number, actual: {default: 0, type: Number}},
     housing: {
