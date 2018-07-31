@@ -22,19 +22,19 @@ class Navbar extends Component {
                     {isAuthenticated ? null : <div className="nav-link"><Link to="/signup">Sign Up</Link></div>}
                 </div>
                 <div className="navbar-item">
-                    {isAuthenticated ? <div className="nav-link"><Link to="/home">Home</Link></div> : null}
+                    {isAuthenticated ? <div className="nav-link"><Link to="/form/home">Home</Link></div> : null}
                 </div>
                 <div className="navbar-item">
-                    {isAuthenticated ? <div  className="nav-link"><Link to="/entertainment">Entertainment</Link></div> : null}
+                    {isAuthenticated ? <div  className="nav-link"><Link to="/form/entertainment">Entertainment</Link></div> : null}
                 </div>
                 <div className="navbar-item">
-                    {isAuthenticated ?  <div className="nav-link"><Link to="/loans">Loans</Link></div> : null}
+                    {isAuthenticated ?  <div className="nav-link"><Link to="/form/loans">Loans</Link></div> : null}
                 </div>
                 <div className="navbar-item">
-                    {isAuthenticated ? <div className="nav-link"><Link to="/transportation">Transportation</Link></div> : null}
+                    {isAuthenticated ? <div className="nav-link"><Link to="/form/transportation">Transportation</Link></div> : null}
                 </div>
                 <div className="navbar-item">
-                    {isAuthenticated ? <div className="nav-link"><Link to="/housing">Housing</Link></div> : null}
+                    {isAuthenticated ? <div className="nav-link"><Link to="/form/housing">Housing</Link></div> : null}
                 </div>
                 <div className="navbar-item">
                     {isAuthenticated ? <div className="nav-link"><button onClick={this.props.logout}>Logout</button></div> : null}

@@ -120,7 +120,6 @@ class FormSequence extends Component {
     }
 
     componentDidMount() {
-
     }
 
     componentWillReceiveProps(nextProps) {
@@ -139,11 +138,9 @@ class FormSequence extends Component {
         })
     }
 
-    handleSubmit = e => {
-        e.preventDefault();
+    handleSubmit = () => {
         const { addCategory } = this.props;
         addCategory(this.state);
-        // alert(JSON.stringify(this.state));
     }
 
     render() {

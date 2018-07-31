@@ -46,10 +46,10 @@ class App extends Component {
                     <Route path="/profile" component={Profile} />
                     <ProtectedRoute path="/budget" component={Budget} />
                     <Route path="/form" component={FormSequence} />
-                    {/* <Route path="/loans" component={Loans} />
+                    <Route path="/housing" component={Housing} />
+                    <Route path="/transportation" component={Transportation} />
+                    <Route path="/loans" component={Loans} />
                     <Route path="/entertainment" component={Entertainment} />
-                    <Route path="/transportation" component={Transportation} /> */}
-
                 </Switch>
             </div>
         )

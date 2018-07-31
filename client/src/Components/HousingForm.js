@@ -22,17 +22,11 @@ class HousingForm extends Component {
                 <input name="maintenance" value={formData.maintenance.projected} type="number" onChange={e => handleChange(e, 'housing')} />
                 <input name="supplies" value={formData.supplies.projected} type="number" onChange={e => handleChange(e, 'housing')} />
                 <input name="other" value={formData.other.projected} type="number" onChange={e => handleChange(e, 'housing')} />
-                <Link to='/form/transportation'>
-                    <div>
-                        <a onClick={handleSubmit}>transportation</a>
-                    </div>
-                </Link>
-                </div>
+                <Link to="/form/transportation" onClick={handleSubmit}>transportation</Link>
+            </div>
         )
     }
 }
-
-
 
 
 export default withRouter(connect(state => state, { addCategory })(HousingForm));

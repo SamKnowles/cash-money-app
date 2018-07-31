@@ -4,7 +4,6 @@ const budgetModel = require('../model/budget');
 
 budgetRouter.route('/')
     .post((req, res) => {
-        console.log(req.body);
         let category = new budgetModel(req.body);
         category.user = req.user._id;
         category.save(req.body, (err, savedBudget) => {
