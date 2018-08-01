@@ -4,6 +4,7 @@ import HousingForm from './HousingForm';
 import EntertainmentForm from './EntertainmentForm';
 import LoansForm from './LoansForm';
 import TransportationForm from './TransportationForm';
+import Budget from './Budget';
 import { addCategory } from '../Redux/budget';
 import { connect } from "react-redux";
 
@@ -160,6 +161,7 @@ class FormSequence extends Component {
                         <Route path='/form/transportation' render={props => <TransportationForm handleChange={this.handleChange} handleSubmit={this.handleSubmit} formData={this.state.transportation} />} />} />
                         <Route path='/form/loans' render={props => <LoansForm handleChange={this.handleChange} handleSubmit={this.handleSubmit} formData={this.state.loans} />} />} />
                         <Route path='/form/entertainment' render={props => <EntertainmentForm handleChange={this.handleChange} handleSubmit={this.handleSubmit} formData={this.state.entertainment} />} />} />
+                        <Route path='/budget' render={props => <Budget handleChange={this.handleChange} />} />
                 </Switch>
                 </form>
             </div>

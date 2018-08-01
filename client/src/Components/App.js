@@ -19,14 +19,17 @@ import '../Styles/app.css';
 
 class App extends Component {
     componentDidMount = () => {
-        // this.props.verifyUser()
+        this.props.verifyUser()
     }
 
     render() {
-        const isAuthenticated = this.props.isAuthenticated;
+        const {isAuthenticated, loading} = this.props;
         return (
             <div className="app-wrapper">
                 <Navbar />
+                {loading ?
+                <div>...Loading user data</div>
+                :
                 <Switch>
                     <Route exact path="/" render={(props) => {
                         return isAuthenticated ?
@@ -51,6 +54,7 @@ class App extends Component {
                     <Route path="/loans" component={Loans} />
                     <Route path="/entertainment" component={Entertainment} />
                 </Switch>
+                }
             </div>
         )
     }

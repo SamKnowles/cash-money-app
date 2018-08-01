@@ -1,11 +1,14 @@
 import axios from "axios";
 
 let budgetAxios = axios.create();
-budgetAxios.interceptors.request.use((config) => {
-    const token = localStorage.getItem("token");
-    config.headers.Authorization = `Bearer ${token}`;
-    return config;
-})
+budgetAxios
+    .interceptors
+    .request
+    .use((config) => {
+        const token = localStorage.getItem("token");
+        config.headers.Authorization = `Bearer ${token}`;
+        return config
+    })
 
 const budgetReducer = (budget = { data: {} }, action) => {
     switch (action.type) {

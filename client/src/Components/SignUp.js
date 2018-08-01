@@ -46,6 +46,14 @@ class Signup extends Component {
     }
 
     render() {
+        let authErrCode = this.props.authErrCode.signup;
+        {/* use authErrCode.login in login component */}
+                let errMsg = "";
+                if (authErrCode < 500 && authErrCode > 399) {
+                    errMsg = "Invalid username or password!";
+                } else if (authErrCode > 499) {
+                    errMsg = "Server error!";
+                }
         return (
             <div className='login-signup-form-wrapper'>
                 <SignupForm
@@ -59,4 +67,5 @@ class Signup extends Component {
     }
 }
 
-export default connect(null, { signup })(Signup);
+export default connect(state => state.auth, { signup })(Signup);  
+
