@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 6000;
 const app = express();
 require('dotenv').config();
 
-
+mongoose.Promise = global.Promise;
 mongoose.connect('mongodb://localhost/budget',
  (err) => {
     if (err) throw err;

@@ -17,10 +17,9 @@ export function verifyUser() {
                 let { success, user } = response.data
                 dispatch(authenticate(user, success));
             })
-            .catch(err => {
-                dispatch(authError("verify", err.response.status));
-            });
-
+            .catch((err) => {
+                console.error(err)
+            })
     }
 }
 
@@ -36,7 +35,7 @@ export function signup(userInfo) {
             })
             .catch(err => {
                 console.error(err);
-                dispatch(authError("signup", err.response.status));
+                // dispatch(signupError("signup", err.response.status));
             });
     }
 }
@@ -52,7 +51,7 @@ export function login(credentials) {
             })
             .catch((err) => {
                 console.error(err);
-                dispatch(authError("login", err.response.status));
+                // dispatch(signupError("login", err.response.status));
             });
     }
 }
@@ -62,14 +61,6 @@ function authenticate(user) {
     return {
         type: "AUTHENTICATE",
         user
-    }
-}
-
-function authError(key, errCode) {
-    return {
-        type: "AUTH_ERROR",
-        key,
-        errCode
     }
 }
 
@@ -85,8 +76,7 @@ export function logout() {
 const initialState = {
     username: "",
     isAdmin: false,
-    isAuthenticated: false,
-    loading: true
+    isAuthenticated: false
 }
 
 export default function reducer(state = initialState, action) {
@@ -95,26 +85,11 @@ export default function reducer(state = initialState, action) {
             return {
                 ...state,
                 ...action.user,
-                isAuthenticated: true,
-                authErrCode: initialState.authErrCode,
-                loading: false
+                isAuthenticated: true
             }
         case "LOGOUT":
-            return {
-                ...initialState,
-                loading: false
-            };
-        case "AUTH_ERROR":
-            return {
-                ...state,
-                authErrCode: {
-                    ...state.authErrCode,
-                    [action.key]: action.errCode
-                },
-                loading: false
-            };
+            return initialState;
         default:
             return state;
-
     }
 }

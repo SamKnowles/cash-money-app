@@ -23,13 +23,10 @@ class App extends Component {
     }
 
     render() {
-        const {isAuthenticated, loading} = this.props;
+        const isAuthenticated = this.props.isAuthenticated;
         return (
             <div className="app-wrapper">
                 <Navbar />
-                {loading ?
-                <div>...Loading user data</div>
-                :
                 <Switch>
                     <Route exact path="/" render={(props) => {
                         return isAuthenticated ?
@@ -54,7 +51,6 @@ class App extends Component {
                     <Route path="/loans" component={Loans} />
                     <Route path="/entertainment" component={Entertainment} />
                 </Switch>
-                }
             </div>
         )
     }
