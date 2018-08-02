@@ -1,8 +1,9 @@
-import React, { Component } from 'react'
-import { loadBudget } from "../Redux/budget"
+import React, { Component } from 'react';
+import { loadBudget } from "../Redux/budget";
 import { connect } from "react-redux";
 import FormSequence from "./FormSequence";
-import '../Styles/budget.css'
+import BudgetLayout from './BudgetLayout';
+import '../Styles/budget.css';
 
 class Budget extends Component {
     constructor(props) {
@@ -10,16 +11,17 @@ class Budget extends Component {
     }
 
     componentDidMount() {
-        this.props.loadBudget();
-        console.log('this is something');
-        
+        this.props.loadBudget();        
     }
 
     render() {
-            
+            let { budgets } = this.props.response.data;
+            let budgeTall = budgets.map((budget, i) => {
+                return <BudgetLayout key={i} {...budget}></BudgetLayout>
+            })
         return (
             <div className="budget-wrapper">
-                Something Here Hopefully
+                {budgeTall}
             </div>
         )
     }

@@ -7,7 +7,6 @@ class ProtectedRoute extends Component {
         super(props)
     }
     render() {
-        console.log(this.props)
         const isAuthenticated = this.props.auth.isAuthenticated;
         const Component = this.props.component;
         const path = this.props.path;
