@@ -145,6 +145,7 @@ class FormSequence extends Component {
     }
 
     render() {
+        console.log(this.state);
         return (
             <div>
                 <form action="">

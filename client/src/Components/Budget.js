@@ -15,13 +15,10 @@ class Budget extends Component {
     }
 
     render() {
-            let { budgets } = this.props.response.data;
-            let budgeTall = budgets.map((budget, i) => {
-                return <BudgetLayout key={i} {...budget}></BudgetLayout>
-            })
+        console.log(this.props);
         return (
             <div className="budget-wrapper">
-                {budgeTall}
+                Here's where we are
             </div>
         )
     }

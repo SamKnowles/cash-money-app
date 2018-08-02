@@ -29,8 +29,8 @@ const budgetReducer = (budget = { data: {} }, action) => {
 
 export function loadBudget() {
     return dispatch => {
-        budgetAxios.get('/budget')
-            .then(response => {
+        budgetAxios.get('/api/budget')
+            .then((response) => {
                 dispatch({
                     type: "LOAD_BUDGET",
                     budget: response.data
