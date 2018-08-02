@@ -21,7 +21,7 @@ class EntertainmentForm extends Component {
                 <input name="sports" value={formData.sports.projected} type="number" onChange={e => handleChange(e, "entertainment")} />
                 <input name="winterSports" value={formData.winterSports.projected} type="number" onChange={e => handleChange(e, "entertainment")} />
                 <input name="other" value={formData.other.projected} type="number" onChange={e => handleChange(e, "entertainment")} />
-                <Link to="/form/housing" onClick={handleSubmit}>Housing</Link>
+                <Link to="/budget" onClick={handleSubmit}>Housing</Link>
             </div>
         )
     }

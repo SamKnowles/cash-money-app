@@ -23,7 +23,7 @@ class App extends Component {
     }
 
     render() {
-        const isAuthenticated = this.props.isAuthenticated;
+        const isAuthenticated = this.props;
         return (
             <div className="app-wrapper">
                 <Navbar />

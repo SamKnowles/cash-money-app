@@ -15,6 +15,9 @@ class FormSequence extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            userId: {
+                
+            },
             housing: {
                 mortgageRent: {
                     projected: '',

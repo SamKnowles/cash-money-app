@@ -76,7 +76,8 @@ export function logout() {
 const initialState = {
     username: "",
     isAdmin: false,
-    isAuthenticated: false
+    isAuthenticated: false,
+    loading: true
 }
 
 export default function reducer(state = initialState, action) {
@@ -85,7 +86,8 @@ export default function reducer(state = initialState, action) {
             return {
                 ...state,
                 ...action.user,
-                isAuthenticated: true
+                isAuthenticated: true,
+                loading: false
             }
         case "LOGOUT":
             return initialState;

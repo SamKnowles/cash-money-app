@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { loadBudget } from "../Redux/budget";
 import { connect } from "react-redux";
 import FormSequence from "./FormSequence";
-import BudgetLayout from './BudgetLayout';
 import '../Styles/budget.css';
 
 class Budget extends Component {
@@ -15,10 +14,10 @@ class Budget extends Component {
     }
 
     render() {
-        console.log(this.props);
+        let {budget} = this.state;
+        console.log(budget);
         return (
             <div className="budget-wrapper">
-                Here's where we are
             </div>
         )
     }
