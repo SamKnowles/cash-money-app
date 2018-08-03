@@ -15,10 +15,6 @@ mongoose.connect('mongodb://localhost/budget',
     console.log('Connected to Mongo');
 });
 
-app.use("/api",(req,res,next)=>{
-    console.log(req.headers);
-    next();
-})
 
 app.use(morgan('dev'));
 app.use(bodyParser.json());
@@ -27,6 +23,7 @@ app.use('/auth', require('./routes/auth'));
 app.use("/api", expressJWT({secret: process.env.SECRET}))
 app.use('/api/budget', require('./routes/budget'));
 app.use("/api/profile", require("./routes/profile"));
+
 
 app.listen(PORT, () => {
     console.log(`[+] App is listening on port ${PORT}`);

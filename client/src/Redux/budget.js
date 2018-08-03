@@ -13,7 +13,7 @@ budgetAxios
 
     const budgetUrl = '/api/budget/';
 
-const budgetReducer = (budget = { loading: true, data: {} }, action) => {
+const budgetReducer = (budget = { data: {} }, action) => {
     switch (action.type) {
         case "LOAD_BUDGET":
             return {
