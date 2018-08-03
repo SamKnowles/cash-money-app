@@ -12,7 +12,7 @@ userAxios
 
 export function verifyUser() {
     return (dispatch) => {
-        userAxios.get("/api/budget/")
+        userAxios.get("/auth")
             .then((response) => {
                 let { success, user } = response.data
                 dispatch(authenticate(user, success));
@@ -25,7 +25,7 @@ export function verifyUser() {
 
 export function signup(userInfo) {
     return dispatch => {
-        axios.post("/auth/signup", userInfo)
+        axios.post("/auth/signup/", userInfo)
             .then(response => {
                 const { token, user } = response.data;
                 // add token to local storage

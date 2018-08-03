@@ -20,7 +20,7 @@ budgetRouter.get((req, res) => {
     });
 })
 
-budgetRouter.get("/:id", (req, res) => {
+budgetRouter.get('/', (req, res) => {
     budget.findOne({ userId: req.user._id }, (err, foundBudget) => {
         if (err) return res.status(500).send(err);
         res.status(200).send(foundBudget);
