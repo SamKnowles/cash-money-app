@@ -1,6 +1,7 @@
 import axios from "axios";
 
 let budgetAxios = axios.create();
+
 budgetAxios
     .interceptors
     .request
@@ -10,17 +11,21 @@ budgetAxios
         return config
     })
 
-const budgetReducer = (budget = { data: {} }, action) => {
+    const budgetUrl = '/api/budget/';
+
+const budgetReducer = (budget = { loading: true, data: {} }, action) => {
     switch (action.type) {
         case "LOAD_BUDGET":
             return {
                 ...budget,
                 data: action.budget,
+                loading: false
             }
         case "ADD_CATEGORY":
             return {
                 ...budget,
                 data: action.category,
+                loading: false
             }
         default:
             return budget;
@@ -29,7 +34,7 @@ const budgetReducer = (budget = { data: {} }, action) => {
 
 export function loadBudget() {
     return dispatch => {
-        budgetAxios.get('/api/budget')
+        budgetAxios.get(budgetUrl)
             .then((response) => {
                 dispatch({
                     type: "LOAD_BUDGET",
@@ -45,7 +50,7 @@ export function loadBudget() {
 
 export function addCategory(category) {
     return dispatch => {
-        budgetAxios.post('/api/budget', category)
+        budgetAxios.post(budgetUrl, category)
             .then(response => {
                 dispatch({
                     type: "ADD_CATEGORY",

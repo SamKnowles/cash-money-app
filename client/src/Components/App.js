@@ -23,34 +23,39 @@ class App extends Component {
     }
 
     render() {
-        const isAuthenticated = this.props;
+        const { loading } = this.props;
+        const isAuthenticated = this.props.isAuthenticated;
         return (
             <div className="app-wrapper">
                 <Navbar />
-                <Switch>
-                    <Route exact path="/" render={(props) => {
-                        return isAuthenticated ?
-                            <Redirect to="/profile" /> :
-                            <Signup {...props} />
-                    }} />
-                    <Route path="/login" render={(props) => {
-                        return isAuthenticated ?
-                            <Redirect to="/profile" /> :
-                            <Login {...props} />
-                    }} />
-                    <Route path="/signup" render={(props) => {
-                        return isAuthenticated ?
-                            <Redirect to="/profile" /> :
-                            <Signup {...props} />
-                    }} />
-                    <Route path="/profile" component={Profile} />
-                    <ProtectedRoute path="/budget" component={Budget} />
-                    <Route path="/form" component={FormSequence} />
-                    <Route path="/housing" component={Housing} />
-                    <Route path="/transportation" component={Transportation} />
-                    <Route path="/loans" component={Loans} />
-                    <Route path="/entertainment" component={Entertainment} />
-                </Switch>
+                {loading ?
+                    <div>...Loading user data </div>
+                    :
+                    <Switch>
+                        <Route exact path="/" render={(props) => {
+                            return isAuthenticated ?
+                                <Redirect to="/profile" /> :
+                                <Signup {...props} />
+                        }} />
+                        <Route path="/login" render={(props) => {
+                            return isAuthenticated ?
+                                <Redirect to="/profile" /> :
+                                <Login {...props} />
+                        }} />
+                        <Route path="/signup" render={(props) => {
+                            return isAuthenticated ?
+                                <Redirect to="/profile" /> :
+                                <Signup {...props} />
+                        }} />
+                        <ProtectedRoute path="/profile" component={Profile} />
+                        <ProtectedRoute path="/budget" component={Budget} />
+                        <ProtectedRoute path="/form" component={FormSequence} />
+                        <ProtectedRoute path="/housing" component={Housing} />
+                        <ProtectedRoute path="/transportation" component={Transportation} />
+                        <ProtectedRoute path="/loans" component={Loans} />
+                        <ProtectedRoute path="/entertainment" component={Entertainment} />
+                    </Switch>
+                }
             </div>
         )
     }
@@ -62,4 +67,4 @@ const mapStateToProps = (state) => {
     return state
 }
 
-export default withRouter(connect(mapStateToProps, { verifyUser })(App))
+export default withRouter(connect(state => state.auth, {verifyUser})(App))

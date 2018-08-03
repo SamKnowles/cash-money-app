@@ -4,7 +4,7 @@ const User = require('../model/user');
 
 const profileRoute = express.Router();
 
-profileRoute.router('/')
+profileRoute.route('/')
     .get((req, res) => {
         User.findById(req.user._id, (err, user) => {
             if (err) return res.status(500).sent({ success: false, err })
