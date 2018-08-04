@@ -14,7 +14,7 @@ class Budget extends Component {
     }
 
     render() {
-        console.log(this.props.budget.data)
+        console.log(this.props.budget.data);
         return (
             <div className="budget-wrapper">
 
