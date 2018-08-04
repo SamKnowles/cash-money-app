@@ -46,19 +46,11 @@ class Signup extends Component {
     }
 
     render() {
-        let authErrCode = this.props.authErrCode.signup;
-        let errMsg = "";
-        if (authErrCode < 500 && authErrCode > 399) {
-            errMsg = "Invalid username or password!";
-        } else if (authErrCode > 499) {
-            errMsg = "Server error!";
-        }
         return (
             <div className='login-signup-form-wrapper'>
                 <SignupForm
                     handleChange={this.handleChange}
                     handleSubmit={this.handleSubmit}
-                    errMsg={errMsg}
                     {...this.state.inputs} />
             </div>
         )

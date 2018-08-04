@@ -143,8 +143,7 @@ class FormSequence extends Component {
     }
 
     handleSubmit = () => {
-        const { addCategory } = this.props;
-        addCategory(this.state);
+        addCategory(this.state.inputs);
     }
 
     render() {

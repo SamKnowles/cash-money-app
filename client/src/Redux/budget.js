@@ -8,10 +8,10 @@ budgetAxios
     .use((config) => {
         const token = localStorage.getItem("token");
         config.headers.Authorization = `Bearer ${token}`;
-        return config
+        return config;
     })
 
-    const budgetUrl = '/api/budget/';
+const budgetUrl = '/api/profile';
 
 const budgetReducer = (budget = { data: {} }, action) => {
     switch (action.type) {
@@ -19,13 +19,11 @@ const budgetReducer = (budget = { data: {} }, action) => {
             return {
                 ...budget,
                 data: action.budget,
-                loading: false
             }
         case "ADD_CATEGORY":
             return {
                 ...budget,
-                data: action.category,
-                loading: false
+                data: [...budget.data, action.budget]
             }
         default:
             return budget;

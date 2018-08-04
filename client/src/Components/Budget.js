@@ -10,14 +10,14 @@ class Budget extends Component {
     }
 
     componentDidMount() {
-        this.props.loadBudget();        
+        this.props.loadBudget();
     }
 
     render() {
-        let {budget} = this.state;
-        console.log(budget);
+        console.log(this.props.budget.data)
         return (
             <div className="budget-wrapper">
+
             </div>
         )
     }
