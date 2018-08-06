@@ -19,4 +19,4 @@ profileRoute.put('/', (req, res) => {
     })
 })
 
-module.exports = profileRoute
+module.exports = profileRoute;

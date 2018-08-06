@@ -9,6 +9,10 @@ import Login from './Login';
 import ProtectedRoute from './ProtectedRoute';
 import Budget from './Budget';
 import FormSequence from "./FormSequence";
+import EntertainmentForm from './EntertainmentForm';
+import HousingForm from './HousingForm';
+import LoansForm from './LoansForm';
+import TransportationForm from './TransportationForm';
 import '../Styles/app.css';
 
 
@@ -46,10 +50,10 @@ class App extends Component {
                         <ProtectedRoute path="/profile" component={Profile} />
                         <ProtectedRoute path="/budget" component={Budget} />
                         <ProtectedRoute path="/form" component={FormSequence} />
-                        <ProtectedRoute path="/housing" component={Housing} />
-                        <ProtectedRoute path="/transportation" component={Transportation} />
-                        <ProtectedRoute path="/loans" component={Loans} />
-                        <ProtectedRoute path="/entertainment" component={Entertainment} />
+                        <ProtectedRoute path="/housing" component={HousingForm} />
+                        <ProtectedRoute path="/transportation" component={TransportationForm} />
+                        <ProtectedRoute path="/loans" component={LoansForm} />
+                        <ProtectedRoute path="/entertainment" component={EntertainmentForm} />
                     </Switch>
                 }
             </div>

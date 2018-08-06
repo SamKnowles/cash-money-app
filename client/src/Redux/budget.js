@@ -22,7 +22,6 @@ const budgetReducer = (budget = { data: {} }, action) => {
             }
         case "ADD_CATEGORY":
             return {
-                ...budget,
                 data: [...budget.data, action.category]
             }
         default:
