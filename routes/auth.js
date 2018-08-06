@@ -1,13 +1,13 @@
-const express = require('express');
-const User = require('../model/user');
+const express = require("express");
+const User = require("../model/user");
 const authRouter = express.Router();
-const jwt = require('jsonwebtoken');
+const jwt = require("jsonwebtoken");
 
-authRouter.post('/signup', (req, res) => {
+authRouter.post("/signup", (req, res) => {
     User.findOne({username: req.body.username}, (err, existingUser) => {
         if (err) return res.status(500).send({success: false, err});
         if (existingUser !== null) {
-            return res.status(400).send({success: false, err: 'That username is already taken'});
+            return res.status(400).send({success: false, err: "That username is already taken"});
         }
         const newUser = new User(req.body);
         newUser.save((err, user) => {

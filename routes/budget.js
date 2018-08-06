@@ -1,9 +1,9 @@
 const express = require("express");
-const budgetModel = require('../model/budget');
+const budgetModel = require("../model/budget");
 const budgetRouter = express.Router();
 
 
-budgetRouter.route('/')
+budgetRouter.route("/")
     .get((req, res) => {
         budgetModel.find({ userId: req.user._id }, (err, foundBudget) => {
             if (err) return res.status(500).send(err);
@@ -20,7 +20,7 @@ budgetRouter.route('/')
         })
     });
 
-// budgetRouter.put('/:id'), (req, res) => {
+// budgetRouter.put("/:id"), (req, res) => {
 //     category.findByIdAndUpdate(req.params.id, req.body, { new: true }, (err, updatedBudget) => {
 //         if (err) return res.status(500).send(err);
 //         return res.send(updatedBudget);

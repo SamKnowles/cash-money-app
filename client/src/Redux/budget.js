@@ -11,7 +11,7 @@ budgetAxios
         return config;
     })
 
-const budgetUrl = '/api/profile';
+const budgetUrl = "/api/profile";
 
 const budgetReducer = (budget = { data: {} }, action) => {
     switch (action.type) {
@@ -22,6 +22,7 @@ const budgetReducer = (budget = { data: {} }, action) => {
             }
         case "ADD_CATEGORY":
             return {
+                ...budget,
                 data: [...budget.data, action.category]
             }
         default:
