@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from "react-redux";
-import { addCategory } from "../Redux/budget";
+import { submitBudget } from "../Redux/budget";
 
 import { Switch, Route, Link, withRouter } from "react-router-dom";
 
@@ -19,11 +19,11 @@ class TransportationForm extends Component {
                 <input name="fuel" value={formData.fuel.projected} type="number" onChange={e => handleChange(e, "transportation")} />
                 <input name="maintenance" value={formData.maintenance.projected} type="number" onChange={e => handleChange(e, "transportation")} />
                 <input name="other" value={formData.other.projected} type="number" onChange={e => handleChange(e, "transportation")} />
-                <Link to="/form/loans" onClick={handleSubmit}>loans</Link>
+                <Link to="/form/loans">loans</Link>
             </div>
         )
     }
 }
 
 
-export default withRouter(connect(state => state, { addCategory })(TransportationForm));
+export default withRouter(connect(state => state, { submitBudget })(TransportationForm));

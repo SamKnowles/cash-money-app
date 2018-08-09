@@ -5,7 +5,7 @@ import EntertainmentForm from './EntertainmentForm';
 import LoansForm from './LoansForm';
 import TransportationForm from './TransportationForm';
 import Budget from './Budget';
-import { addCategory } from '../Redux/budget';
+import { submitBudget } from '../Redux/budget';
 import { connect } from "react-redux";
 
 import { Switch, Route, Link, withRouter } from "react-router-dom";
@@ -142,8 +142,8 @@ class FormSequence extends Component {
         })
     }
 
-    handleSubmit = () => {
-        addCategory(this.state.inputs);
+    handleSubmit = (e) => {
+        submitBudget(this.state);
     }
 
     render() {
@@ -160,9 +160,9 @@ class FormSequence extends Component {
                                 </div>
                             )
                         }} />
-                        <Route path='/form/housing' render={props => <HousingForm handleChange={this.handleChange} handleSubmit={this.handleSubmit} formData={this.state.housing} />} />} />
-                        <Route path='/form/transportation' render={props => <TransportationForm handleChange={this.handleChange} handleSubmit={this.handleSubmit} formData={this.state.transportation} />} />} />
-                        <Route path='/form/loans' render={props => <LoansForm handleChange={this.handleChange} handleSubmit={this.handleSubmit} formData={this.state.loans} />} />} />
+                        <Route path='/form/housing' render={props => <HousingForm handleChange={this.handleChange} formData={this.state.housing} />} />} />
+                        <Route path='/form/transportation' render={props => <TransportationForm handleChange={this.handleChange} formData={this.state.transportation} />} />} />
+                        <Route path='/form/loans' render={props => <LoansForm handleChange={this.handleChange} formData={this.state.loans} />} />} />
                         <Route path='/form/entertainment' render={props => <EntertainmentForm handleChange={this.handleChange} handleSubmit={this.handleSubmit} formData={this.state.entertainment} />} />} />
                         <Route path='/budget' render={props => <Budget handleChange={this.handleChange} />} />
                 </Switch>
@@ -176,4 +176,4 @@ FormSequence.propTypes = {
 
 }
 
-export default withRouter(connect(state => state, { addCategory })(FormSequence));
+export default withRouter(connect(state => state, { submitBudget })(FormSequence));

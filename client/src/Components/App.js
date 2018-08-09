@@ -47,13 +47,13 @@ class App extends Component {
                                 <Redirect to="/profile" /> :
                                 <Signup {...props} />
                         }} />
-                        <ProtectedRoute path="/profile" component={Profile} />
-                        <ProtectedRoute path="/budget" component={Budget} />
-                        <ProtectedRoute path="/form" component={FormSequence} />
-                        <ProtectedRoute path="/housing" component={HousingForm} />
-                        <ProtectedRoute path="/transportation" component={TransportationForm} />
-                        <ProtectedRoute path="/loans" component={LoansForm} />
-                        <ProtectedRoute path="/entertainment" component={EntertainmentForm} />
+                        <Route path="/profile" component={Profile} />
+                        <Route path="/budget" component={Budget} />
+                        <Route path="/form" component={FormSequence} />
+                        <Route path="/housing" component={HousingForm} />
+                        <Route path="/transportation" component={TransportationForm} />
+                        <Route path="/loans" component={LoansForm} />
+                        <Route path="/entertainment" component={EntertainmentForm} />
                     </Switch>
                 }
             </div>

@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { loadBudget } from "../Redux/budget";
 import { connect } from "react-redux";
-import FormSequence from "./FormSequence";
 import '../Styles/budget.css';
+
+import { Switch, Route, Link, withRouter } from "react-router-dom";
 
 class Budget extends Component {
     constructor(props) {
@@ -14,18 +15,17 @@ class Budget extends Component {
     }
 
     render() {
-        let {data} = this.props
-        console.log(data);
+        console.log('budget state', this.props.budget);
         return (
             <div className="budget-wrapper">
-                THIS IS THE BUDGET
+                <p>{}</p>
             </div>
         )
     }
 }
 
-const mapStateToProps = (state) => {
-    return state.budget
-}
+// const mapStateToProps = (state) => {
+//     return state.budget
+// }
 
-export default connect(state => state, { loadBudget })(Budget)
+export default connect(state => state, { loadBudget })(Budget);

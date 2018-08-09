@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from "react-redux";
-import { addCategory } from "../Redux/budget";
+import { submitBudget } from "../Redux/budget";
 
 import { Switch, Route, Link, withRouter } from "react-router-dom";
 
@@ -28,4 +28,4 @@ class EntertainmentForm extends Component {
 }
 
 
-export default withRouter(connect(state => state, { addCategory })(EntertainmentForm));
+export default withRouter(connect(state => state, { submitBudget })(EntertainmentForm));

@@ -11,17 +11,19 @@ budgetAxios
         return config;
     })
 
-const budgetUrl = "/api/budget";
+const budgetUrl = "/";
 
-const budgetReducer = (budget = { data: {} }, action) => {
+const budgetReducer = (budget = { data: {}, loading: true }, action) => {
     switch (action.type) {
         case "LOAD_BUDGET":
             return {
                 data: action.data,
+                loading: false
             }
-        case "ADD_CATEGORY":
+        case "SUBMIT_BUDGET":
             return {
-                data: budget.data
+                data: action.data,
+                loading: false
             }
         default:
             return budget;
@@ -44,16 +46,16 @@ export function loadBudget() {
 }
 
 
-export function addCategory(category) {
+export function submitBudget(budgetObj) {
     return dispatch => {
-        budgetAxios.post(budgetUrl, category)
+        budgetAxios.post(budgetUrl, budgetObj)
             .then(response => {
                 dispatch({
-                    type: "ADD_CATEGORY",
+                    type: "submitBudget",
                     category: response.data
                 })
             })
-            .catch(err => console.log(err))
+            .catch(err => console.log(err));
     }
 }
 
