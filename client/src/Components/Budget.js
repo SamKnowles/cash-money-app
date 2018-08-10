@@ -15,10 +15,11 @@ class Budget extends Component {
     }
 
     render() {
-        console.log('budget state', this.props.budget);
+        console.log('budget state', this.props.budget
+    );
         return (
             <div className="budget-wrapper">
-                <p>{}</p>
+                <h3>WHere are my words</h3> 
             </div>
         )
     }
