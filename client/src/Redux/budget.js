@@ -11,17 +11,19 @@ budgetAxios
         return config;
     })
 
-const budgetUrl = "/";
+const budgetUrl = "/api/budget";
 
 const budgetReducer = (budget = { data: {}, loading: true }, action) => {
     switch (action.type) {
         case "LOAD_BUDGET":
             return {
-                data: action.data,
+                ...budget,
+                data: action.budget,
                 loading: false
             }
         case "SUBMIT_BUDGET":
             return {
+                ...budget,
                 data: action.data,
                 loading: false
             }
@@ -32,7 +34,7 @@ const budgetReducer = (budget = { data: {}, loading: true }, action) => {
 
 export function loadBudget() {
     return dispatch => {
-        budgetAxios.get(budgetUrl)
+        budgetAxios.get('/')
             .then((response) => {
                 dispatch({
                     type: "LOAD_BUDGET",
@@ -51,7 +53,7 @@ export function submitBudget(budgetObj) {
         budgetAxios.post(budgetUrl, budgetObj)
             .then(response => {
                 dispatch({
-                    type: "submitBudget",
+                    type: "SUBMIT_BUDGET",
                     category: response.data
                 })
             })

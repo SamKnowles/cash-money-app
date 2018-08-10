@@ -15,8 +15,7 @@ class Budget extends Component {
     }
 
     render() {
-        console.log('budget state', this.props.budget
-    );
+        console.log('budget state', this.props);
         return (
             <div className="budget-wrapper">
                 <h3>WHere are my words</h3> 

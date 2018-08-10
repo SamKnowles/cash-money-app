@@ -11,10 +11,10 @@ profileAxios
     })
 const userUrl = "/api/profile";
 
-const profileReducer = (prevProfile = { loading: true, data: [] }, action) => {
+const profileReducer = (prevProfile = { data: {} }, action) => {
     switch (action.type) {
         case "EDIT_PROFILE":
-            return { loading: false, data: action.data }
+            return { data: action.data }
         default:
             return prevProfile
     }
