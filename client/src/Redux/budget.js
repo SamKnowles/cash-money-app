@@ -34,7 +34,7 @@ const budgetReducer = (budget = { data: {}, loading: true }, action) => {
 
 export function loadBudget() {
     return dispatch => {
-        budgetAxios.get('/')
+        budgetAxios.get(budgetUrl)
             .then((response) => {
                 dispatch({
                     type: "LOAD_BUDGET",

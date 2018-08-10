@@ -28,9 +28,6 @@ class App extends Component {
         return (
             <div className="app-wrapper">
                 <Navbar />
-                {/* {loading ?
-                    <div>...Loading user data </div>
-                    : */}
                     <Switch>
                         <Route exact path="/" render={(props) => {
                             return isAuthenticated ?

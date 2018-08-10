@@ -7,7 +7,7 @@ import { Switch, Route, Link, withRouter } from "react-router-dom";
 
 class Budget extends Component {
     constructor(props) {
-        super(props) 
+        super(props)
     }
 
     componentDidMount() {
@@ -16,10 +16,12 @@ class Budget extends Component {
 
     render() {
         console.log('budget state', this.props);
+        let { loading } = this.props
         return (
-            <div className="budget-wrapper">
-                <h3>WHere are my words</h3> 
-            </div>
+            loading ? <div>loading...</div> :
+                <div className="budget-wrapper">
+                    <h3>WHere are my words</h3>
+                </div>
         )
     }
 }
