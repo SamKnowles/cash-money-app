@@ -7,20 +7,24 @@ import { Switch, Route, Link, withRouter } from "react-router-dom";
 
 class Budget extends Component {
     constructor(props) {
-        super(props)
+        super(props);
+        this.state = {
+            budget: null
+        }
     }
 
     componentDidMount() {
-        this.props.loadBudget();
+        this.props.loadBudget().then(()=> this.setState({budget: this.props.budget.data}))
     }
 
     render() {
-        console.log('budget state', this.props);
-        let { loading } = this.props
+        console.log('budget state', this.state);
+        let { loading, data } = this.props.budget
         return (
             loading ? <div>loading...</div> :
                 <div className="budget-wrapper">
-                    <h3>WHere are my words</h3>
+                    <label htmlFor="">Actual Income<input value={data.income.actual} placeholder="Enter income"/></label>
+                    <h3>{data.income.actual}</h3>
                 </div>
         )
     }

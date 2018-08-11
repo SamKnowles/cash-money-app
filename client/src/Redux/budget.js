@@ -34,11 +34,11 @@ const budgetReducer = (budget = { data: {}, loading: true }, action) => {
 
 export function loadBudget() {
     return dispatch => {
-        budgetAxios.get(budgetUrl)
+       return budgetAxios.get(budgetUrl)
             .then((response) => {
                 dispatch({
                     type: "LOAD_BUDGET",
-                    budget: response.data
+                    budget: response.data[0]
                 })
             })
             .catch(err => {
@@ -54,7 +54,7 @@ export function submitBudget(budgetObj) {
             .then(response => {
                 dispatch({
                     type: "SUBMIT_BUDGET",
-                    category: response.data
+                    budget: response.data
                 })
             })
             .catch(err => console.log(err));
