@@ -14,7 +14,7 @@ class Budget extends Component {
     }
 
     componentDidMount() {
-        this.props.loadBudget().then(()=> this.setState({budget: this.props.budget.data}))
+        this.props.loadBudget().then(() => this.setState({ budget: this.props.budget.data }))
     }
 
     render() {
@@ -23,8 +23,20 @@ class Budget extends Component {
         return (
             loading ? <div>loading...</div> :
                 <div className="budget-wrapper">
-                    <label htmlFor="">Actual Income<input value={data.income.actual} placeholder="Enter income"/></label>
+                    <label htmlFor=""><input value={data.income.actual} placeholder="Enter income" /></label>
                     <h3>{data.income.actual}</h3>
+                    <div className="housing-section-wrapper">
+                        <input name="mortgageRent" type="number" value={formData.mortgageRent.projected} onChange={e => handleChange(e, 'housing')} />
+                        <input name="phone" value={data.phone.projected} type="number" onChange={e => handleChange(e, 'housing')} />
+                        <input name="gas" value={data.gas.projected} type="number" onChange={e => handleChange(e, 'housing')} />
+                        <input name="electricity" value={data.electricity.projected} type="number" onChange={e => handleChange(e, 'housing')} />
+                        <input name="waterSewer" value={data.waterSewer.projected} type="number" onChange={e => handleChange(e, 'housing')} />
+                        <input name="internet" value={data.internet.projected} type="number" onChange={e => handleChange(e, 'housing')} />
+                        <input name="wasteRemoval" value={data.wasteRemoval.projected} type="number" onChange={e => handleChange(e, 'housing')} />
+                        <input name="maintenance" value={data.maintenance.projected} type="number" onChange={e => handleChange(e, 'housing')} />
+                        <input name="supplies" value={data.supplies.projected} type="number" onChange={e => handleChange(e, 'housing')} />
+                        <input name="other" value={data.other.projected} type="number" onChange={e => handleChange(e, 'housing')} />
+                    </div>
                 </div>
         )
     }
