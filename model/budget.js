@@ -7,7 +7,7 @@ const categorySchema = Schema({
         ref: "User",
         required: true
     },
-    income: {projected: Number, actual: {default: 0, type: Number}},
+    income: {projected: Number, actual: Number},
     housing: {
         mortgageRent: {projected: Number, actual: {default: 0, type: Number}},
         phone: {projected: Number, actual: {default: 0, type: Number}},

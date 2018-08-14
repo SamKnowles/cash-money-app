@@ -23,4 +23,4 @@ class ProtectedRoute extends Component {
 const mapStateToProps = (state) => {
     return state;
 }
-export default connect(mapStateToProps, {})(ProtectedRoute); 
+export default connect(mapStateToProps, {})(ProtectedRoute);

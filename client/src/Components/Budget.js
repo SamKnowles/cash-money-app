@@ -3,7 +3,7 @@ import { loadBudget } from "../Redux/budget";
 import { connect } from "react-redux";
 import '../Styles/budget.css';
 
-import { Switch, Route, Link, withRouter } from "react-router-dom";
+// import { Switch, Route, Link, withRouter } from "react-router-dom";
 
 class Budget extends Component {
     constructor(props) {
@@ -18,8 +18,8 @@ class Budget extends Component {
     }
 
     render() {
-        console.log('budget state', this.state);
-        let { loading, data } = this.props.budget
+        let { loading, data } = this.props.budget;
+        console.log(this.props.budget)
         return (
             loading ? <div>loading...</div> :
                 <div className="budget-wrapper">
@@ -31,7 +31,7 @@ class Budget extends Component {
 }
 
 // const mapStateToProps = (state) => {
-//     return state.budget
+//     return Budget
 // }
 
 export default connect(state => state, { loadBudget })(Budget);

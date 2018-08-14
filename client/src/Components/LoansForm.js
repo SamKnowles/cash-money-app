@@ -2,13 +2,13 @@ import React, { Component } from 'react'
 import { connect } from "react-redux";
 import { submitBudget } from "../Redux/budget";
 
-import { Switch, Route, Link, withRouter } from "react-router-dom";
+import {  Link, withRouter } from "react-router-dom";
 
 import '../Styles/body.css'
 
 class LoansForm extends Component {
     render() {
-        let { formData, handleChange, handleSubmit } = this.props;
+        let { formData, handleChange } = this.props;
         return (
             <div>
                 <h1>Loans</h1>

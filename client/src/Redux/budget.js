@@ -24,7 +24,7 @@ const budgetReducer = (budget = { data: {}, loading: true }, action) => {
         case "SUBMIT_BUDGET":
             return {
                 ...budget,
-                data: action.data,
+                data: action.budget,
                 loading: false
             }
         default:
@@ -52,6 +52,7 @@ export function submitBudget(budgetObj) {
     return dispatch => {
         budgetAxios.post(budgetUrl, budgetObj)
             .then(response => {
+                console.log(response.data)
                 dispatch({
                     type: "SUBMIT_BUDGET",
                     budget: response.data

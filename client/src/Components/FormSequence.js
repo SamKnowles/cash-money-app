@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import HousingForm from './HousingForm';
 import EntertainmentForm from './EntertainmentForm';
 import LoansForm from './LoansForm';
@@ -17,6 +17,10 @@ class FormSequence extends Component {
         this.state = {
             userId: {
                 
+            },
+            income: {
+                projected:'',
+                actual: ''
             },
             housing: {
                 mortgageRent: {
@@ -147,7 +151,6 @@ class FormSequence extends Component {
     }
 
     render() {
-        console.log(this.state);
         return (
             <div>
                 <form action="">

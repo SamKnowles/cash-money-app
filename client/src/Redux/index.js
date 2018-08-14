@@ -8,7 +8,7 @@ const rootReducer = (combineReducers({auth, budget, profile}));
 let store = createStore(rootReducer, applyMiddleware(thunk));
 
 store.subscribe(()=>{
-    console.log(store.getState())
+    // console.log(store.getState())
 })
 
 export default store;

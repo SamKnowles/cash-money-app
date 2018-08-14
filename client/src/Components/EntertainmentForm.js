@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { connect } from "react-redux";
 import { submitBudget } from "../Redux/budget";
 
-import { Switch, Route, Link, withRouter } from "react-router-dom";
+import {  Link, withRouter } from "react-router-dom";
 
 import '../Styles/body.css'
 
