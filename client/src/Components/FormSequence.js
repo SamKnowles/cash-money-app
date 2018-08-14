@@ -16,11 +16,7 @@ class FormSequence extends Component {
         super(props);
         this.state = {
             userId: {
-                
-            },
-            income: {
-                projected:'',
-                actual: ''
+        
             },
             housing: {
                 mortgageRent: {
@@ -55,26 +51,17 @@ class FormSequence extends Component {
                 }
             },
             loans: {
-                vehiclePayment: {
+                personal: {
                     projected: '',
                 },
-                busTrainUber: {
+                student: {
                     projected: '',
                 },
-                insurance: {
-                    projected: '',
-                },
-                licensing: {
-                    projected: '',
-                },
-                fuel: {
-                    projected: '',
-                },
-                maintenance: {
+                credit: {
                     projected: '',
                 },
                 other: {
-                    projected: ''
+                    projected: '',
                 }
             },
             transportation: {
@@ -163,7 +150,7 @@ class FormSequence extends Component {
                                 </div>
                             )
                         }} />
-                        <Route path='/form/housing' render={props => <HousingForm handleChange={this.handleChange} formData={this.state.housing} />} />} />
+                        <Route path='/form/housing' render={props => <HousingForm handleChange={this.handleChange} handleSubmit={this.handleSubmit} formData={this.state.housing} />} />} />
                         <Route path='/form/transportation' render={props => <TransportationForm handleChange={this.handleChange} formData={this.state.transportation} />} />} />
                         <Route path='/form/loans' render={props => <LoansForm handleChange={this.handleChange} formData={this.state.loans} />} />} />
                         <Route path='/form/entertainment' render={props => <EntertainmentForm handleChange={this.handleChange} handleSubmit={this.handleSubmit} formData={this.state.entertainment} />} />} />

@@ -14,16 +14,16 @@ class Budget extends Component {
     }
 
     componentDidMount() {
-        this.props.loadBudget().then(()=> this.setState({budget: this.props.budget.data}))
+        this.props.loadBudget().then(() => this.setState({ budget: this.props.budget.data }))
     }
 
     render() {
         let { loading, data } = this.props.budget;
-        console.log(this.props.budget)
+        console.log(data.income);
         return (
             loading ? <div>loading...</div> :
                 <div className="budget-wrapper">
-                    <label htmlFor="">Actual Income<input value={data.income.actual} placeholder="Enter income"/></label>
+                    <label htmlFor="">Actual Income<input value={data.income.actual} placeholder="Enter income" /></label>
                     <h3>{data.income.actual}</h3>
                 </div>
         )
