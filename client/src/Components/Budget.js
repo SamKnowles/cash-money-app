@@ -18,8 +18,7 @@ class Budget extends Component {
     }
 
     render() {
-        console.log(this.props);
-        console.log(this.props.budget);
+        console.log('budget state', this.state);
         let { loading, data } = this.props.budget
         return (
             loading ? <div>loading...</div> :
