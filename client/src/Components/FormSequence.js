@@ -16,7 +16,11 @@ class FormSequence extends Component {
         super(props);
         this.state = {
             userId: {
-        
+                
+            },
+            income: {
+                projected:'',
+                
             },
             housing: {
                 mortgageRent: {
@@ -150,11 +154,11 @@ class FormSequence extends Component {
                                 </div>
                             )
                         }} />
-                        <Route path='/form/housing' render={props => <HousingForm handleChange={this.handleChange} handleSubmit={this.handleSubmit} formData={this.state.housing} />} />} />
+                        <Route path='/form/housing' render={props => <HousingForm handleChange={this.handleChange} formData={this.state.housing} />} />} />
                         <Route path='/form/transportation' render={props => <TransportationForm handleChange={this.handleChange} formData={this.state.transportation} />} />} />
                         <Route path='/form/loans' render={props => <LoansForm handleChange={this.handleChange} formData={this.state.loans} />} />} />
                         <Route path='/form/entertainment' render={props => <EntertainmentForm handleChange={this.handleChange} handleSubmit={this.handleSubmit} formData={this.state.entertainment} />} />} />
-                        <Route path='/budget' render={props => <Budget handleChange={this.handleChange} />} />
+                        <Route path='/budget' render={props => <Budget />} />
                 </Switch>
                 </form>
             </div>

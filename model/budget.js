@@ -9,8 +9,8 @@ const categorySchema = Schema({
     },
     income: {projected: Number, actual: Number},
     housing: {
-        mortgageRent: {projected: Number, actual: {default: 0, type: Number}},
-        phone: {projected: Number, actual: {default: 0, type: Number}},
+        mortgageRent: {projected: {default: 0, type: Number}, actual: {default: 0, type: Number}},
+        phone: {projected:{type: Number}, actual: {type: Number}},
         electricity: {projected: Number, actual: {default: 0, type: Number}},
         gas: {projected: Number, actual: {default: 0, type: Number}},
         waterSewer: {projected: Number, actual: {default: 0, type: Number}},
