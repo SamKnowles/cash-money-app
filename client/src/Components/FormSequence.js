@@ -20,7 +20,6 @@ class FormSequence extends Component {
             },
             income: {
                 projected:'',
-                
             },
             housing: {
                 mortgageRent: {
