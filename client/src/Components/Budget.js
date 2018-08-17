@@ -17,9 +17,12 @@ class Budget extends Component {
         const { value, name } = e.target;
         this.setState(prevState => {
             return {
-                [category]: {
-                    ...prevState[category],
-                    [name]: { actual: value }
+                budget: {
+                    ...prevState.budget,
+                    [category]: {
+                        ...prevState.budget[category],
+                        [name]: { ...prevState.budget[category][name], actual: value }
+                    }
                 }
             }
         })
@@ -29,9 +32,12 @@ class Budget extends Component {
         const { value, name } = e.target;
         this.setState(prevState => {
             return {
-                [category]: {
-                    ...prevState[category],
-                    [name]: { projected: value }
+                budget: {
+                    ...prevState.budget,
+                    [category]: {
+                        ...prevState.budget[category],
+                        [name]: { ...prevState.budget[category][name], projected: value }
+                    }
                 }
             }
         })
@@ -45,40 +51,87 @@ class Budget extends Component {
         this.props.loadBudget().then(() => this.setState({ budget: this.props.budget.data }))
     }
 
-    // handleChangeMain = (e, category) => {
-    //     const { value, name } = e.target;
-    //     this.setState(prevState => {
-    //         return {
-    //             [category]: {
-    //                 ...prevState[category],
-    //                 [name]: { actual: value }
-    //             }
-    //         }
-    //     })
-    // }
 
     render() {
-        let { loading, data } = this.props.budget;
-        console.log(this.props.budget)
+        let { loading } = this.props.budget;
+        // console.log(this.props.budget)
+        console.log(this.state);
         const { budget } = this.state;
-        // console.log(this.props.budget);
+        console.log(budget);
         return (
-            loading ? <div>loading...</div> :
+            budget ?
                 <div className="budget-wrapper">
-                    <div>
-                        <label htmlFor="">Actual Income<input value={data.income.actual} placeholder="Enter income" /></label>
-                        {/* <h3>{budget.income.actual}</h3> */}
+                    {/* <div>
+                        <label htmlFor="">Actual Income<input value={budget.income.actual} placeholder="Enter income" /></label>
+                    </div> */}
+                    <div className="housing-wrapper">
+                        <div className="housing-category-wrapper">
+                            <label htmlFor="">Mortgage
+                        <input
+                                    name="mortgageRent"
+                                    type='number'
+                                    value={budget.housing.mortgageRent.projected}
+                                    placeholder={budget.housing.mortgageRent.projected}
+                                    onChange={e => this.handleChangeProjected(e, "housing")} />
+                                <input
+                                    name="mortgageRent"
+                                    type="number"
+                                    value={budget.housing.mortgageRent.actual}
+                                    onChange={e => this.handleChangeActual(e, 'housing')} />
+                            </label>
+                        </div>
+                        <div className="housing-category-wrapper">
+                            <label htmlFor="">Phone
+                        <input
+                                    name="phone"
+                                    type='number'
+                                    value={budget.housing.phone.projected}
+                                    placeholder={budget.housing.phone.projected}
+                                    onChange={e => this.handleChangeProjected(e, "housing")} />
+                                <input
+                                    name="phone"
+                                    type="number"
+                                    value={budget.housing.phone.actual}
+                                    onChange={e => this.handleChangeActual(e, 'housing')} />
+                            </label>
+                            <div className="housing-category-wrapper">
+                                <label htmlFor="">Electricity
+                        <input
+                                        name="electricity"
+                                        type='number'
+                                        value={budget.housing.electricity.projected}
+                                        placeholder={budget.housing.electricity.projected}
+                                        onChange={e => this.handleChangeProjected(e, "housing")} />
+                                    <input
+                                        name="electricity"
+                                        type="number"
+                                        value={budget.housing.electricity.actual}
+                                        onChange={e => this.handleChangeActual(e, 'housing')} />
+                                </label>
+                            </div>
+                            <div className="housing-category-wrapper">
+                                <label htmlFor="">gas
+                        <input
+                                        name="gas"
+                                        type='number'
+                                        value={budget.housing.gas.projected}
+                                        placeholder={budget.housing.gas.projected}
+                                        onChange={e => this.handleChangeProjected(e, "housing")} />
+                                    <input
+                                        name="gas"
+                                        type="number"
+                                        value={budget.housing.gas.actual}
+                                        onChange={e => this.handleChangeActual(e, 'housing')} />
+                                </label>
+                            </div>
+                        </div>
                     </div>
-                    {/* <label htmlFor="">Mortgage<input name="mortgageRent" type='number' value={budget.housing.mortgageRent.actual} placeholder={budget.housing.mortgageRent.actual} onChange={e => this.handleChangeProjected(e, "housing")} /><input name="mortgageRentActual" type="number" value={budget.housing.mortgageRent.actual} onChange={e => this.props.handleChangeActual(e, 'housing')} />
-                    </label> */}
-                    {/* <h3>{budget.housing.mortgageRent.actual}</h3> */}
                 </div>
+                : <div>loading...</div>
         )
     }
 }
 
-// const mapStateToProps = (state) => {
-//     return Budget
-// }
+
 
 export default connect(state => state, { loadBudget })(Budget);

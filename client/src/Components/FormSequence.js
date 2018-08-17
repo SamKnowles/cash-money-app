@@ -15,102 +15,99 @@ class FormSequence extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            userId: {
-                
-            },
             income: {
-                projected:'',
+                projected: 0
             },
             housing: {
                 mortgageRent: {
-                    projected: '',
+                    projected: 0,
                 },
                 phone: {
-                    projected: '',
+                    projected: 0,
                 },
                 gas: {
-                    projected: '',
+                    projected: 0,
                 },
                 electricity: {
-                    projected: '',
+                    projected: 0,
                 },
                 waterSewer: {
-                    projected: '',
+                    projected: 0,
                 },
                 internet: {
-                    projected: '',
+                    projected: 0,
                 },
                 wasteRemoval: {
-                    projected: '',
+                    projected: 0,
                 },
                 maintenance: {
-                    projected: '',
+                    projected: 0,
                 },
                 supplies: {
-                    projected: '',
+                    projected: 0,
                 },
                 other: {
-                    projected: ''
+                    projected: 0
                 }
             },
             loans: {
                 personal: {
-                    projected: '',
+                    projected: 0,
                 },
                 student: {
-                    projected: '',
+                    projected: 0,
                 },
                 credit: {
-                    projected: '',
+                    projected: 0,
                 },
                 other: {
-                    projected: '',
+                    projected: 0,
                 }
             },
             transportation: {
                 vehiclePayment: {
-                    projected: '',
+                    projected: 0,
                 },
                 busTrainUber: {
-                    projected: '',
+                    projected: 0,
                 },
                 insurance: {
-                    projected: '',
+                    projected: 0,
                 },
                 licensing: {
-                    projected: '',
+                    projected: 0,
                 },
                 fuel: {
-                    projected: '',
+                    projected: 0,
                 },
                 maintenance: {
-                    projected: '',
+                    projected: 0,
                 },
                 other: {
-                    projected: '',
+                    projected: 0,
                 }
             },
             entertainment: {
                 movies: {
-                    projected: '',
+                    projected: 0,
                 },
                 music: {
-                    projected: '',
+                    projected: 0,
                 },
                 vacation: {
-                    projected: '',
+                    projected: 0,
                 },
                 theater: {
-                    projected: '',
+                    projected: 0,
                 },
                 sports: {
-                    projected: '',
+                    projected: 0,
                 },
                 winterSports: {
-                    projected: '',
+                    projected: 0,
                 },
                 other: {
-                    projected: '',
+                    projected: 0,
                 }
             },
         }
@@ -137,6 +134,8 @@ class FormSequence extends Component {
     }
 
     handleSubmit = (e) => {
+        console.log(this.state.income);
+        
         this.props.submitBudget(this.state);
     }
 
@@ -158,7 +157,7 @@ class FormSequence extends Component {
                         <Route path='/form/loans' render={props => <LoansForm handleChange={this.handleChange} formData={this.state.loans} />} />} />
                         <Route path='/form/entertainment' render={props => <EntertainmentForm handleChange={this.handleChange} handleSubmit={this.handleSubmit} formData={this.state.entertainment} />} />} />
                         <Route path='/budget' render={props => <Budget />} />
-                </Switch>
+                    </Switch>
                 </form>
             </div>
         )

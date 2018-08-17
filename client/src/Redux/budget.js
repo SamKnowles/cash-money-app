@@ -49,6 +49,7 @@ export function loadBudget() {
 
 
 export function submitBudget(budgetObj) {
+    console.log(budgetObj);
     return dispatch => {
         budgetAxios.post(budgetUrl, budgetObj)
             .then(response => {

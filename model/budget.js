@@ -7,42 +7,42 @@ const categorySchema = Schema({
         ref: "User",
         required: true
     },
-    income: {projected: Number, actual: Number},
+    income: { projected: { default: 0, type: Number }, actual: { default: 0, type: Number } },
     housing: {
-        mortgageRent: {projected: {default: 0, type: Number}, actual: {default: 0, type: Number}},
-        phone: {projected:{type: Number}, actual: {type: Number}},
-        electricity: {projected: Number, actual: {default: 0, type: Number}},
-        gas: {projected: Number, actual: {default: 0, type: Number}},
-        waterSewer: {projected: Number, actual: {default: 0, type: Number}},
-        internet: {projected: Number, actual: {default: 0, type: Number}},
-        wasteRemoval: {projected: Number, actual: {default: 0, type: Number}},
-        maintenance: {projected: Number, actual: {default: 0, type: Number}},
-        supplies: {projected: Number, actual: {default: 0, type: Number}},
-        other: {projected: Number, actual: {default: 0, type: Number}}
+        mortgageRent: { projected: { default: 0, type: Number }, actual: { default: 0, type: Number } },
+        phone: { projected: { default: 0, type: Number }, actual: { default: 0, type: Number } },
+        electricity: { projected: { default: 0, type: Number }, actual: { default: 0, type: Number } },
+        gas: { projected: { default: 0, type: Number }, actual: { default: 0, type: Number } },
+        waterSewer: { projected: { default: 0, type: Number }, actual: { default: 0, type: Number } },
+        internet: { projected: { default: 0, type: Number }, actual: { default: 0, type: Number } },
+        wasteRemoval: { projected: { default: 0, type: Number }, actual: { default: 0, type: Number } },
+        maintenance: { projected: { default: 0, type: Number }, actual: { default: 0, type: Number } },
+        supplies: { projected: { default: 0, type: Number }, actual: { default: 0, type: Number } },
+        other: { projected: { default: 0, type: Number }, actual: { default: 0, type: Number } }
     },
     transportation: {
-        vehiclePayment: {projected: Number, actual: {default: 0, type: Number}},
-        busTrainUber: {projected: Number, actual: {default: 0, type: Number}},
-        insurance: {projected: Number, actual: {default: 0, type: Number}},
-        licensing: {projected: Number, actual: {default: 0, type: Number}},
-        fuel: {projected: Number, actual: {default: 0, type: Number}},
-        maintenance: {projected: Number, actual: {default: 0, type: Number}},
-        other: {projected: Number, actual: {default: 0, type: Number}}
+        vehiclePayment: { projected: { default: 0, type: Number }, actual: { default: 0, type: Number } },
+        busTrainUber: { projected: { default: 0, type: Number }, actual: { default: 0, type: Number } },
+        insurance: { projected: { default: 0, type: Number }, actual: { default: 0, type: Number } },
+        licensing: { projected: { default: 0, type: Number }, actual: { default: 0, type: Number } },
+        fuel: { projected: { default: 0, type: Number }, actual: { default: 0, type: Number } },
+        maintenance: { projected: { default: 0, type: Number }, actual: { default: 0, type: Number } },
+        other: { projected: { default: 0, type: Number }, actual: { default: 0, type: Number } }
     },
     entertainment: {
-        movies: {projected: Number, actual: {default: 0, type: Number}},
-        music: {projected: Number, actual: {default: 0, type: Number}},
-        vacation: {projected: Number, actual: {default: 0, type: Number}},
-        theater: {projected: Number, actual: {default: 0, type: Number}},
-        sports: {projected: Number, actual: {default: 0, type: Number}},
-        winterSports: {projected: Number, actual: {default: 0, type: Number}},
-        other: {projected: Number, actual: {default: 0, type: Number}}
+        movies: { projected: { default: 0, type: Number }, actual: { default: 0, type: Number } },
+        music: { projected: { default: 0, type: Number }, actual: { default: 0, type: Number } },
+        vacation: { projected: { default: 0, type: Number }, actual: { default: 0, type: Number } },
+        theater: { projected: { default: 0, type: Number }, actual: { default: 0, type: Number } },
+        sports: { projected: { default: 0, type: Number }, actual: { default: 0, type: Number } },
+        winterSports: { projected: { default: 0, type: Number }, actual: { default: 0, type: Number } },
+        other: { projected: { default: 0, type: Number }, actual: { default: 0, type: Number } }
     },
     loans: {
-        personal: {projected: Number, actual: {default: 0, type: Number}},
-        student: {projected: Number, actual: {default: 0, type: Number}},
-        credit: {projected: Number, actual: {default: 0, type: Number}},
-        other: {projected: Number, actual: {default: 0, type: Number}}
+        personal: { projected: { default: 0, type: Number }, actual: { default: 0, type: Number } },
+        student: { projected: { default: 0, type: Number }, actual: { default: 0, type: Number } },
+        credit: { projected: { default: 0, type: Number }, actual: { default: 0, type: Number } },
+        other: { projected: { default: 0, type: Number }, actual: { default: 0, type: Number } }
     }
 });
 

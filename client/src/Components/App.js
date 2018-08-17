@@ -31,17 +31,17 @@ class App extends Component {
                     <Switch>
                         <Route exact path="/" render={(props) => {
                             return isAuthenticated ?
-                                <Redirect to="/profile" /> :
+                                <Redirect to="/budget" /> :
                                 <Signup {...props} />
                         }} />
                         <Route path="/login" render={(props) => {
                             return isAuthenticated ?
-                                <Redirect to="/profile" /> :
+                                <Redirect to="/budget" /> :
                                 <Login {...props} />
                         }} />
                         <Route path="/signup" render={(props) => {
                             return isAuthenticated ?
-                                <Redirect to="/profile" /> :
+                                <Redirect to="/budget" /> :
                                 <Signup {...props} />
                         }} />
                         <ProtectedRoute path="/profile" component={Profile} />
