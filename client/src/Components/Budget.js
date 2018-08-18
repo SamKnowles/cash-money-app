@@ -123,6 +123,136 @@ class Budget extends Component {
                                         value={budget.housing.gas.actual}
                                         onChange={e => this.handleChangeActual(e, 'housing')} />
                                 </label>
+                                <label htmlFor="">gas
+                        <input
+                                        name="gas"
+                                        type='number'
+                                        value={budget.housing.gas.projected}
+                                        placeholder={budget.housing.gas.projected}
+                                        onChange={e => this.handleChangeProjected(e, "housing")} />
+                                    <input
+                                        name="gas"
+                                        type="number"
+                                        value={budget.housing.gas.actual}
+                                        onChange={e => this.handleChangeActual(e, 'housing')} />
+                                </label>
+                                <label htmlFor="">gas
+                        <input
+                                        name="gas"
+                                        type='number'
+                                        value={budget.housing.gas.projected}
+                                        placeholder={budget.housing.gas.projected}
+                                        onChange={e => this.handleChangeProjected(e, "housing")} />
+                                    <input
+                                        name="gas"
+                                        type="number"
+                                        value={budget.housing.gas.actual}
+                                        onChange={e => this.handleChangeActual(e, 'housing')} />
+                                </label>
+                                <label htmlFor="">gas
+                        <input
+                                        name="gas"
+                                        type='number'
+                                        value={budget.housing.gas.projected}
+                                        placeholder={budget.housing.gas.projected}
+                                        onChange={e => this.handleChangeProjected(e, "housing")} />
+                                    <input
+                                        name="gas"
+                                        type="number"
+                                        value={budget.housing.gas.actual}
+                                        onChange={e => this.handleChangeActual(e, 'housing')} />
+                                </label>
+                                <label htmlFor="">gas
+                        <input
+                                        name="gas"
+                                        type='number'
+                                        value={budget.housing.gas.projected}
+                                        placeholder={budget.housing.gas.projected}
+                                        onChange={e => this.handleChangeProjected(e, "housing")} />
+                                    <input
+                                        name="gas"
+                                        type="number"
+                                        value={budget.housing.gas.actual}
+                                        onChange={e => this.handleChangeActual(e, 'housing')} />
+                                </label>
+                                <label htmlFor="">gas
+                        <input
+                                        name="gas"
+                                        type='number'
+                                        value={budget.housing.gas.projected}
+                                        placeholder={budget.housing.gas.projected}
+                                        onChange={e => this.handleChangeProjected(e, "housing")} />
+                                    <input
+                                        name="gas"
+                                        type="number"
+                                        value={budget.housing.gas.actual}
+                                        onChange={e => this.handleChangeActual(e, 'housing')} />
+                                </label>
+                                <label htmlFor="">gas
+                        <input
+                                        name="gas"
+                                        type='number'
+                                        value={budget.housing.gas.projected}
+                                        placeholder={budget.housing.gas.projected}
+                                        onChange={e => this.handleChangeProjected(e, "housing")} />
+                                    <input
+                                        name="gas"
+                                        type="number"
+                                        value={budget.housing.gas.actual}
+                                        onChange={e => this.handleChangeActual(e, 'housing')} />
+                                </label>
+                                <label htmlFor="">gas
+                        <input
+                                        name="gas"
+                                        type='number'
+                                        value={budget.housing.gas.projected}
+                                        placeholder={budget.housing.gas.projected}
+                                        onChange={e => this.handleChangeProjected(e, "housing")} />
+                                    <input
+                                        name="gas"
+                                        type="number"
+                                        value={budget.housing.gas.actual}
+                                        onChange={e => this.handleChangeActual(e, 'housing')} />
+                                </label>
+                                <label htmlFor="">gas
+                        <input
+                                        name="gas"
+                                        type='number'
+                                        value={budget.housing.gas.projected}
+                                        placeholder={budget.housing.gas.projected}
+                                        onChange={e => this.handleChangeProjected(e, "housing")} />
+                                    <input
+                                        name="gas"
+                                        type="number"
+                                        value={budget.housing.gas.actual}
+                                        onChange={e => this.handleChangeActual(e, 'housing')} />
+                                </label>
+                                <label htmlFor="">gas
+                        <input
+                                        name="gas"
+                                        type='number'
+                                        value={budget.housing.gas.projected}
+                                        placeholder={budget.housing.gas.projected}
+                                        onChange={e => this.handleChangeProjected(e, "housing")} />
+                                    <input
+                                        name="gas"
+                                        type="number"
+                                        value={budget.housing.gas.actual}
+                                        onChange={e => this.handleChangeActual(e, 'housing')} />
+                                </label>
+                                <label htmlFor="">gas
+                        <input
+                                        name="gas"
+                                        type='number'
+                                        value={budget.housing.gas.projected}
+                                        placeholder={budget.housing.gas.projected}
+                                        onChange={e => this.handleChangeProjected(e, "housing")} />
+                                    <input
+                                        name="gas"
+                                        type="number"
+                                        value={budget.housing.gas.actual}
+                                        onChange={e => this.handleChangeActual(e, 'housing')} />
+                                </label>
                             </div>
                         </div>
                     </div>
