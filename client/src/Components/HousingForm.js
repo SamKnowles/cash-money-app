@@ -4,7 +4,6 @@ import { submitBudget } from "../Redux/budget";
 
 import { Link, withRouter } from "react-router-dom";
 
-import '../Styles/body.css'
 
 class HousingForm extends Component {
     render() {

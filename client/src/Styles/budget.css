@@ -4,6 +4,44 @@
     height: 100%;
 }
 
-.housing-category-wrapper {
-    border: 2px black solid
+/* .housing-category-wrapper {
+    border: 2px green solid;
+    width: 100%;
+} */
+
+.housing-wrapper {
+    border: 2px red solid;
+    width: 50%;
 }
+
+.category {
+    width: 100%;
+    border: 2px solid pink;
+    display: flex;
+}
+
+.category-name {
+    width: 25%;
+    border: 2px black solid;    
+}
+
+.projected-input {
+    width: 25%;
+    color: black;
+    border: 2px black solid
+    
+}
+
+.actual-input {
+    width: 25%;
+    color: red;
+    border: 2px black solid
+    
+}
+
+h5 {
+    width: 25%;
+    border: 2px black solid;
+    margin: 0 auto;
+}
+
