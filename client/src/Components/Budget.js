@@ -44,7 +44,6 @@ class Budget extends Component {
     }
 
     handleSubmit = (e) => {
-        e.preventDefault
         this.props.editBudget(this.state.budget);
     }
 

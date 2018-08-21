@@ -18,13 +18,13 @@ budgetRouter.route("/")
             if (err) return res.status(500).send(err);
             return res.status(201).send(savedBudget);
         })
-    })
-
-    .put((req, res) => {
-        budgetModel.findByIdAndUpdate(req.params.id, req.body, { new: true }, (err, updatedBudget) => {
-            if (err) return res.status(500).send(err);
-            return res.send(updatedBudget);
-        });
     });
+
+budgetRouter.put("/"), (req, res) => {
+    budgetModel.findByIdAndUpdate(req.params.id, req.body, { new: true }, (err, updatedBudget) => {
+        if (err) return res.status(500).send(err);
+        return res.send(updatedBudget);
+    });
+};
 
 module.exports = budgetRouter;

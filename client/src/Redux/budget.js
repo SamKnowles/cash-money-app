@@ -29,7 +29,9 @@ const budgetReducer = (budget = { data: {}, loading: true }, action) => {
             }
         case "EDIT_BUDGET":
             return {
-                data: action.data
+                ...budget,
+                data: action.budget,
+                loading: false
             }
         default:
             return budget;
