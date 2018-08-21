@@ -135,7 +135,6 @@ class FormSequence extends Component {
 
     handleSubmit = (e) => {
         console.log(this.state.income);
-        
         this.props.submitBudget(this.state);
     }
 

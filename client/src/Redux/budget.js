@@ -27,6 +27,10 @@ const budgetReducer = (budget = { data: {}, loading: true }, action) => {
                 data: action.budget,
                 loading: false
             }
+        case "EDIT_BUDGET":
+            return {
+                data: action.data
+            }
         default:
             return budget;
     }
@@ -34,7 +38,7 @@ const budgetReducer = (budget = { data: {}, loading: true }, action) => {
 
 export function loadBudget() {
     return dispatch => {
-       return budgetAxios.get(budgetUrl)
+        return budgetAxios.get(budgetUrl)
             .then((response) => {
                 dispatch({
                     type: "LOAD_BUDGET",
@@ -60,6 +64,21 @@ export function submitBudget(budgetObj) {
                 })
             })
             .catch(err => console.log(err));
+    }
+}
+
+export const editBudget = (change) => {
+    return dispatch => {
+        budgetAxios.put(budgetUrl, change)
+            .then((response) => {
+                dispatch({
+                    type: "EDIT_BUDGET",
+                    budget: response.data
+                });
+            })
+            .catch(err =>
+                console.error(err)
+            )
     }
 }
 
