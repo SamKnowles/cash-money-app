@@ -24,6 +24,11 @@
     width: 50%;
 }
 
+.loans-wrapper {
+    border: 2px blanchedalmond solid;
+    width: 50%;
+}
+
 .category {
     width: 100%;
     border: 2px solid pink;

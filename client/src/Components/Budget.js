@@ -385,7 +385,7 @@ class Budget extends Component {
 
                     <div className="transportation-wrapper">
                         <div className="category">
-                            <h4>Transportation</h4>
+                            <h4>Loans</h4>
                             <h4>ProjectedCost</h4>
                             <h4>Actual Cost</h4>
                             <h4>Difference</h4>
@@ -507,6 +507,89 @@ class Budget extends Component {
                                 type="number"
                                 value={budget.transportation.other.actual}
                                 onChange={e => this.handleChangeActual(e, 'transportation')} />
+                            <h5>$0</h5>
+                        </div>
+                        <div className="category">
+                            <h4>Subtotals</h4>
+                            <h4>$0</h4>
+                            <h4>$0</h4>
+                            <h4>$0</h4>
+                        </div>
+                    </div>
+
+                    <div className="loans-wrapper">
+                        <div className="category">
+                            <h4>Loans</h4>
+                            <h4>ProjectedCost</h4>
+                            <h4>Actual Cost</h4>
+                            <h4>Difference</h4>
+                        </div>
+                        <div className="category">
+                            <label className="category-name">Personal</label>
+                            <input
+                                name="personal"
+                                className="projected-input"
+                                type='number'
+                                value={budget.loans.personal.projected}
+                                placeholder={budget.loans.personal.projected}
+                                onChange={e => this.handleChangeProjected(e, "loans")} />
+                            <input
+                                name="personal"
+                                className="actual-input"
+                                type="number"
+                                value={budget.loans.personal.actual}
+                                onChange={e => this.handleChangeActual(e, 'loans')} />
+                            <h5>$0</h5>
+                        </div>
+                        <div className="category">
+                            <label className="category-name">Student</label>
+                            <input
+                                name="student"
+                                className="projected-input"
+                                type='number'
+                                value={budget.loans.student.projected}
+                                placeholder={budget.loans.student.projected}
+                                onChange={e => this.handleChangeProjected(e, "loans")} />
+                            <input
+                                name="student"
+                                className="actual-input"
+                                type="number"
+                                value={budget.loans.student.actual}
+                                onChange={e => this.handleChangeActual(e, 'loans')} />
+                            <h5>$0</h5>
+                        </div>
+                        <div className="category">
+                            <label className="category-name">Credit</label>
+                            <input
+                                name="credit"
+                                className="projected-input"
+                                type='number'
+                                value={budget.loans.credit.projected}
+                                placeholder={budget.loans.credit.projected}
+                                onChange={e => this.handleChangeProjected(e, "loans")} />
+                            <input
+                                name="credit"
+                                className="actual-input"
+                                type="number"
+                                value={budget.loans.credit.actual}
+                                onChange={e => this.handleChangeActual(e, 'loans')} />
+                            <h5>$0</h5>
+                        </div>
+                        <div className="category">
+                            <label className="category-name">Other</label>
+                            <input
+                                name="other"
+                                className="projected-input"
+                                type='number'
+                                value={budget.loans.other.projected}
+                                placeholder={budget.loans.other.projected}
+                                onChange={e => this.handleChangeProjected(e, "loans")} />
+                            <input
+                                name="other"
+                                className="actual-input"
+                                type="number"
+                                value={budget.loans.other.actual}
+                                onChange={e => this.handleChangeActual(e, 'loans')} />
                             <h5>$0</h5>
                         </div>
                         <div className="category">
