@@ -383,6 +383,141 @@ class Budget extends Component {
                         </div>
                     </div>
 
+                    <div className="transportation-wrapper">
+                        <div className="category">
+                            <h4>Transportation</h4>
+                            <h4>ProjectedCost</h4>
+                            <h4>Actual Cost</h4>
+                            <h4>Difference</h4>
+                        </div>
+                        <div className="category">
+                            <label className="category-name">Car Payment</label>
+                            <input
+                                name="vehiclePayment"
+                                className="projected-input"
+                                type='number'
+                                value={budget.transportation.vehiclePayment.projected}
+                                placeholder={budget.transportation.vehiclePayment.projected}
+                                onChange={e => this.handleChangeProjected(e, "transportation")} />
+                            <input
+                                name="vehiclePayment"
+                                className="actual-input"
+                                type="number"
+                                value={budget.transportation.vehiclePayment.actual}
+                                onChange={e => this.handleChangeActual(e, 'transportation')} />
+                            <h5>$0</h5>
+                        </div>
+                        <div className="category">
+                            <label className="category-name">Train/ Uber</label>
+                            <input
+                                name="busTrainUber"
+                                className="projected-input"
+                                type='number'
+                                value={budget.transportation.busTrainUber.projected}
+                                placeholder={budget.transportation.busTrainUber.projected}
+                                onChange={e => this.handleChangeProjected(e, "transportation")} />
+                            <input
+                                name="busTrainUber"
+                                className="actual-input"
+                                type="number"
+                                value={budget.transportation.busTrainUber.actual}
+                                onChange={e => this.handleChangeActual(e, 'transportation')} />
+                            <h5>$0</h5>
+                        </div>
+                        <div className="category">
+                            <label className="category-name">Insurance</label>
+                            <input
+                                name="insurance"
+                                className="projected-input"
+                                type='number'
+                                value={budget.transportation.insurance.projected}
+                                placeholder={budget.transportation.insurance.projected}
+                                onChange={e => this.handleChangeProjected(e, "transportation")} />
+                            <input
+                                name="insurance"
+                                className="actual-input"
+                                type="number"
+                                value={budget.transportation.insurance.actual}
+                                onChange={e => this.handleChangeActual(e, 'transportation')} />
+                            <h5>$0</h5>
+                        </div>
+                        <div className="category">
+                            <label className="category-name">Licensing</label>
+                            <input
+                                name="licensing"
+                                className="projected-input"
+                                type='number'
+                                value={budget.transportation.licensing.projected}
+                                placeholder={budget.transportation.licensing.projected}
+                                onChange={e => this.handleChangeProjected(e, "transportation")} />
+                            <input
+                                name="licensing"
+                                className="actual-input"
+                                type="number"
+                                value={budget.transportation.licensing.actual}
+                                onChange={e => this.handleChangeActual(e, 'transportation')} />
+                            <h5>$0</h5>
+                        </div>
+                        <div className="category">
+                            <label className="category-name">Fuel</label>
+                            <input
+                                name="fuel"
+                                className="projected-input"
+                                type='number'
+                                value={budget.transportation.fuel.projected}
+                                placeholder={budget.transportation.fuel.projected}
+                                onChange={e => this.handleChangeProjected(e, "transportation")} />
+                            <input
+                                name="fuel"
+                                className="actual-input"
+                                type="number"
+                                value={budget.transportation.fuel.actual}
+                                onChange={e => this.handleChangeActual(e, 'transportation')} />
+                            <h5>$0</h5>
+                        </div>
+                        <div className="category">
+                            <label className="category-name">Maintenance</label>
+                            <input
+                                name="maintenance"
+                                className="projected-input"
+                                type='number'
+                                value={budget.transportation.maintenance.projected}
+                                placeholder={budget.transportation.maintenance.projected}
+                                onChange={e => this.handleChangeProjected(e, "transportation")} />
+                            <input
+                                name="maintenance"
+                                className="actual-input"
+                                type="number"
+                                value={budget.transportation.maintenance.actual}
+                                onChange={e => this.handleChangeActual(e, 'transportation')} />
+                            <h5>$0</h5>
+                        </div>
+                        <div className="category">
+                            <label className="category-name">Other</label>
+                            <input
+                                name="other"
+                                className="projected-input"
+                                type='number'
+                                value={budget.transportation.other.projected}
+                                placeholder={budget.transportation.other.projected}
+                                onChange={e => this.handleChangeProjected(e, "transportation")} />
+                            <input
+                                name="other"
+                                className="actual-input"
+                                type="number"
+                                value={budget.transportation.other.actual}
+                                onChange={e => this.handleChangeActual(e, 'transportation')} />
+                            <h5>$0</h5>
+                        </div>
+                        <div className="category">
+                            <h4>Subtotals</h4>
+                            <h4>$0</h4>
+                            <h4>$0</h4>
+                            <h4>$0</h4>
+                        </div>
+                    </div>
+
+
                     <button onClick={this.handleSubmit}>UPDATE</button>
                 </div>
                 : <div>loading...</div>
