@@ -126,7 +126,7 @@ class Budget extends Component {
                                 <h5>$0</h5>
                             </div>
                             <div className="category">
-                                <label className="category-name">gas</label>
+                                <label className="category-name">Gas</label>
                                 <input
                                     name="gas"
                                     className="projected-input"
@@ -143,7 +143,7 @@ class Budget extends Component {
                                 <h5>$0</h5>
                             </div>
                             <div className="category">
-                                <label className="category-name">waterSewer</label>
+                                <label className="category-name">Water/ Sewer</label>
                                 <input
                                     name="waterSewer"
                                     className="projected-input"
@@ -160,7 +160,7 @@ class Budget extends Component {
                                 <h5>$0</h5>
                             </div>
                             <div className="category">
-                                <label className="category-name">internet</label>
+                                <label className="category-name">Internet</label>
                                 <input
                                     name="internet"
                                     className="projected-input"
@@ -177,7 +177,7 @@ class Budget extends Component {
                                 <h5>$0</h5>
                             </div>
                             <div className="category">
-                                <label className="category-name">wasteRemoval</label>
+                                <label className="category-name">Waste Removal</label>
                                 <input
                                     name="wasteRemoval"
                                     className="projected-input"
@@ -194,7 +194,7 @@ class Budget extends Component {
                                 <h5>$0</h5>
                             </div>
                             <div className="category">
-                                <label className="category-name">maintenance</label>
+                                <label className="category-name">Maintenance</label>
                                 <input
                                     name="maintenance"
                                     className="projected-input"
@@ -211,7 +211,7 @@ class Budget extends Component {
                                 <h5>$0</h5>
                             </div>
                             <div className="category">
-                                <label className="category-name">supplies</label>
+                                <label className="category-name">Supplies</label>
                                 <input
                                     name="supplies"
                                     className="projected-input"
@@ -228,7 +228,7 @@ class Budget extends Component {
                                 <h5>$0</h5>
                             </div>
                             <div className="category">
-                                <label className="category-name">other</label>
+                                <label className="category-name">Other</label>
                                 <input
                                     name="other"
                                     className="projected-input"
@@ -254,7 +254,7 @@ class Budget extends Component {
 
                         <div className="entertainment-wrapper">
                             <div className="category">
-                                <h4>Entertainment</h4>
+                                <p>Entertainment</p>
                                 <h4>Projected Cost</h4>
                                 <h4>Actual Cost</h4>
                                 <h4>Difference</h4>
@@ -388,7 +388,7 @@ class Budget extends Component {
 
                         <div className="loans-wrapper">
                             <div className="category">
-                                <h4>Loans</h4>
+                                <p>Loans</p>
                                 <h4>ProjectedCost</h4>
                                 <h4>Actual Cost</h4>
                                 <h4>Difference</h4>
@@ -462,7 +462,7 @@ class Budget extends Component {
                                 <h5>$0</h5>
                             </div>
                             <div className="category">
-                                <h4>Subtotals</h4>
+                                <p>Subtotals</p>
                                 <h4>$0</h4>
                                 <h4>$0</h4>
                                 <h4>$0</h4>
@@ -471,7 +471,7 @@ class Budget extends Component {
 
                         <div className="transportation-wrapper">
                             <div className="category">
-                                <h4>Transportation</h4>
+                                <p>Transportation</p>
                                 <h4>ProjectedCost</h4>
                                 <h4>Actual Cost</h4>
                                 <h4>Difference</h4>
@@ -596,7 +596,7 @@ class Budget extends Component {
                                 <h5>$0</h5>
                             </div>
                             <div className="category">
-                                <h4>Subtotals</h4>
+                                <p>Subtotals</p>
                                 <h4>$0</h4>
                                 <h4>$0</h4>
                                 <h4>$0</h4>

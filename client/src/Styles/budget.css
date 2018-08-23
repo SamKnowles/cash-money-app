@@ -1,8 +1,10 @@
 .budget-wrapper {
-    background-color: lightskyblue;
+    /* background-color: lightskyblue; */
     height: 100%;
     width: 100%vh;
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .budget-title-wrapper {
@@ -13,37 +15,35 @@
 
 .income-wrapper {
     border: 2px darkblue solid;
-    width: 100%
+    width: 100%;
 }
 
 .category-wrapper {
     border: 2px darkred solid;
-    width: 100%;
+    width: 60%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
 }
 
 .housing-wrapper {
-    border: 2px red solid;
-    width: 45%;
+    border: 2px silver solid;
 }
 
 .entertainment-wrapper { 
-    border: 2px greenyellow solid;
-    width: 45%;
+    border: 2px silver solid;
+    height: 0;   
 }
 
 .transportation-wrapper { 
-    border: 2px teal solid;
-    width: 45%;
-    margin-top: -5%;
-}
+    border: 2px silver solid;
+    height: 0 auto;
+    }
 
 .loans-wrapper {  
-    border: 2px blanchedalmond solid;
-    width: 45%;
-    margin-top: 1.2%;
+    border: 2px silver solid;
+    margin-top: 20px;
+    height: 0;
 }
 
 .button-wrapper {  
@@ -54,46 +54,48 @@
 
 .category {
     width: 100%;
-    border: 2px solid pink;
+    border: 1px silver solid;
     display: flex;
     justify-content: flex-start;
-    
+    margin: 0;
 }
 
 .category-name {
-    width: 25%;
-    border: 2px black solid;
+    width: 145px;
+    border: 1px silver solid;
 }
 
 .projected-input {
     width: 60px;    
     color: black;
-    border: 2px black solid;
+    border: 1px silver solid;
 }
 
 .actual-input {
     width: 60px;
-    color: red;
-    border: 2px black solid;
+    border: 1px silver solid;
 }
 
 h5 {
     width: 62px;
-    border: 2px black solid;
+    border: 1px silver solid;
     margin: 0;
-    background-color: ghostwhite;
 }
 
 h4 {
     width: 62px;
-    border: 2px darkred solid;
+    border: 1px silver solid;
     margin: 0;
-    font-size: 10px;
+    font-size: 13px;
+    text-align: center;
+    background-color: lightcyan;
+    
 }
 
 p {
-    width: 25%;
-    border: 2px orange solid;
+    width: 145px;
+    background-color: lightcyan;
+    border: 1px silver solid;
     font-weight: bold;
     font-size: 20px;
     margin: 0;
