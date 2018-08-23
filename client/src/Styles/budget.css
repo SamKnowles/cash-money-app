@@ -1,68 +1,100 @@
 .budget-wrapper {
-    background-color: blue;
-    width: 100%;
+    background-color: lightskyblue;
     height: 100%;
+    width: 100%vh;
+
 }
 
-/* .housing-category-wrapper {
-    border: 2px green solid;
+.budget-title-wrapper {
+    border: 2px burlywood solid;
     width: 100%;
-} */
+    height: 15%;
+}
+
+.income-wrapper {
+    border: 2px darkblue solid;
+    width: 100%
+}
+
+.category-wrapper {
+    border: 2px darkred solid;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
 
 .housing-wrapper {
     border: 2px red solid;
-    width: 50%;
+    width: 45%;
 }
 
-.entertainment-wrapper {
+.entertainment-wrapper { 
     border: 2px greenyellow solid;
-    width: 50%;
+    width: 45%;
 }
 
-.transportation-wrapper {
+.transportation-wrapper { 
     border: 2px teal solid;
-    width: 50%;
+    width: 45%;
+    margin-top: -5%;
 }
 
-.loans-wrapper {
+.loans-wrapper {  
     border: 2px blanchedalmond solid;
-    width: 50%;
+    width: 45%;
+    margin-top: 1.2%;
+}
+
+.button-wrapper {  
+    border: 2px olivedrab solid;
+    width: 100%;
+    height: 15%;
 }
 
 .category {
     width: 100%;
     border: 2px solid pink;
     display: flex;
+    justify-content: flex-start;
+    
 }
 
 .category-name {
     width: 25%;
-    border: 2px black solid;    
+    border: 2px black solid;
 }
 
 .projected-input {
-    width: 25%;
+    width: 60px;    
     color: black;
-    border: 2px black solid
-    
+    border: 2px black solid;
 }
 
 .actual-input {
-    width: 25%;
+    width: 60px;
     color: red;
-    border: 2px black solid
-    
+    border: 2px black solid;
 }
 
 h5 {
-    width: 25%;
+    width: 62px;
     border: 2px black solid;
-    margin: 0 auto;
+    margin: 0;
     background-color: ghostwhite;
 }
 
 h4 {
-    width: 25%;
+    width: 62px;
     border: 2px darkred solid;
-    margin: 0 auto;
+    margin: 0;
+    font-size: 10px;
+}
+
+p {
+    width: 25%;
+    border: 2px orange solid;
+    font-weight: bold;
+    font-size: 20px;
+    margin: 0;
 }
