@@ -8,15 +8,113 @@
 }
 
 .budget-title-wrapper {
-    border: 2px burlywood solid;
+    border: 2px black solid;
+    font-size: 40px;
     width: 100%;
-    height: 15%;
+    height: 100px;
+    display: flex;
+    font-weight: bold;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
 }
 
 .income-wrapper {
+    height: 300px;
     border: 2px darkblue solid;
-    width: 100%;
+    width: 900px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
 }
+
+.inc-wrapper-wrapper {
+    border: 2px silver solid;
+}
+
+.income-cat-wrapper {
+    display: flex;
+    border: 1px silver solid;
+}
+
+.dif-wrapper {
+    border: 2px silver solid;
+    width: 62px;
+    display: flex;
+    height: 23px;
+    
+}
+
+.projected-income-wrapper {
+    border: 2px silver solid;
+    height: 90px;
+    display: flex;
+    justify-content: flex-start;
+    width: 320px;
+}
+
+.actual-income-wrapper {
+    border: 2px silver solid;
+    height: 90px;
+    display: flex;
+    justify-content: flex-start;
+    width: 320px;
+}
+
+h2 {
+    border: 2px blue solid;
+    font-size: 18px;
+    width: 120px;
+    height: 86px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    margin: 0 auto;
+}
+
+h6 {
+    width: 150px;
+    height: 23px;
+    font-size: 13px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.pro-act-income-wrapper {
+    border: 2px red solid;
+}
+
+.balance-section-wrapper {
+    border: 1px silver solid;    
+    border: 2px blue solid;    
+}
+
+.bal-row-wrapper {
+    border: 1px silver solid;    
+    display: flex;
+    
+}
+
+.bal-discription-wrapper {
+    border: 1px silver solid;    
+    width: 200px;
+    height: 45px;
+    font-size: 13px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.bal-wrapper {
+    border: 1px silver solid;    
+    width: 66px;
+    
+}
+
 
 .category-wrapper {
     border: 2px darkred solid;
@@ -47,9 +145,25 @@
 }
 
 .button-wrapper {  
-    border: 2px olivedrab solid;
+    border: 2px red solid;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
-    height: 15%;
+    height: 40px;
+}
+.button {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #008CBA;
+    font-size: 24px;
+    width: 50%;
+}
+
+.button:hover {
+    background-color: #008CBA;
+    color: white;
 }
 
 .category {
@@ -100,3 +214,6 @@ p {
     font-size: 20px;
     margin: 0;
 }
+
+
+

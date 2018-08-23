@@ -61,11 +61,59 @@ class Budget extends Component {
         return (
             budget ?
                 <div className="budget-wrapper">
-                    <div className='budget-title-wrapper'>YOUR BUDGET</div>
-                    <div className='income-wrapper'></div>
-                    {/* <div>
-                        <label htmlFor="">Actual Income<input value={budget.income.actual} placeholder="Enter income" /></label>
-                    </div> */}
+                    <div className='budget-title-wrapper'>HERE'S YOUR BUDGET BITCH</div>
+                    <div className='income-wrapper'>
+                        <div className='pro-act-income-wrapper'>
+                            <div className='projected-income-wrapper'>
+                                <h2>Projected Monthly Income</h2>
+                                <div className='inc-wrapper-wrapper'>
+                                    <div className="income-cat-wrapper">
+                                        <h6>Income 1</h6>
+                                        <div className='dif-wrapper'>$0</div>
+                                    </div>
+                                    <div className="income-cat-wrapper">
+                                        <h6>Extra Income</h6>
+                                        <div className='dif-wrapper'>$0</div>
+                                    </div>
+                                    <div className="income-cat-wrapper">
+                                        <h6>Total monthly income</h6>
+                                        <div className='dif-wrapper'>$0</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className='actual-income-wrapper'>
+                                <h2>Actual Monthly Income</h2>
+                                <div className='inc-wrapper-wrapper'>
+                                    <div className="income-cat-wrapper">
+                                        <h6>Income 1</h6>
+                                        <div className='dif-wrapper'>$0</div>
+                                    </div>
+                                    <div className="income-cat-wrapper">
+                                        <h6>Extra Income</h6>
+                                        <div className='dif-wrapper'>$0</div>
+                                    </div>
+                                    <div className="income-cat-wrapper">
+                                        <h6>Total monthly income</h6>
+                                        <div className='dif-wrapper'>$0</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className='balance-section-wrapper'>
+                            <div className='bal-row-wrapper'>
+                                <div className='bal-discription-wrapper'>Projected Balance (Projected Income Minus Expenses)</div>
+                                <div className='bal-wrapper'>$0</div>
+                            </div>
+                            <div className='bal-row-wrapper'>
+                                <div className='bal-discription-wrapper'>Actual Balance (Actual Income Minus Expenses)</div>
+                                <div className='bal-wrapper'>$0</div>
+                            </div>
+                            <div className='bal-row-wrapper'>
+                                <div className='bal-discription-wrapper'>Difference (Actual Difference Minus Projected)</div>
+                                <div className='bal-wrapper'>$0</div>
+                            </div>
+                        </div>
+                    </div>
                     <div className='category-wrapper'>
                         <div className="housing-wrapper">
                             <div className="category">
@@ -606,7 +654,7 @@ class Budget extends Component {
 
                     </div>
                     <div className='button-wrapper'>
-                        <button onClick={this.handleSubmit}>UPDATE</button>
+                        <button className='button' onClick={this.handleSubmit}>UPDATE</button>
                     </div>
                 </div>
                 : <div>loading...</div>
