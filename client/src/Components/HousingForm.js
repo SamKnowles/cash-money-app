@@ -51,7 +51,7 @@ class HousingForm extends Component {
                         <input name="supplies" className='cat-input-wrapper' value={formData.supplies.projected} type="number" onChange={e => handleChange(e, 'housing')} />
                     </div>
                     <div className='form-category-wrapper'>
-                        <label className="form-categçory-name">Other</label>
+                        <label className="form-category-name">Other</label>
                         <input name="other" className='cat-input-wrapper' value={formData.other.projected} type="number" onChange={e => handleChange(e, 'housing')} />
                     </div>
                     </div>

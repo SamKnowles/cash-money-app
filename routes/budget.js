@@ -20,11 +20,17 @@ budgetRouter.route("/")
         })
     });
 
-budgetRouter.put("/"), (req, res) => {
+
+budgetRouter.put(("/:id"), (req, res) => { 
     budgetModel.findByIdAndUpdate(req.params.id, req.body, { new: true }, (err, updatedBudget) => {
+        console.log('----------------')
+        console.log(req.params);
+        console.log('+++')
+        console.log(req.body);
+        console.log('----------------')
         if (err) return res.status(500).send(err);
         return res.send(updatedBudget);
     });
-};
+});
 
 module.exports = budgetRouter;

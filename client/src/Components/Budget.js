@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { loadBudget, editBudget } from "../Redux/budget";
+import { loadBudget, editBudget, submitBudget } from "../Redux/budget";
 import { connect } from "react-redux";
 import '../Styles/budget.css';
 
@@ -21,7 +21,7 @@ class Budget extends Component {
                     ...prevState.budget,
                     [category]: {
                         ...prevState.budget[category],
-                        [name]: { ...prevState.budget[category][name], actual: value }
+                        [name]: { ...prevState.budget[category][name], actual: Number(value) }
                     }
                 }
             }
@@ -36,7 +36,7 @@ class Budget extends Component {
                     ...prevState.budget,
                     [category]: {
                         ...prevState.budget[category],
-                        [name]: { ...prevState.budget[category][name], projected: value }
+                        [name]: { ...prevState.budget[category][name], projected: Number(value) }
                     }
                 }
             }
@@ -44,7 +44,7 @@ class Budget extends Component {
     }
 
     handleSubmit = (e) => {
-        this.props.editBudget(this.state.budget);
+        this.props.editBudget(this.state.budget, this.props.budget.data._id);
     }
 
     componentDidMount() {
@@ -54,7 +54,6 @@ class Budget extends Component {
 
     render() {
         let { loading } = this.props.budget;
-        // console.log(this.props.budget)
         console.log(this.state);
         const { budget } = this.state;
         console.log(budget);
@@ -542,7 +541,7 @@ class Budget extends Component {
                                 <h5>$0</h5>
                             </div>
                             <div className="category">
-                                <label className="category-name">Train/ Uber</label>
+                                <label className="category-name"></label>
                                 <input
                                     name="busTrainUber"
                                     className="projected-input"
@@ -664,4 +663,4 @@ class Budget extends Component {
 
 
 
-export default connect(state => state, { loadBudget, editBudget })(Budget);
+export default connect(state => state, { loadBudget, editBudget, submitBudget })(Budget);

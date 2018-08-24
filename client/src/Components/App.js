@@ -31,7 +31,7 @@ class App extends Component {
                     <Switch>
                         <Route exact path="/" render={(props) => {
                             return isAuthenticated ?
-                                <Redirect to="/form/transportation" /> :
+                                <Redirect to="/budget" /> :
                                 <Signup {...props} />
                         }} />
                         <Route path="/login" render={(props) => {

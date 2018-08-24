@@ -11,7 +11,7 @@ budgetAxios
         return config;
     })
 
-const budgetUrl = "/api/budget";
+const budgetUrl = "/api/budget/";
 
 const budgetReducer = (budget = { data: {}, loading: true }, action) => {
     switch (action.type) {
@@ -69,9 +69,10 @@ export function submitBudget(budgetObj) {
     }
 }
 
-export const editBudget = (change) => {
+export const editBudget = (change, id) => {
+    console.log("change", change)
     return dispatch => {
-        budgetAxios.put(budgetUrl, change)
+        budgetAxios.put(budgetUrl + id, change)
             .then((response) => {
                 dispatch({
                     type: "EDIT_BUDGET",
