@@ -136,7 +136,7 @@ class Budget extends Component {
                                     type="number"
                                     value={budget.housing.mortgageRent.actual}
                                     onChange={e => this.handleChangeActual(e, 'housing')} />
-                                <h5>$0</h5>
+                                <h5>{budget.housing.mortgageRent.projected - budget.housing.mortgageRent.actual}</h5>
                             </div>
                             <div className="category">
                                 <label className="category-name">Phone</label>
@@ -153,7 +153,7 @@ class Budget extends Component {
                                     type="number"
                                     value={budget.housing.phone.actual}
                                     onChange={e => this.handleChangeActual(e, 'housing')} />
-                                <h5>$0</h5>
+                                <h5>{budget.housing.phone.projected - budget.housing.phone.actual}</h5>
                             </div>
                             <div className="category">
                                 <label className="category-name">Electricity</label>
@@ -170,7 +170,7 @@ class Budget extends Component {
                                     type="number"
                                     value={budget.housing.electricity.actual}
                                     onChange={e => this.handleChangeActual(e, 'housing')} />
-                                <h5>$0</h5>
+                                <h5>{budget.housing.electricity.projected - budget.housing.electricity.actual}</h5>
                             </div>
                             <div className="category">
                                 <label className="category-name">Gas</label>
@@ -187,7 +187,7 @@ class Budget extends Component {
                                     type="number"
                                     value={budget.housing.gas.actual}
                                     onChange={e => this.handleChangeActual(e, 'housing')} />
-                                <h5>$0</h5>
+                                <h5>{budget.housing.gas.projected - budget.housing.gas.actual}</h5>
                             </div>
                             <div className="category">
                                 <label className="category-name">Water/ Sewer</label>
@@ -204,7 +204,7 @@ class Budget extends Component {
                                     type="number"
                                     value={budget.housing.waterSewer.actual}
                                     onChange={e => this.handleChangeActual(e, 'housing')} />
-                                <h5>$0</h5>
+                                <h5>{budget.housing.waterSewer.projected - budget.housing.waterSewer.actual}</h5>
                             </div>
                             <div className="category">
                                 <label className="category-name">Internet</label>
@@ -221,7 +221,7 @@ class Budget extends Component {
                                     type="number"
                                     value={budget.housing.internet.actual}
                                     onChange={e => this.handleChangeActual(e, 'housing')} />
-                                <h5>$0</h5>
+                                <h5>{budget.housing.internet.projected - budget.housing.internet.actual}</h5>
                             </div>
                             <div className="category">
                                 <label className="category-name">Waste Removal</label>
@@ -238,7 +238,7 @@ class Budget extends Component {
                                     type="number"
                                     value={budget.housing.wasteRemoval.actual}
                                     onChange={e => this.handleChangeActual(e, 'housing')} />
-                                <h5>$0</h5>
+                                <h5>{budget.housing.wasteRemoval.projected - budget.housing.wasteRemoval.actual}</h5>
                             </div>
                             <div className="category">
                                 <label className="category-name">Maintenance</label>
@@ -255,7 +255,7 @@ class Budget extends Component {
                                     type="number"
                                     value={budget.housing.maintenance.actual}
                                     onChange={e => this.handleChangeActual(e, 'housing')} />
-                                <h5>$0</h5>
+                                <h5>{budget.housing.maintenance.projected - budget.housing.maintenance.actual}</h5>
                             </div>
                             <div className="category">
                                 <label className="category-name">Supplies</label>
@@ -272,7 +272,7 @@ class Budget extends Component {
                                     type="number"
                                     value={budget.housing.supplies.actual}
                                     onChange={e => this.handleChangeActual(e, 'housing')} />
-                                <h5>$0</h5>
+                                <h5>{budget.housing.supplies.projected - budget.housing.supplies.actual}</h5>
                             </div>
                             <div className="category">
                                 <label className="category-name">Other</label>
@@ -289,14 +289,14 @@ class Budget extends Component {
                                     type="number"
                                     value={budget.housing.other.actual}
                                     onChange={e => this.handleChangeActual(e, 'housing')} />
-                                <h5>$0</h5>
+                                <h5>{budget.housing.other.projected - budget.housing.other.actual}</h5>
                             </div>
                             <div className="category">
                                 <p>Subtotals</p>
-                                <h4>$0</h4>
-                                <h4>$0</h4>
-                                <h4>$0</h4>
-                            </div>
+                                <h4>{budget.housing.mortgageRent.projected + budget.housing.phone.projected + budget.housing.electricity.projected + budget.housing.gas.projected + budget.housing.waterSewer.projected + budget.housing.internet.projected + budget.housing.wasteRemoval.projected + budget.housing.maintenance.projected + budget.housing.supplies.projected + budget.housing.other.projected }</h4>
+                                <h4>{budget.housing.mortgageRent.actual + budget.housing.phone.actual + budget.housing.electricity.actual + budget.housing.gas.actual + budget.housing.waterSewer.actual + budget.housing.internet.actual + budget.housing.wasteRemoval.actual + budget.housing.maintenance.actual + budget.housing.supplies.actual + budget.housing.other.actual }</h4>
+                                <h4>{budget.housing.mortgageRent.projected + budget.housing.phone.projected + budget.housing.electricity.projected + budget.housing.gas.projected + budget.housing.waterSewer.projected + budget.housing.internet.projected + budget.housing.wasteRemoval.projected + budget.housing.maintenance.projected + budget.housing.supplies.projected + budget.housing.other.projected - (budget.housing.mortgageRent.actual + budget.housing.phone.actual + budget.housing.electricity.actual + budget.housing.gas.actual + budget.housing.waterSewer.actual + budget.housing.internet.actual + budget.housing.wasteRemoval.actual + budget.housing.maintenance.actual + budget.housing.supplies.actual + budget.housing.other.actual) }</h4>
+                                </div>
                         </div>
 
                         <div className="entertainment-wrapper">
@@ -321,7 +321,7 @@ class Budget extends Component {
                                     type="number"
                                     value={budget.entertainment.movies.actual}
                                     onChange={e => this.handleChangeActual(e, 'entertainment')} />
-                                <h5>$0</h5>
+                                <h5>{budget.entertainment.movies.projected - budget.entertainment.movies.actual}</h5>
                             </div>
                             <div className="category">
                                 <label className="category-name">Music</label>
@@ -338,7 +338,7 @@ class Budget extends Component {
                                     type="number"
                                     value={budget.entertainment.music.actual}
                                     onChange={e => this.handleChangeActual(e, 'entertainment')} />
-                                <h5>$0</h5>
+                                <h5>{budget.entertainment.music.projected - budget.entertainment.music.actual}</h5>
                             </div>
                             <div className="category">
                                 <label className="category-name">Vacation</label>
@@ -355,7 +355,7 @@ class Budget extends Component {
                                     type="number"
                                     value={budget.entertainment.vacation.actual}
                                     onChange={e => this.handleChangeActual(e, 'entertainment')} />
-                                <h5>$0</h5>
+                                <h5>{budget.entertainment.vacation.projected - budget.entertainment.vacation.actual}</h5>
                             </div>
                             <div className="category">
                                 <label className="category-name">Theater</label>
@@ -372,7 +372,7 @@ class Budget extends Component {
                                     type="number"
                                     value={budget.entertainment.theater.actual}
                                     onChange={e => this.handleChangeActual(e, 'entertainment')} />
-                                <h5>$0</h5>
+                                <h5>{budget.entertainment.theater.projected - budget.entertainment.theater.actual}</h5>
                             </div>
                             <div className="category">
                                 <label className="category-name">Sports</label>
@@ -389,7 +389,7 @@ class Budget extends Component {
                                     type="number"
                                     value={budget.entertainment.sports.actual}
                                     onChange={e => this.handleChangeActual(e, 'entertainment')} />
-                                <h5>$0</h5>
+                                <h5>{budget.entertainment.sports.projected - budget.entertainment.sports.actual}</h5>
                             </div>
                             <div className="category">
                                 <label className="category-name">Winter Sports</label>
@@ -406,7 +406,7 @@ class Budget extends Component {
                                     type="number"
                                     value={budget.entertainment.winterSports.actual}
                                     onChange={e => this.handleChangeActual(e, 'entertainment')} />
-                                <h5>$0</h5>
+                                <h5>{budget.entertainment.winterSports.projected - budget.entertainment.winterSports.actual}</h5>
                             </div>
                             <div className="category">
                                 <label className="category-name">Other</label>
@@ -423,20 +423,20 @@ class Budget extends Component {
                                     type="number"
                                     value={budget.entertainment.other.actual}
                                     onChange={e => this.handleChangeActual(e, 'entertainment')} />
-                                <h5>$0</h5>
+                                <h5>{budget.entertainment.other.projected - budget.entertainment.other.actual}</h5>
                             </div>
                             <div className="category">
                                 <p>Subtotals</p>
-                                <h4>$0</h4>
-                                <h4>$0</h4>
-                                <h4>$0</h4>
-                            </div>
+                                <h4>{budget.entertainment.movies.projected + budget.entertainment.music.projected + budget.entertainment.vacation.projected + budget.entertainment.theater.projected + budget.entertainment.sports.projected + budget.entertainment.winterSports.projected + budget.entertainment.other.projected }</h4>
+                                <h4>{budget.entertainment.movies.actual + budget.entertainment.music.actual + budget.entertainment.vacation.actual + budget.entertainment.theater.actual + budget.entertainment.sports.actual + budget.entertainment.winterSports.actual + budget.entertainment.other.actual }</h4>
+                                <h4>{budget.entertainment.movies.projected + budget.entertainment.music.projected + budget.entertainment.vacation.projected + budget.entertainment.theater.projected + budget.entertainment.sports.projected + budget.entertainment.winterSports.projected + budget.entertainment.other.projected - (budget.entertainment.movies.actual + budget.entertainment.music.actual + budget.entertainment.vacation.actual + budget.entertainment.theater.actual + budget.entertainment.sports.actual + budget.entertainment.winterSports.actual + budget.entertainment.other.actual)}</h4>
+                                </div>
                         </div>
 
                         <div className="loans-wrapper">
                             <div className="category">
                                 <p>Loans</p>
-                                <h4>ProjectedCost</h4>
+                                <h4>Projected Cost</h4>
                                 <h4>Actual Cost</h4>
                                 <h4>Difference</h4>
                             </div>
@@ -455,7 +455,7 @@ class Budget extends Component {
                                     type="number"
                                     value={budget.loans.personal.actual}
                                     onChange={e => this.handleChangeActual(e, 'loans')} />
-                                <h5>$0</h5>
+                                <h5>{budget.loans.personal.projected - budget.loans.personal.actual}</h5>
                             </div>
                             <div className="category">
                                 <label className="category-name">Student</label>
@@ -472,7 +472,7 @@ class Budget extends Component {
                                     type="number"
                                     value={budget.loans.student.actual}
                                     onChange={e => this.handleChangeActual(e, 'loans')} />
-                                <h5>$0</h5>
+                                <h5>{budget.loans.student.projected - budget.loans.student.actual}</h5>
                             </div>
                             <div className="category">
                                 <label className="category-name">Credit</label>
@@ -489,7 +489,7 @@ class Budget extends Component {
                                     type="number"
                                     value={budget.loans.credit.actual}
                                     onChange={e => this.handleChangeActual(e, 'loans')} />
-                                <h5>$0</h5>
+                                <h5>{budget.loans.credit.projected - budget.loans.credit.actual}</h5>
                             </div>
                             <div className="category">
                                 <label className="category-name">Other</label>
@@ -506,20 +506,20 @@ class Budget extends Component {
                                     type="number"
                                     value={budget.loans.other.actual}
                                     onChange={e => this.handleChangeActual(e, 'loans')} />
-                                <h5>$0</h5>
+                                <h5>{budget.loans.other.projected - budget.loans.other.actual}</h5>
                             </div>
                             <div className="category">
                                 <p>Subtotals</p>
-                                <h4>$0</h4>
-                                <h4>$0</h4>
-                                <h4>$0</h4>
+                                <h4>{budget.loans.personal.projected + budget.loans.student.projected + budget.loans.credit.projected + budget.loans.other.projected }</h4>
+                                <h4>{budget.loans.personal.actual + budget.loans.student.actual + budget.loans.credit.actual + budget.loans.other.actual }</h4>
+                                <h4>{budget.loans.personal.projected + budget.loans.student.projected + budget.loans.credit.projected + budget.loans.other.projected - (budget.loans.personal.actual + budget.loans.student.actual + budget.loans.credit.actual + budget.loans.other.actual)}</h4>
                             </div>
                         </div>
 
                         <div className="transportation-wrapper">
                             <div className="category">
                                 <p>Transportation</p>
-                                <h4>ProjectedCost</h4>
+                                <h4>Projected Cost</h4>
                                 <h4>Actual Cost</h4>
                                 <h4>Difference</h4>
                             </div>
@@ -538,10 +538,10 @@ class Budget extends Component {
                                     type="number"
                                     value={budget.transportation.vehiclePayment.actual}
                                     onChange={e => this.handleChangeActual(e, 'transportation')} />
-                                <h5>$0</h5>
+                                <h5>{budget.transportation.vehiclePayment.projected - budget.transportation.vehiclePayment.actual}</h5>
                             </div>
                             <div className="category">
-                                <label className="category-name"></label>
+                                <label className="category-name">Train/ Uber</label>
                                 <input
                                     name="busTrainUber"
                                     className="projected-input"
@@ -555,7 +555,7 @@ class Budget extends Component {
                                     type="number"
                                     value={budget.transportation.busTrainUber.actual}
                                     onChange={e => this.handleChangeActual(e, 'transportation')} />
-                                <h5>$0</h5>
+                                <h5>{budget.transportation.busTrainUber.projected - budget.transportation.busTrainUber.actual}</h5>
                             </div>
                             <div className="category">
                                 <label className="category-name">Insurance</label>
@@ -572,7 +572,7 @@ class Budget extends Component {
                                     type="number"
                                     value={budget.transportation.insurance.actual}
                                     onChange={e => this.handleChangeActual(e, 'transportation')} />
-                                <h5>$0</h5>
+                                <h5>{budget.transportation.insurance.projected - budget.transportation.insurance.actual}</h5>
                             </div>
                             <div className="category">
                                 <label className="category-name">Licensing</label>
@@ -589,7 +589,7 @@ class Budget extends Component {
                                     type="number"
                                     value={budget.transportation.licensing.actual}
                                     onChange={e => this.handleChangeActual(e, 'transportation')} />
-                                <h5>$0</h5>
+                                <h5>{budget.transportation.licensing.projected - budget.transportation.licensing.actual}</h5>
                             </div>
                             <div className="category">
                                 <label className="category-name">Fuel</label>
@@ -606,7 +606,7 @@ class Budget extends Component {
                                     type="number"
                                     value={budget.transportation.fuel.actual}
                                     onChange={e => this.handleChangeActual(e, 'transportation')} />
-                                <h5>$0</h5>
+                                <h5>{budget.transportation.fuel.projected - budget.transportation.fuel.actual}</h5>
                             </div>
                             <div className="category">
                                 <label className="category-name">Maintenance</label>
@@ -623,7 +623,7 @@ class Budget extends Component {
                                     type="number"
                                     value={budget.transportation.maintenance.actual}
                                     onChange={e => this.handleChangeActual(e, 'transportation')} />
-                                <h5>$0</h5>
+                                <h5>{budget.transportation.maintenance.projected - budget.transportation.maintenance.actual}</h5>
                             </div>
                             <div className="category">
                                 <label className="category-name">Other</label>
@@ -640,17 +640,15 @@ class Budget extends Component {
                                     type="number"
                                     value={budget.transportation.other.actual}
                                     onChange={e => this.handleChangeActual(e, 'transportation')} />
-                                <h5>$0</h5>
+                                <h5>{budget.transportation.other.projected - budget.transportation.other.actual}</h5>
                             </div>
                             <div className="category">
                                 <p>Subtotals</p>
-                                <h4>$0</h4>
-                                <h4>$0</h4>
-                                <h4>$0</h4>
-                            </div>
+                                <h4>{budget.transportation.vehiclePayment.projected + budget.transportation.busTrainUber.projected + budget.transportation.insurance.projected + budget.transportation.licensing.projected + budget.transportation.fuel.projected + budget.transportation.maintenance.projected + budget.transportation.other.projected }</h4>
+                                <h4>{budget.transportation.vehiclePayment.actual + budget.transportation.busTrainUber.actual + budget.transportation.insurance.actual + budget.transportation.licensing.actual + budget.transportation.fuel.actual + budget.transportation.maintenance.actual + budget.transportation.other.actual }</h4>
+                                <h4>{budget.transportation.vehiclePayment.projected + budget.transportation.busTrainUber.projected + budget.transportation.insurance.projected + budget.transportation.licensing.projected + budget.transportation.fuel.projected + budget.transportation.maintenance.projected + budget.transportation.other.projected - (budget.transportation.vehiclePayment.actual + budget.transportation.busTrainUber.actual + budget.transportation.insurance.actual + budget.transportation.licensing.actual + budget.transportation.fuel.actual + budget.transportation.maintenance.actual + budget.transportation.other.actual)}</h4>
+                                </div>
                         </div>
-
-
                     </div>
                     <div className='button-wrapper'>
                         <button className='button' onClick={this.handleSubmit}>UPDATE</button>
