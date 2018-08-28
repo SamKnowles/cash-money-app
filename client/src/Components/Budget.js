@@ -49,23 +49,23 @@ class Budget extends Component {
             return {
                 [category]: {
                     ...prevState[category],
-                    [name]: { projected: value }
+                    [name]: { ...prevState.budget[name], projected: Number(value) }
                 }
             }
         })
     }
 
-    // handleChangeIncomeActual = (e, category) => {
-    //     const { value, name } = e.target;
-    //     this.setState(prevState => {
-    //         return {
-    //             [category]: {
-    //                 ...prevState[category],
-    //                 [name]: { actual: value }
-    //             }
-    //         }
-    //     })
-    // }
+    handleChangeIncomeActual = (e, category) => {
+        const { value, name } = e.target;
+        this.setState(prevState => {
+            return {
+                [category]: {
+                    ...prevState[category],
+                    [name]: { ...prevState.budget[name], actual: Number(value) }
+                }
+            }
+        })
+    }
 
     handleSubmit = (e) => {
         this.props.editBudget(this.state.budget, this.props.budget.data._id);
@@ -80,7 +80,6 @@ class Budget extends Component {
         let { loading } = this.props.budget;
         console.log(this.state);
         const { budget } = this.state;
-        console.log();
         return (
             budget ?
                 <div className="budget-wrapper">
@@ -115,7 +114,13 @@ class Budget extends Component {
                                 <div className='inc-wrapper-wrapper'>
                                     <div className="income-cat-wrapper">
                                         <h6>Income 1</h6>
-                                        <div className='dif-wrapper'>$0</div>
+                                        <input
+                                    name="income"
+                                    className="dif-wrapper"
+                                    type='number'
+                                    value={budget.income.actual}
+                                    placeholder={budget.income.actual}
+                                    onChange={e => this.handleChangeIncomeActual(e, 'budget')} />
                                     </div>
                                     <div className="income-cat-wrapper">
                                         <h6>Extra Income</h6>
