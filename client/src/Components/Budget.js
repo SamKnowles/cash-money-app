@@ -188,7 +188,7 @@ class Budget extends Component {
                                     type="number"
                                     value={budget.housing.phone.actual}
                                     onChange={e => this.handleChangeActual(e, 'housing')} />
-                                <h5>{budget.housing.phone.projected - budget.housing.phone.actual}</h5>
+                                <h5 className='dif'>{budget.housing.phone.projected - budget.housing.phone.actual}</h5>
                             </div>
                             <div className="category">
                                 <label className="category-name">Electricity</label>
