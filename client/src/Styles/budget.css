@@ -22,7 +22,7 @@
 .income-wrapper {
     height: 300px;
     border: 2px darkblue solid;
-    width: 900px;
+    width: 800px;
     display: flex;
     justify-content: center;
     align-items: center;
