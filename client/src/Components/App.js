@@ -41,7 +41,7 @@ class App extends Component {
                         }} />
                         <Route path="/signup" render={(props) => {
                             return isAuthenticated ?
-                                <Redirect to="/budget" /> :
+                                <Redirect to="/form/housing" /> :
                                 <Signup {...props} />
                         }} />
                         <ProtectedRoute path="/profile" component={Profile} />
