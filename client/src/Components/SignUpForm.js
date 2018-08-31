@@ -23,7 +23,6 @@ function SignupForm(props) {
                         placeholder="Password" />
                 </div>
                 <button className='submit-button-wrapper' type="submit">Create Account</button>
-                <p>{props.errMsg}</p>
             </form>
         </div>
     )

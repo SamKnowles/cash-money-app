@@ -24,7 +24,6 @@ function LoginForm(props) {
                         placeholder="Password" />
                 </div>
                 <button className='submit-button-wrapper' type="submit">Login</button>
-                <p>{props.errMsg}</p>
             </form>
         </div>
         

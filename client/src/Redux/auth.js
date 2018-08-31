@@ -108,15 +108,7 @@ export default function reducer(state = initialState, action) {
                 // authErrCode: initialState.authErrCode,
                 loading: false
             }
-        // case "AUTH_ERROR":
-        //     return {
-        //         ...state,
-        //         authErrCode: {
-        //             ...state.authErrCode,
-        //             [action.key]: action.errCode
-        //         },
-        //         loading: false
-        //     }
+
         case "LOGOUT":
             return {
                 ...initialState,

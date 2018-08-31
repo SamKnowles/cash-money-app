@@ -43,13 +43,7 @@ class Login extends Component {
         this.clearInputs();
     }
     render() {
-        // let authErrCode = this.props.authErrCode.login;
-        // let errMsg = "";
-        // if (authErrCode < 500 && authErrCode > 399) {
-        //     errMsg = "Invalid username or password!";
-        // } else if (authErrCode > 499) {
-        //     errMsg = "Server error!";
-        // }
+
         return (
             <div className='login-signup-form-wrapper'>
 
