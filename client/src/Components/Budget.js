@@ -163,7 +163,9 @@ class Budget extends Component {
                                     name="mortgageRent"
                                     className="projected-input"
                                     type='number'
+                                    step='0.01'
                                     value={budget.housing.mortgageRent.projected}
+                                    value='0.00'
                                     placeholder={budget.housing.mortgageRent.projected}
                                     onChange={e => this.handleChangeProjected(e, "housing")} />
                                     <span>$</span>
@@ -624,9 +626,9 @@ class Budget extends Component {
                             </div>
                             <div className="category">
                                 <p>Subtotals</p>
-                                <h4 style={{backgroundColor: "white"}}>{budget.loans.personal.projected + budget.loans.student.projected + budget.loans.credit.projected + budget.loans.other.projected }</h4>
-                                <h4 style={{backgroundColor: "white"}}>{budget.loans.personal.actual + budget.loans.student.actual + budget.loans.credit.actual + budget.loans.other.actual }</h4>
-                                <h4 style={budget.loans.personal.projected + budget.loans.student.projected + budget.loans.credit.projected + budget.loans.other.projected - (budget.loans.personal.actual + budget.loans.student.actual + budget.loans.credit.actual + budget.loans.other.actual) > 0 ? {color: "green", backgroundColor: "white"}  : {color: "red", backgroundColor: "white"}}>{budget.loans.personal.projected + budget.loans.student.projected + budget.loans.credit.projected + budget.loans.other.projected - (budget.loans.personal.actual + budget.loans.student.actual + budget.loans.credit.actual + budget.loans.other.actual)}</h4>
+                                <h4 style={{backgroundColor: "white"}}><span>$</span>{(budget.loans.personal.projected + budget.loans.student.projected + budget.loans.credit.projected + budget.loans.other.projected).toFixed(2)}</h4>
+                                <h4 style={{backgroundColor: "white"}}><span>$</span>{(budget.loans.personal.actual + budget.loans.student.actual + budget.loans.credit.actual + budget.loans.other.actual).toFixed(2)}</h4>
+                                <h4 style={budget.loans.personal.projected + budget.loans.student.projected + budget.loans.credit.projected + budget.loans.other.projected - (budget.loans.personal.actual + budget.loans.student.actual + budget.loans.credit.actual + budget.loans.other.actual) > 0 ? {color: "green", backgroundColor: "white"}  : {color: "red", backgroundColor: "white"}}><span>$</span>{(budget.loans.personal.projected + budget.loans.student.projected + budget.loans.credit.projected + budget.loans.other.projected - (budget.loans.personal.actual + budget.loans.student.actual + budget.loans.credit.actual + budget.loans.other.actual).toFixed(2))}</h4>
                             </div>
                         </div>
 
