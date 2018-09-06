@@ -20,94 +20,94 @@ class FormSequence extends Component {
             },
             housing: {
                 mortgageRent: {
-                    projected: 0,
+                    projected: '',
                 },
                 phone: {
-                    projected: 0,
+                    projected: '',
                 },
                 gas: {
-                    projected: 0,
+                    projected: '',
                 },
                 electricity: {
-                    projected: 0,
+                    projected: '',
                 },
                 waterSewer: {
-                    projected: 0,
+                    projected: '',
                 },
                 internet: {
-                    projected: 0,
+                    projected: '',
                 },
                 wasteRemoval: {
-                    projected: 0,
+                    projected: '',
                 },
                 maintenance: {
-                    projected: 0,
+                    projected: '',
                 },
                 supplies: {
-                    projected: 0,
+                    projected: '',
                 },
                 other: {
-                    projected: 0
+                    projected: ''
                 }
             },
             loans: {
                 personal: {
-                    projected: 0,
+                    projected: '',
                 },
                 student: {
-                    projected: 0,
+                    projected: '',
                 },
                 credit: {
-                    projected: 0,
+                    projected: '',
                 },
                 other: {
-                    projected: 0,
+                    projected: '',
                 }
             },
             transportation: {
                 vehiclePayment: {
-                    projected: 0,
+                    projected: '',
                 },
                 busTrainUber: {
-                    projected: 0,
+                    projected: '',
                 },
                 insurance: {
-                    projected: 0,
+                    projected: '',
                 },
                 licensing: {
-                    projected: 0,
+                    projected: '',
                 },
                 fuel: {
-                    projected: 0,
+                    projected: '',
                 },
                 maintenance: {
-                    projected: 0,
+                    projected: '',
                 },
                 other: {
-                    projected: 0,
+                    projected: '',
                 }
             },
             entertainment: {
                 movies: {
-                    projected: 0,
+                    projected: '',
                 },
                 music: {
-                    projected: 0,
+                    projected: '',
                 },
                 vacation: {
-                    projected: 0,
+                    projected: '',
                 },
                 theater: {
-                    projected: 0,
+                    projected: '',
                 },
                 sports: {
-                    projected: 0,
+                    projected: '',
                 },
                 winterSports: {
-                    projected: 0,
+                    projected: '',
                 },
                 other: {
-                    projected: 0,
+                    projected: '',
                 }
             },
         }

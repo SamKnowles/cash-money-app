@@ -52,6 +52,9 @@
     display: flex;
     justify-content: flex-start;
     width: 320px;
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .actual-income-wrapper {
@@ -60,6 +63,9 @@
     display: flex;
     justify-content: flex-start;
     width: 320px;
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 h2 {
@@ -194,6 +200,9 @@ h5 {
     width: 62px;
     border: 1px silver solid;
     margin: 0;
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 h4 {
@@ -203,7 +212,9 @@ h4 {
     font-size: 13px;
     text-align: center;
     background-color: lightgreen;
-    
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 p {
