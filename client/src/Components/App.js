@@ -31,7 +31,7 @@ class App extends Component {
                     <Switch>
                         <Route exact path="/" render={(props) => {
                             return isAuthenticated ?
-                                <Redirect to="/form/housing" /> :
+                                <Redirect to="/budget" /> :
                                 <Signup {...props} />
                         }} />
                         <Route path="/login" render={(props) => {
@@ -52,7 +52,7 @@ class App extends Component {
                         <ProtectedRoute path="/loans" component={LoansForm} />
                         <ProtectedRoute path="/entertainment" component={EntertainmentForm} />
                     </Switch>
-                }
+
             </div>
         )
     }
