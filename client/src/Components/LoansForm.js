@@ -17,19 +17,19 @@ class LoansForm extends Component {
                 <div className='cat-form-wrapper'>
                     <div className='form-category-wrapper'>
                         <label className="form-category-name">Student</label>
-                        <input name="student" className='cat-input-wrapper' value={formData.student.projected} type="number" onChange={e => handleChange(e, "loans")} />
+                        <span className='form-dollar-sign'>$</span><input name="student" placeholder="0.00" className='cat-input-wrapper' value={formData.student.projected} type="number" onChange={e => handleChange(e, "loans")} />
                     </div>
                     <div className='form-category-wrapper'>
                         <label className="form-category-name">Credit Card</label>
-                        <input name="credit" className='cat-input-wrapper' value={formData.credit.projected} type="number" onChange={e => handleChange(e, "loans")} />
+                        <span className='form-dollar-sign'>$</span><input name="credit" placeholder="0.00" className='cat-input-wrapper' value={formData.credit.projected} type="number" onChange={e => handleChange(e, "loans")} />
                     </div>
                     <div className='form-category-wrapper'>
                         <label className="form-category-name">Personal</label>
-                        <input name="personal" className='cat-input-wrapper' value={formData.personal.projected} type="number" onChange={e => handleChange(e, "loans")} />
+                        <span className='form-dollar-sign'>$</span><input name="personal" placeholder="0.00" className='cat-input-wrapper' value={formData.personal.projected} type="number" onChange={e => handleChange(e, "loans")} />
                     </div>
                     <div className='form-category-wrapper'>
                         <label className="form-category-name">Other</label>
-                        <input name="other" className='cat-input-wrapper' value={formData.other.projected} type="number" onChange={e => handleChange(e, "loans")} />
+                        <span className='form-dollar-sign'>$</span><input name="other" placeholder="0.00" className='cat-input-wrapper' value={formData.other.projected} type="number" onChange={e => handleChange(e, "loans")} />
                     </div>
                 </div>
                 <div className='link-wrapper'>
