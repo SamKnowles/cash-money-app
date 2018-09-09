@@ -226,5 +226,8 @@ p {
     margin: 0;
 }
 
-
-
+.money-income {
+    color: red;
+    display: flex;
+    flex-wrap: wrap;
+}
