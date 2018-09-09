@@ -3,9 +3,7 @@ import { connect } from "react-redux";
 import { Route, Redirect } from "react-router-dom";
 
 class ProtectedRoute extends Component {
-    constructor(props) {
-        super(props)
-    }
+
     render() {
         const isAuthenticated = this.props.auth.isAuthenticated;
         const Component = this.props.component;
