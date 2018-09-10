@@ -86,7 +86,7 @@ class Budget extends Component {
                     <div className='income-wrapper'>
                         <div className='pro-act-income-wrapper'>
                             <div className='projected-income-wrapper'>
-                                <h2 className='money-income'>Projected Monthly Income</h2>
+                                <h2 className='money-income' >Projected Monthly Income</h2>
                                 <div className='inc-wrapper-wrapper'>
                                     <div className="income-cat-wrapper">
                                         <h6>Income 1</h6>
