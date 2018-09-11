@@ -164,6 +164,7 @@ class Budget extends Component {
                                     value={budget.housing.mortgageRent.projected}
                                     placeholder={budget.housing.mortgageRent.projected}
                                     onChange={e => this.handleChangeProjected(e, "housing")} />
+                                    <span>$</span>
                                 <input
                                     name="mortgageRent"
                                     className="actual-input"
@@ -430,6 +431,7 @@ class Budget extends Component {
                                     type="number"
                                     value={budget.entertainment.vacation.actual}
                                     onChange={e => this.handleChangeActual(e, 'entertainment')} />
+                                    <span>$</span>
                                 <h5 style={budget.entertainment.vacation.projected - budget.entertainment.vacation.actual > 0 ? {color: "green"}  : {color: "red"} }>{(budget.entertainment.vacation.projected - budget.entertainment.vacation.actual).toFixed(2)}</h5>
 
                             </div>

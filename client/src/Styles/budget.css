@@ -1,6 +1,4 @@
-.budget-wrapper {
-    background-color: lightskyblue;
-    
+.budget-wrapper {    
     width: 100%vh;
     height: 200%;
     display: flex;
