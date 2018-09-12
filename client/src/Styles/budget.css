@@ -51,7 +51,6 @@
     display: flex;
     justify-content: flex-start;
     width: 320px;
-    white-space: nowrap; 
     overflow: hidden;
     text-overflow: ellipsis;
 }
@@ -62,21 +61,25 @@
     display: flex;
     justify-content: flex-start;
     width: 320px;
-    white-space: nowrap; 
     overflow: hidden;
     text-overflow: ellipsis;
 }
 
 h2 {
-    border: 2px blue solid;
+    width: auto;
     font-size: 18px;
+    color: red;
+    display: flex;
+}
+
+.pmi-ami-wrapper {
+    border: 2px purple solid;
+    display: flex;
+    flex-direction: column;    
+    justify-content: center;
+    align-items: center;
     width: 120px;
     height: 86px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-    margin: 0 auto;
 }
 
 h6 {
@@ -222,4 +225,3 @@ p {
     font-size: 20px;
     margin: 0;
 }
-
