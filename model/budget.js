@@ -8,6 +8,7 @@ const categorySchema = Schema({
         required: true
     },
     income: { projected: { default: 0, type: Number }, actual: { default: 0, type: Number } },
+    extraIncome: { projected: { default: 0, type: Number }, actual: { default: 0, type: Number } },
     housing: {
         mortgageRent: { projected: { default: 0, type: Number }, actual: { default: 0, type: Number } },
         phone: { projected: { default: 0, type: Number }, actual: { default: 0, type: Number } },
