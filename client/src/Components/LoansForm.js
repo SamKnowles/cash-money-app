@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from "react-redux";
 import { submitBudget } from "../Redux/budget";
-import '../Styles/loansform.css';
+import '../Styles/categoryForm.css';
 
 import { Link, withRouter } from "react-router-dom";
 
