@@ -38,12 +38,15 @@
 }
 
 .dif-wrapper {
-    border: 1px solid black;
     border-top: 0 none;
     border-bottom: 0 none;
-    border-left: 0 none;    width: 62px;
+    border-left: 0 none;    
+    width: 69px;
     display: flex;
     height: 23px;
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;
     
 }
 
@@ -71,14 +74,16 @@ h2 {
     font-size: 18px;
     color: red;
     display: flex;
+    text-align: center;
+    margin: 0 auto;
 }
 
 .pmi-ami-wrapper {
     border: 2px purple solid;
     display: flex;
-    flex-direction: column;    
     justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    text-align: center;
     width: 120px;
     height: 86px;
 }
@@ -90,7 +95,7 @@ h6 {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    margin: 0 auto;
+    margin: 0;
     border: 1px solid black;
     border-top: 0 none;
     border-bottom: 0 none;
@@ -127,7 +132,8 @@ h6 {
 .bal-wrapper {
     border: 1px silver solid;    
     width: 66px;
-    
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 
@@ -215,7 +221,6 @@ h6 {
 
 h5 {
     width: 62px;
-
     margin: 0;
     white-space: nowrap; 
     overflow: hidden;
@@ -229,9 +234,8 @@ h4 {
     font-size: 13px;
     text-align: center;
     background-color: cyan;
-    /* white-space: nowrap; 
     overflow: hidden;
-    text-overflow: ellipsis; */
+    text-overflow: ellipsis;
 }
 
 p {
