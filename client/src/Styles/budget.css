@@ -38,8 +38,10 @@
 }
 
 .dif-wrapper {
-    border: 2px silver solid;
-    width: 62px;
+    border: 1px solid black;
+    border-top: 0 none;
+    border-bottom: 0 none;
+    border-left: 0 none;    width: 62px;
     display: flex;
     height: 23px;
     
@@ -89,6 +91,10 @@ h6 {
     justify-content: center;
     flex-direction: column;
     margin: 0 auto;
+    border: 1px solid black;
+    border-top: 0 none;
+    border-bottom: 0 none;
+    border-left: 0 none;
 }
 
 .pro-act-income-wrapper {
@@ -107,8 +113,10 @@ h6 {
 }
 
 .bal-discription-wrapper {
-    border: 1px silver solid;    
-    width: 200px;
+    border: 1px solid black;
+    border-top: 0 none;
+    border-bottom: 0 none;
+    border-left: 0 none;    width: 200px;
     height: 45px;
     font-size: 13px;
     display: flex;
@@ -180,24 +188,34 @@ h6 {
 }
 
 .category-name {
-    width: 145px;
-    border: 1px silver solid;
+    border-right: 1px solid black;        
+    width: 146px;
+    /* border: 1px silver solid; */
 }
 
 .projected-input {
-    width: 60px;    
+    width: 61px;    
     color: black;
-    border: 1px silver solid;
+    border: 0;
+    outline: 0;
+    border: 1px solid black;
+    border-top: 0 none;
+    border-bottom: 0 none;
+    border-left: 0 none;
 }
 
 .actual-input {
-    width: 60px;
-    border: 1px silver solid;
+    width: 61px;
+    border-right: 1px solid black;
+    border: 1px solid black;
+    border-top: 0 none;
+    border-bottom: 0 none;
+    border-left: 0 none;
 }
 
 h5 {
     width: 62px;
-    border: 1px silver solid;
+
     margin: 0;
     white-space: nowrap; 
     overflow: hidden;
@@ -205,15 +223,15 @@ h5 {
 }
 
 h4 {
-    width: 62px;
+    width: 70px;
     border: 1px silver solid;
     margin: 0;
     font-size: 13px;
     text-align: center;
     background-color: cyan;
-    white-space: nowrap; 
+    /* white-space: nowrap; 
     overflow: hidden;
-    text-overflow: ellipsis;
+    text-overflow: ellipsis; */
 }
 
 p {

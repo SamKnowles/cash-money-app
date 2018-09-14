@@ -421,9 +421,8 @@ class Budget extends Component {
                                     value={budget.entertainment.music.projected}
                                     placeholder={budget.entertainment.music.projected}
                                     onChange={e => this.handleChangeProjected(e, "entertainment")} />
-                                
+                                <span>$</span>
                                 <input
-                                
                                     name="music"
                                     className="actual-input"
                                     type="number"
