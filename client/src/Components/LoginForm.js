@@ -4,6 +4,7 @@ import '../Styles/login.css';
 function LoginForm(props) {
     return (
         <div className="form-wrapper">
+        <button className='submit-button-wrapper' type="submit">Login</button>
             <form className="login-wrapper" onSubmit={props.handleSubmit}>
                 <div className='username-wrapper'>
                     <input
@@ -23,7 +24,6 @@ function LoginForm(props) {
                         type="password"
                         placeholder="Password" />
                 </div>
-                <button className='submit-button-wrapper' type="submit">Login</button>
             </form>
         </div>
         

@@ -3,6 +3,7 @@ import React from 'react';
 function SignupForm(props) {
     return (
         <div className="form-wrapper">
+        <button className='submit-button-wrapper' type="submit">Create Account</button>
             <form className='login-wrapper' onSubmit={props.handleSubmit}>
                 <div className='username-wrapper'>
                     <input
@@ -22,7 +23,6 @@ function SignupForm(props) {
                         type="password"
                         placeholder="Password" />
                 </div>
-                <button className='submit-button-wrapper' type="submit">Create Account</button>
             </form>
         </div>
     )

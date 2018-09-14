@@ -27,7 +27,7 @@ class App extends Component {
         const isAuthenticated = this.props.isAuthenticated;
         return (
             <div className="app-wrapper">
-                <Navbar />
+                <Navbar />             
                     <Switch>
                         <Route exact path="/" render={(props) => {
                             return isAuthenticated ?
@@ -52,7 +52,6 @@ class App extends Component {
                         <ProtectedRoute path="/loans" component={LoansForm} />
                         <ProtectedRoute path="/entertainment" component={EntertainmentForm} />
                     </Switch>
-
             </div>
         )
     }
@@ -65,3 +64,4 @@ class App extends Component {
 // }
 
 export default withRouter(connect(state => state.auth, {verifyUser})(App))
+
