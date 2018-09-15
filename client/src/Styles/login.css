@@ -1,58 +1,54 @@
 .form-wrapper {
-    width: 300px;
-    height: 300px;
-    border-radius: 5px;
-    background-color: #F0F0F0;
-    margin-top:100px;
-    border: 1px solid fuchsia;
+   width: 300px;
+   height: 300px;
+   border-radius: 5px;
+   background-color: #F0F0F0;
+   margin-top:100px;
 }
 
 .login-wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    height: 80%;
-    text-align: center;
-    padding: 10px;
-    border: 1px solid salmon;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+   height: 80%;
+   text-align: center;
+   padding: 10px;
 }
 
 .username-wrapper {
-    width: 100%;
+   width: 100%;
 }
 
 .password-wrapper {
-    width: 100%;
+   width: 100%;
 }
 
 .submit-button-wrapper {
-    border-radius: 10px;
-    height: 40px;    
-    width: 150px;
-    color: white;
-    font-size: 15px;
-    margin: 0 auto;
-    background-color: #8E9EAF;
-    border: 1px solid green;
+   border-radius: 10px;
+   height: 40px;    
+   width: 150px;
+   color: white;
+   font-size: 15px;
+   margin: 0 auto;
+   background-color: #8E9EAF;
 }
 
 .signup-input {
-    width: 90%;
-    border-radius: 5px;
-    height: 25px;
-    border: none;
-    padding: 5px;
-    border: 1px solid red;
-    /* margin: 0 auto; */
+   width: 90%;
+   border-radius: 5px;
+   height: 25px;
+   border: none;
+   padding: 5px;
+
+   /* margin: 0 auto; */
 }
 
 .login-signup-form-wrapper {
-    padding: 10px;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-   border: 1px solid purple;
+   padding: 10px;
+   width: 100%;
+   height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+  
 }
-

@@ -4,89 +4,12 @@ import { connect } from "react-redux";
 import '../Styles/budget.css';
 
 // import { Switch, Route, Link, withRouter } from "react-router-dom";
-function clone(obj) {
-    if (null == obj || "object" != typeof obj) return obj;
-    var copy = obj.constructor();
-    for (var attr in obj) {
-        if (obj.hasOwnProperty(attr)) copy[attr] = obj[attr];
-    }
-    return copy;
-}
-
-const initBudget = {
-    income: {},
-    extraIncome: {},
-    housing: {
-        mortgageRent: {
-        },
-        phone: {
-        },
-        gas: {
-        },
-        electricity: {
-        },
-        waterSewer: {
-        },
-        internet: {
-        },
-        wasteRemoval: {
-        },
-        maintenance: {
-        },
-        supplies: {
-        },
-        other: {
-        }                },
-    entertainment: {
-        movies: {
-        },
-        music: {
-        },
-        vacation: {
-        },
-        theater: {
-        },
-        sports: {
-        },
-        winterSports: {
-        },
-        other: {
-        }
-    },
-    loans: {
-        personal: {
-        },
-        student: {
-        },
-        credit: {
-        },
-        other: {
-        }
-    },
-    transportation: {
-        vehiclePayment: {
-        },
-        busTrainUber: {
-        },
-        insurance: {
-        },
-        licensing: {
-        },
-        fuel: {
-        },
-        maintenance: {
-        },
-        other: {
-        }
-    }
-}
-
 
 class Budget extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            budget: clone(initBudget)
+            budget: null
         }
     }
 
@@ -149,21 +72,13 @@ class Budget extends Component {
     }
 
     componentDidMount() {
-        this.props.loadBudget().then(() => {
-            console.log(this.props)
-            let newBudget = "initial bullshit"
-            if (Object.keys(this.props.budget.data).length === 0 && this.props.budget.data.constructor === Object){
-                newBudget = clone(initBudget)
-            } else {
-                newBudget = this.props.budget.data
-            }
-            this.setState({ budget: newBudget })
-        })
+        this.props.loadBudget().then(() => this.setState({ budget: this.props.budget.data }))
     }
 
 
     render() {
         console.log(this.state);
+        // let { loading } = this.props.budget;	
         const { budget } = this.state;
         return (
             budget ?
