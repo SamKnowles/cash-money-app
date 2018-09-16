@@ -20,12 +20,13 @@
 
 .income-wrapper {
     height: 300px;
-    border: 2px darkblue solid;
     width: 800px;
     display: flex;
     justify-content: center;
     align-items: center;
     justify-content: space-around;
+    width: 60%;
+    
 }
 
 .inc-wrapper-wrapper {
@@ -78,7 +79,6 @@ h2 {
 }
 
 .pmi-ami-wrapper {
-    border: 2px purple solid;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -102,12 +102,12 @@ h6 {
 }
 
 .pro-act-income-wrapper {
-    border: 2px red solid;
+    border: 2px solid black;
 }
 
 .balance-section-wrapper {
     border: 1px silver solid;    
-    border: 2px blue solid;    
+    border: 2px solid black;    
 }
 
 .bal-row-wrapper {
@@ -142,33 +142,35 @@ h6 {
 
 
 .category-wrapper {
-    border: 2px darkred solid;
-    width: 60%;
+    width: 70%;
     height: auto;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .housing-wrapper {
-    border: 2px silver solid;
+    border: 2px black solid;
 }
 
 .entertainment-wrapper { 
-    border: 2px silver solid;
+    border: 2px black solid;
+    height: 100%;
 }
 
 .transportation-wrapper { 
-    border: 2px silver solid;
+    border: 2px black solid;
+    margin-top: -40px;
     }
 
 .loans-wrapper {  
-    border: 2px silver solid;
     margin-top: 20px;
+    border: 2px black solid;
+    height: 100%;
 }
 
 .button-wrapper {  
-    border: 2px red solid;
+    margin-top: 30px;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -237,14 +239,14 @@ h4 {
     margin: 0;
     font-size: 13px;
     text-align: center;
-    background-color: cyan;
+    background-color: #b7d7e8;
     overflow: hidden;
     text-overflow: ellipsis;
 }
 
 p {
     width: 145px;
-    background-color: cyan;
+    background-color: #b7d7e8;
     border: 1px silver solid;
     font-weight: bold;
     font-size: 20px;
