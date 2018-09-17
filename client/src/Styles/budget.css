@@ -7,7 +7,6 @@
 }
 
 .budget-title-wrapper {
-    border: 2px black solid;
     font-size: 40px;
     width: 100%;
     height: 100px;
@@ -16,6 +15,8 @@
     justify-content: center;
     flex-direction: column;
     text-align: center;
+    border: 2px solid #3b3a30;
+    border-radius: 5px;
 }
 
 .income-wrapper {
@@ -30,12 +31,12 @@
 }
 
 .inc-wrapper-wrapper {
-    border: 2px silver solid;
+    border: 2px #b2c2bf solid;
 }
 
 .income-cat-wrapper {
     display: flex;
-    border: 1px silver solid;
+    border: 1px #b2c2bf solid;
 }
 
 .dif-wrapper {
@@ -51,7 +52,7 @@
 }
 
 .projected-income-wrapper {
-    border: 2px silver solid;
+    border: 2px #b2c2bf solid;
     height: 90px;
     display: flex;
     justify-content: flex-start;
@@ -61,7 +62,7 @@
 }
 
 .actual-income-wrapper {
-    border: 2px silver solid;
+    border: 2px #b2c2bf solid;
     height: 90px;
     display: flex;
     justify-content: flex-start;
@@ -95,29 +96,29 @@ h6 {
     justify-content: center;
     flex-direction: column;
     margin: 0;
-    border: 1px solid black;
+    border: 1px solid #3b3a30;
     border-top: 0 none;
     border-bottom: 0 none;
     border-left: 0 none;
 }
 
 .pro-act-income-wrapper {
-    border: 2px solid black;
+    border: 2px solid #3b3a30;
 }
 
 .balance-section-wrapper {
-    border: 1px silver solid;    
-    border: 2px solid black;    
+    border: 1px #b2c2bf solid;    
+    border: 2px solid #3b3a30;    
 }
 
 .bal-row-wrapper {
-    border: 1px silver solid;    
+    border: 1px #b2c2bf solid;    
     display: flex;
     
 }
 
 .bal-discription-wrapper {
-    border: 1px solid black;
+    border: 1px solid #3b3a30;
     border-top: 0 none;
     border-bottom: 0 none;
     border-left: 0 none;    width: 200px;
@@ -130,7 +131,7 @@ h6 {
 }
 
 .bal-wrapper {
-    border: 1px silver solid;    
+    border: 1px #b2c2bf solid;    
     width: 66px;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -150,22 +151,26 @@ h6 {
 }
 
 .housing-wrapper {
-    border: 2px black solid;
+    border: 2px solid #000000;
+    border-radius: 5px;
 }
 
 .entertainment-wrapper { 
-    border: 2px black solid;
+    border: 2px solid #000000;
+    border-radius: 5px;
     height: 100%;
 }
 
 .transportation-wrapper { 
-    border: 2px black solid;
+    border: 2px solid #000000;
+    border-radius: 5px;
     margin-top: -40px;
     }
 
 .loans-wrapper {  
     margin-top: 20px;
-    border: 2px black solid;
+    border: 2px solid #000000;
+    border-radius: 5px;
     height: 100%;
 }
 
@@ -180,7 +185,7 @@ h6 {
 }
 .button {
     background-color: white; 
-    color: black; 
+    color: #3b3a30; 
     border: 2px solid #008CBA;
     font-size: 24px;
     width: 50%;
@@ -193,24 +198,24 @@ h6 {
 
 .category {
     width: 100%;
-    border: 1px silver solid;
+    border: 1px #b2c2bf solid;
     display: flex;
     justify-content: flex-start;
     margin: 0;
 }
 
 .category-name {
-    border-right: 1px solid black;        
+    border-right: 1px solid #3b3a30;        
     width: 146px;
-    /* border: 1px silver solid; */
+    /* border: 1px #b2c2bf solid; */
 }
 
 .projected-input {
     width: 61px;    
-    color: black;
+    color: #3b3a30;
     border: 0;
     outline: 0;
-    border: 1px solid black;
+    border: 1px solid #3b3a30;
     border-top: 0 none;
     border-bottom: 0 none;
     border-left: 0 none;
@@ -218,8 +223,8 @@ h6 {
 
 .actual-input {
     width: 61px;
-    border-right: 1px solid black;
-    border: 1px solid black;
+    border-right: 1px solid #3b3a30;
+    border: 1px solid #3b3a30;
     border-top: 0 none;
     border-bottom: 0 none;
     border-left: 0 none;
@@ -235,19 +240,19 @@ h5 {
 
 h4 {
     width: 70px;
-    border: 1px silver solid;
+    border: 1px #b2c2bf solid;
     margin: 0;
     font-size: 13px;
     text-align: center;
-    background-color: #b7d7e8;
+    background-color: #2a623d;
     overflow: hidden;
     text-overflow: ellipsis;
 }
 
 p {
     width: 145px;
-    background-color: #b7d7e8;
-    border: 1px silver solid;
+    background-color: #2a623d;
+    border: 1px #b2c2bf solid;
     font-weight: bold;
     font-size: 20px;
     margin: 0;
