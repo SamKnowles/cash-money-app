@@ -244,14 +244,14 @@ h4 {
     margin: 0;
     font-size: 13px;
     text-align: center;
-    background-color: #2a623d;
+    background-color: lightblue;
     overflow: hidden;
     text-overflow: ellipsis;
 }
 
 p {
     width: 145px;
-    background-color: #2a623d;
+    background-color: lightblue;
     border: 1px #b2c2bf solid;
     font-weight: bold;
     font-size: 20px;
