@@ -7,13 +7,14 @@ import '../Styles/navbar.css';
 
 
 class Navbar extends Component {
+33
 
     render() {
         const isAuthenticated = this.props.auth.isAuthenticated;
         return (
             <div className='nav-wrapper'>
                 <div className="navbar-item">
-                    {isAuthenticated ? null  && Component === <login />: <div className="nav-link" ><Link to="/login">Login</Link></div>}
+                    {isAuthenticated ? null : <div className="nav-link" ><Link to="/login">Login</Link></div>}
                 </div>
                 <div className="navbar-item">
                     {isAuthenticated ? null : <div className="nav-link"><Link to="/signup">Sign Up</Link></div>}
