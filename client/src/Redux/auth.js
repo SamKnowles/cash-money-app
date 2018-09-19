@@ -12,13 +12,13 @@ userAxios
 
 export function verifyUser() {
     return (dispatch) => {
-        userAxios.get("/")
+        userAxios.get("/api/profile")
             .then((response) => {
                 let { success, user } = response.data
                 dispatch(authenticate(user, success));
             })
             .catch((err) => {
-                console.error(err)
+                dispatch({type: "AUTH_FAIL"});
             })
     }
 }
@@ -112,6 +112,11 @@ export default function reducer(state = initialState, action) {
         case "LOGOUT":
             return {
                 ...initialState,
+                loading: false
+            }
+        case "AUTH_FAIL":
+            return {
+                ...state,
                 loading: false
             }
         default:

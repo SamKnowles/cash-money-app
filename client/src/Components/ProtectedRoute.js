@@ -6,12 +6,12 @@ class ProtectedRoute extends Component {
 
     render() {
         const isAuthenticated = this.props.auth.isAuthenticated;
-        const Component = this.props.component;
+        const ProtectedComponent = this.props.component;
         const path = this.props.path;
         return (
             isAuthenticated ?
                 <Route path={path} render={(props) => {
-                    return <Component {...props} />
+                    return <ProtectedComponent {...props} />
                 }} /> :
                 <Redirect to="/" />
         )

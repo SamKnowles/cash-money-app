@@ -9,7 +9,7 @@ profileRoute.route("/")
         User.findById(req.user._id, (err, user) => {
             if (err) return res.status(500).sent({ success: false, err })
             if (user === null) return res.status(400).send({ success: false, err: "User not found!" })
-            return res.status(200).sent({ success: true, user: user.withoutPassword() })
+            return res.status(200).send({ success: true, user: user.withoutPassword() })
         })
     });
 profileRoute.put("/", (req, res) => {

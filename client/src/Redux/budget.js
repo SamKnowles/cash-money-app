@@ -13,7 +13,7 @@ budgetAxios
 
 const budgetUrl = "/api/budget/";
 
-const budgetReducer = (budget = { data: {}, loading: true }, action) => {
+const budgetReducer = (budget = { data: null, loading: true }, action) => {
     switch (action.type) {
         case "LOAD_BUDGET":
             return {
@@ -57,7 +57,7 @@ export function loadBudget() {
 export function submitBudget(budgetObj) {
     console.log(budgetObj);
     return dispatch => {
-        budgetAxios.post(budgetUrl, budgetObj)
+        return budgetAxios.post(budgetUrl, budgetObj)
             .then(response => {
                 console.log(response.data)
                 dispatch({

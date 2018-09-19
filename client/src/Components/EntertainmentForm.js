@@ -46,7 +46,7 @@ class EntertainmentForm extends Component {
                     </div>
                 </div>
                 <div className='link-wrapper'>
-                    <Link className='a-link' to="/budget" onClick={handleSubmit}>Budget</Link>
+                    <div className='a-link' to="/budget" onClick={handleSubmit}>Budget</div>
                 </div>
             </div>
         )

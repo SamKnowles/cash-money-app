@@ -115,10 +115,10 @@ class FormSequence extends Component {
     }
 
     componentDidMount() {
-    }
-
-    componentWillReceiveProps(nextProps) {
-
+        const budget = JSON.parse(localStorage.getItem("budget"));
+        if(budget){
+            this.setState(budget);
+        }
     }
 
     handleChange = (e, category) => {
@@ -130,12 +130,15 @@ class FormSequence extends Component {
                     [name]: { projected: value }
                 }
             }
-        })
+        }, ()=> localStorage.setItem("budget", JSON.stringify(this.state)))
     }
 
     handleSubmit = (e) => {
         console.log(this.state.income);
-        this.props.submitBudget(this.state);
+        this.props.submitBudget(this.state).then(()=> {
+            this.props.history.push("/budget");
+            localStorage.removeItem("budget");
+        });
     }
 
     render() {
