@@ -8,35 +8,34 @@ import '../Styles/navbar.css';
 
 class Navbar extends Component {
 
-
     render() {
         const isAuthenticated = this.props.auth.isAuthenticated;
         return (
             <div className='nav-wrapper'>
                 <div className="navbar-item">
-                    {isAuthenticated ? null : <div className="nav-link"><Link to="/login">Login</Link></div>}
+                    {isAuthenticated ? null  && Component === <login />: <div className="nav-link" ><Link to="/login">Login</Link></div>}
                 </div>
                 <div className="navbar-item">
                     {isAuthenticated ? null : <div className="nav-link"><Link to="/signup">Sign Up</Link></div>}
                 </div>
-                <div className="navbar-item">
-                    {isAuthenticated ? null : <div className="nav-link"><Link to="/form/home">Home</Link></div>}
+                {/* <div className="navbar-item">
+                    {isAuthenticated ? <div className="nav-link"><Link to="/form/home">Home</Link></div> : null}
                 </div>
                 <div className="navbar-item">
-                    {isAuthenticated ? null : <div  className="nav-link"><Link to="/form/entertainment">Entertainment</Link></div>}
+                    {isAuthenticated ? <div  className="nav-link"><Link to="/form/entertainment">Entertainment</Link></div> : null}
                 </div>
                 <div className="navbar-item">
-                    {isAuthenticated ?  null : <div className="nav-link"><Link to="/form/loans">Loans</Link></div>}
+                    {isAuthenticated ? <div className="nav-link"><Link to="/form/loans">Loans</Link></div> : null}
                 </div>
                 <div className="navbar-item">
-                    {isAuthenticated ? null : <div className="nav-link"><Link to="/form/transportation">Transportation</Link></div>}
+                    {isAuthenticated ? <div className="nav-link"><Link to="/form/transportation">Transportation</Link></div> : null}
                 </div>
                 <div className="navbar-item">
-                    {isAuthenticated ? null : <div className="nav-link"><Link to="/form/housing">Housing</Link></div>}
+                    {isAuthenticated ? <div className="nav-link"><Link to="/form/housing">Housing</Link></div> : null}
                 </div>
                 <div className="navbar-item">
-                    {isAuthenticated ? null : <div className="nav-link"><Link to="/budget">Budget</Link></div>}
-                </div>
+                    {isAuthenticated ? <div className="nav-link"><Link to="/budget">Budget</Link></div> : null}
+                </div> */}
                 <div className="navbar-item">
                     {isAuthenticated ? <div className="nav-link"><button onClick={this.props.logout}>Logout</button></div> : null}
                 </div>
