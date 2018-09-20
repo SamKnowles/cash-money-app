@@ -14,6 +14,11 @@ class LoansForm extends Component {
                 <div className='form-title-wrapper'>
                     <h1>Loans</h1>
                 </div>
+                <div class="progress-light-grey">
+                    <div class="progress-grey" style={{ "height": "24px", "width": "60%" }}>60%</div>
+                </div>
+                <div className='mid-section-wrapper'>
+                    <div className='cat-form-instructions'>Fill out this form then click the "Entertainment" button at the bottom.</div>
                 <div className='cat-form-wrapper'>
                     <div className='form-category-wrapper'>
                         <label className="form-category-name">Student</label>
@@ -31,6 +36,7 @@ class LoansForm extends Component {
                         <label className="form-category-name">Other</label>
                         <span className='form-dollar-sign'>$</span><input name="other" placeholder="0.00" className='cat-input-wrapper' value={formData.other.projected} type="number" onChange={e => handleChange(e, "loans")} />
                     </div>
+                </div>
                 </div>
                 <div className='link-wrapper'>
                     <Link className='a-link' to="/form/entertainment">Entertainment</Link>

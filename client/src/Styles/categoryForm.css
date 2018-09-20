@@ -9,7 +9,6 @@
 }
 
 .cat-form-wrapper {
-    border: 1px blue solid;
     margin: 60px;
 }
 
@@ -22,24 +21,29 @@
 }
 
 .form-category-wrapper {
-    border: 1px gray solid;
+    border-radius: 6px;    
+    border: 1px blue solid;
     display: flex;
     justify-content: flex-start;
     width: 320px;
+    margin: 2px;
 }
 
 .form-category-name {
-    border-right: 2px solid black;    
+    border-right: 2px solid black;
     height: 32px;
     width: 75%;
     display: flex;
     align-items: center;
     font-size: 20px;
     margin-right: 8px;
+    align-items: center;
+    margin-left: 4px;
 }
 
 .cat-input-wrapper {
     border: none;
+    margin: 2px;
     width: 25%;
     height: 30px;
     font-size: 14px;
@@ -56,23 +60,25 @@
 
 .a-link:hover {
     color: white;
-    background-color: grey;
+    background-color: blue;
+    cursor: pointer;
 }
 
 .a-link {
-    color: grey;
-    border: 1px grey solid;
-    height: 100px;
+    color: black;
+    border: 1px blue solid;
     width: 200px;
     display: flex;
     justify-content: center;
     align-items: center;
+    text-decoration: none;
+    cursor: 
 }
 
 .a-link:active {
     color: blue;
-    border: 1px blue solid;  
-    background-color: white;  
+    border: 1px blue solid;
+    background-color: white;
 }
 
 .form-dollar-sign {
@@ -81,3 +87,19 @@
     align-items: center;
 }
 
+.progress-light-grey {
+    margin: 25px; 
+    width: 40%;
+    height: 25px;
+    background-color: lightgray;
+}
+
+.progress-grey {
+    height: 100%;
+    width: 100px;
+    color: white;
+    background-color: gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

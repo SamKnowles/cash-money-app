@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { Route, Switch, withRouter, Redirect } from "react-router-dom";
 import { connect } from "react-redux";
 import { verifyUser } from '../Redux/auth';
-import Navbar from './Navbar';
 import Profile from './Profile';
 import Signup from './Signup';
 import Login from './Login';
@@ -28,7 +27,6 @@ class App extends Component {
         return (
             !loading ?
             <div className="app-wrapper">
-                <Navbar />
                     <Switch>
                         <Route exact path="/" render={(props) => {
                             return isAuthenticated ?

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { loadBudget, editBudget, submitBudget } from "../Redux/budget";
+import { logout } from '../Redux/auth';
 import { connect } from "react-redux";
 import '../Styles/budget.css';
 
@@ -83,6 +84,9 @@ class Budget extends Component {
         return (
             budget ?
                 <div className="budget-wrapper">
+                <div className="logout-link">
+                    <div className="nav-link"><button onClick={this.props.logout}>Logout</button></div>
+                </div>
                     <div className='budget-title-wrapper'>PULL YOUR LIFE TOGETHER</div>
                     <div className='income-wrapper'>
                         <div className='pro-act-income-wrapper'>
@@ -820,4 +824,4 @@ class Budget extends Component {
 
 
 
-export default connect(state => state, { loadBudget, editBudget, submitBudget })(Budget);
+export default connect(state => state, { loadBudget, editBudget, submitBudget, logout })(Budget);

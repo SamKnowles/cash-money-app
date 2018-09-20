@@ -7,17 +7,17 @@ import '../Styles/navbar.css';
 
 
 class Navbar extends Component {
-33
 
     render() {
         const isAuthenticated = this.props.auth.isAuthenticated;
+        console.log(this.props);
         return (
             <div className='nav-wrapper'>
                 <div className="navbar-item">
-                    {isAuthenticated ? null : <div className="nav-link" ><Link to="/login">Login</Link></div>}
+                    {isAuthenticated ? null : <div className="nav-link" ><Link className='login-signup-link' to="/login">Login</Link></div>}
                 </div>
                 <div className="navbar-item">
-                    {isAuthenticated ? null : <div className="nav-link"><Link to="/signup">Sign Up</Link></div>}
+                    {isAuthenticated ? null : <div className="nav-link"><Link className='login-signup-link' to="/signup">Sign Up</Link></div>}
                 </div>
                 {/* <div className="navbar-item">
                     {isAuthenticated ? <div className="nav-link"><Link to="/form/home">Home</Link></div> : null}
@@ -37,9 +37,9 @@ class Navbar extends Component {
                 <div className="navbar-item">
                     {isAuthenticated ? <div className="nav-link"><Link to="/budget">Budget</Link></div> : null}
                 </div> */}
-                <div className="navbar-item">
+                {/* <div className="logout-link">
                     {isAuthenticated ? <div className="nav-link"><button onClick={this.props.logout}>Logout</button></div> : null}
-                </div>
+                </div> */}
             </div>
         )
     }

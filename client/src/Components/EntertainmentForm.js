@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { connect } from "react-redux";
 import { submitBudget } from "../Redux/budget";
 
-import { Link, withRouter } from "react-router-dom";
+import { withRouter } from "react-router-dom";
 
 
 class EntertainmentForm extends Component {
@@ -15,6 +15,11 @@ class EntertainmentForm extends Component {
                 <div className='form-title-wrapper'>
                     <h1>Entertainment</h1>
                 </div>
+                <div class="progress-light-grey">
+                    <div class="progress-grey" style={{ "height": "24px", "width": "80%" }}>80%</div>
+                </div>
+                <div className='mid-section-wrapper'>
+                    <div className='cat-form-instructions'>Fill out this form then click the "Budget" button at the bottom.</div>
                 <div className='cat-form-wrapper'>
                     <div className='form-category-wrapper'>
                         <label className="form-category-name">Movies</label>
@@ -44,6 +49,7 @@ class EntertainmentForm extends Component {
                         <label className="form-category-name">Other</label>
                         <span className='form-dollar-sign'>$</span><input name="other" placeholder='0.00' className='cat-input-wrapper' value={formData.other.projected} type="number" onChange={e => handleChange(e, "entertainment")} />
                     </div>
+                </div>
                 </div>
                 <div className='link-wrapper'>
                     <div className='a-link' to="/budget" onClick={handleSubmit}>Budget</div>

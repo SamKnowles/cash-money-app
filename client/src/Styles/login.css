@@ -50,5 +50,12 @@
    display: flex;
    justify-content: center;
    align-items: center;
+   flex-direction: column;
   
+}
+
+.login-logout-words {
+    font-weight: bold;
+    font-size: 40px;
+    text-align: center;    
 }

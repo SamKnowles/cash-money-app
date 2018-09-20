@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import SignupForm from "./SignupForm";
 import { connect } from "react-redux";
 import { signup } from "../Redux/auth";
-import "../Styles/signup.css"
+import Navbar from "./Navbar";
+import "../Styles/signup.css";
 
 
 
@@ -48,6 +49,8 @@ class Signup extends Component {
     render() {
         return (
             <div className='login-signup-form-wrapper'>
+            <Navbar />
+            <div className='login-logout-words'>Signup And Start Budgeting Today!</div>
                 <SignupForm
                     handleChange={this.handleChange}
                     handleSubmit={this.handleSubmit}

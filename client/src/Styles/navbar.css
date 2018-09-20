@@ -9,31 +9,24 @@
     background-color: #333;
 }
 
-a {
-    border: 2px solid red;
+.login-signup-link {
+    height: 100%;
     font-size: 30px;
-    display: block;
+    display: flex;
     color: white;
+    justify-content: center;
     text-align: center;
-    padding: 14px 16px;
+    padding: 25px;
     text-decoration: none;
 }
 
-a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-.active {
-    background-color: #4CAF50;
+.login-signup-link:hover {
+    background-color: #1D1D1D;
+    border: 1px solid silver;
 }
 
 .navbar-item {
     width: 100%;
-    border: 2px solid black;
     justify-content: center;
     flex-direction: column;
     text-align: center;
