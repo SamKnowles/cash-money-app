@@ -12,7 +12,6 @@ import EntertainmentForm from './EntertainmentForm';
 import HousingForm from './HousingForm';
 import LoansForm from './LoansForm';
 import TransportationForm from './TransportationForm';
-import Navbar from './Navbar';
 import '../Styles/app.css';
 
 
@@ -27,7 +26,6 @@ class App extends Component {
         return (
             !loading ?
             <div className="app-wrapper">
-                <Navbar />
                     <Switch>
                         <Route exact path="/" render={(props) => {
                             return isAuthenticated ?
