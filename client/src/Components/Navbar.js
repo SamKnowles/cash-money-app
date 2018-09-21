@@ -37,9 +37,9 @@ class Navbar extends Component {
                 <div className="navbar-item">
                     {isAuthenticated ? <div className="nav-link"><Link to="/budget">Budget</Link></div> : null}
                 </div> */}
-                {/* <div className="logout-link">
+                <div className="logout-link">
                     {isAuthenticated ? <div className="nav-link"><button onClick={this.props.logout}>Logout</button></div> : null}
-                </div> */}
+                </div>
             </div>
         )
     }
