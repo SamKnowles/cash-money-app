@@ -133,7 +133,7 @@ h6 {
 
 .bal-wrapper {
     border: 1px #b2c2bf solid;    
-    width: 66px;
+    width: 90px;
     overflow: hidden;
     text-overflow: ellipsis;
     display: flex;

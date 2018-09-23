@@ -88,7 +88,6 @@ class Budget extends Component {
                     <div className="nav-link"><button onClick={this.props.logout}>Logout</button></div>
                 </div>
                     <div className='budget-title-wrapper'>PULL YOUR LIFE TOGETHER</div>
-                    <div>Fill out the income section and which ever montly expense amounts, and click update to save the changes</div>
                     <div className='income-wrapper'>
                         <div className='pro-act-income-wrapper'>
                             <div className='projected-income-wrapper'>
@@ -400,7 +399,7 @@ class Budget extends Component {
                                 <h4>Difference</h4>
                             </div>
                             <div className="category">
-                                <label className="category-name">Movies  </label>
+                                <label className="category-name">Movies</label>
                                 <span>$</span>
                                 <input
                                     name="movies"

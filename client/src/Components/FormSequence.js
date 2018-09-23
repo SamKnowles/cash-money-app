@@ -15,102 +15,105 @@ class FormSequence extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            income: {
-                projected: ''
-            },
-            housing: {
-                mortgageRent: {
-                    projected: '',
-                },
-                phone: {
-                    projected: '',
-                },
-                gas: {
-                    projected: '',
-                },
-                electricity: {
-                    projected: '',
-                },
-                waterSewer: {
-                    projected: '',
-                },
-                internet: {
-                    projected: '',
-                },
-                wasteRemoval: {
-                    projected: '',
-                },
-                maintenance: {
-                    projected: '',
-                },
-                supplies: {
-                    projected: '',
-                },
-                other: {
-                    projected: ''
-                }
-            },
-            loans: {
-                personal: {
-                    projected: '',
-                },
-                student: {
-                    projected: '',
-                },
-                credit: {
-                    projected: '',
-                },
-                other: {
-                    projected: '',
-                }
-            },
-            transportation: {
-                vehiclePayment: {
-                    projected: '',
-                },
-                busTrainUber: {
-                    projected: '',
-                },
-                insurance: {
-                    projected: '',
-                },
-                licensing: {
-                    projected: '',
-                },
-                fuel: {
-                    projected: '',
-                },
-                maintenance: {
-                    projected: '',
-                },
-                other: {
-                    projected: '',
-                }
-            },
-            entertainment: {
-                movies: {
-                    projected: '',
-                },
-                music: {
-                    projected: '',
-                },
-                vacation: {
-                    projected: '',
-                },
-                theater: {
-                    projected: '',
-                },
-                sports: {
-                    projected: '',
-                },
-                winterSports: {
-                    projected: '',
-                },
-                other: {
-                    projected: '',
-                }
-            },
+            budget: null
         }
+        // this.state = {
+        //     income: {
+        //         projected: ''
+        //     },
+        //     housing: {
+        //         mortgageRent: {
+        //             projected: '',
+        //         },
+        //         phone: {
+        //             projected: '',
+        //         },
+        //         gas: {
+        //             projected: '',
+        //         },
+        //         electricity: {
+        //             projected: '',
+        //         },
+        //         waterSewer: {
+        //             projected: '',
+        //         },
+        //         internet: {
+        //             projected: '',
+        //         },
+        //         wasteRemoval: {
+        //             projected: '',
+        //         },
+        //         maintenance: {
+        //             projected: '',
+        //         },
+        //         supplies: {
+        //             projected: '',
+        //         },
+        //         other: {
+        //             projected: ''
+        //         }
+        //     },
+        //     loans: {
+        //         personal: {
+        //             projected: '',
+        //         },
+        //         student: {
+        //             projected: '',
+        //         },
+        //         credit: {
+        //             projected: '',
+        //         },
+        //         other: {
+        //             projected: '',
+        //         }
+        //     },
+        //     transportation: {
+        //         vehiclePayment: {
+        //             projected: '',
+        //         },
+        //         busTrainUber: {
+        //             projected: '',
+        //         },
+        //         insurance: {
+        //             projected: '',
+        //         },
+        //         licensing: {
+        //             projected: '',
+        //         },
+        //         fuel: {
+        //             projected: '',
+        //         },
+        //         maintenance: {
+        //             projected: '',
+        //         },
+        //         other: {
+        //             projected: '',
+        //         }
+        //     },
+        //     entertainment: {
+        //         movies: {
+        //             projected: '',
+        //         },
+        //         music: {
+        //             projected: '',
+        //         },
+        //         vacation: {
+        //             projected: '',
+        //         },
+        //         theater: {
+        //             projected: '',
+        //         },
+        //         sports: {
+        //             projected: '',
+        //         },
+        //         winterSports: {
+        //             projected: '',
+        //         },
+        //         other: {
+        //             projected: '',
+        //         }
+        //     },
+        // }
 
     }
 
