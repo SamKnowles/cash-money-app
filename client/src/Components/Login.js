@@ -47,10 +47,8 @@ class Login extends Component {
 
         return (
             <div className='login-signup-form-wrapper'>
-                <div className='login-nav-wrapper'>
-                    <Navbar />
-                </div>
-                <div className='login-logout-words'>Login And Continue Budgeting Today!</div>
+                <Navbar />
+            <div className='login-logout-words'>Login And Continue Budgeting Today!</div>
                 <LoginForm
                     handleChange={this.handleChange}
                     handleSubmit={this.handleSubmit}

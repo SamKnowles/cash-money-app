@@ -1,47 +1,52 @@
 .nav-wrapper {
     width: 100%;
-    height: 100px;
+    height: 50px;
     display: flex;
     justify-content: center;
+    align-items: center;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333;
 }
 
 .login-signup-link {
     height: 100%;
-    font-size: 30px;
+    width: 100%;
+    font-size: 25px;
     display: flex;
-    color: white;
     justify-content: center;
-    text-align: center;
-    padding: 25px;
+    align-items: center;
+    color: white;
+    background-color: #3742fa;
     text-decoration: none;
     cursor: pointer;    
 }
 
 .login-signup-link:hover {
-    background-color: #1D1D1D;
+    background-color: #3D3DFF;
     border: 1px solid silver;
     cursor: pointer;    
 }
 
 .navbar-item {
     width: 100%;
+    height: 100%;
     justify-content: center;
     flex-direction: column;
     text-align: center;
     align-items: center;
+    background-color: white;
+    border: 1px solid #2f3542;
 }
 
 .nav-link {
-    width: 100%;
+width: 100%;
     height: 100%;
     display: flex;
     justify-content: center;
     flex-direction: column;
     text-align: center;
+    margin: 0 auto;
 }
 
 
@@ -51,7 +56,7 @@
 
 
 
-a:active {
+/* a:active {
     background-color: black;
 }
 
@@ -61,4 +66,4 @@ li.nav-link > a.active {
     height:100%;
     color: white;
     background-color: blue;
-}
+} */

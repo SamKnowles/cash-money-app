@@ -49,9 +49,7 @@ class Signup extends Component {
     render() {
         return (
             <div className='login-signup-form-wrapper'>
-                <div className='signup-nav-wrapper'>
-                <Navbar />
-            </div>
+            <Navbar />
             <div className='login-logout-words'>Signup And Start Budgeting Today!</div>
                 <SignupForm
                     handleChange={this.handleChange}
