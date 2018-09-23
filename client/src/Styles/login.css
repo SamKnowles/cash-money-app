@@ -4,6 +4,7 @@
    border-radius: 5px;
    background-color: #F0F0F0;
    margin-top:100px;
+   border: 5px solid blue;   
 }
 
 .login-wrapper {
@@ -13,6 +14,7 @@
    height: 80%;
    text-align: center;
    padding: 10px;
+   
 }
 
 .username-wrapper {
@@ -31,6 +33,7 @@
    font-size: 15px;
    margin: 0 auto;
    background-color: #8E9EAF;
+   border: 2px solid blue;
 }
 
 .signup-input {
@@ -39,7 +42,7 @@
    height: 25px;
    border: none;
    padding: 5px;
-
+   border: 2px solid blue;
    /* margin: 0 auto; */
 }
 
@@ -51,7 +54,6 @@
    justify-content: center;
    align-items: center;
    flex-direction: column;
-  
 }
 
 .login-logout-words {
@@ -65,4 +67,10 @@
     background-color: pink;
     width: 100%;
     height: 150px;
+}
+
+.login-nav-wrapper {
+    background-color: blue;
+    width: 100%;
+    height: 150PX;
 }
