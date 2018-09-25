@@ -1,4 +1,4 @@
-.budget-wrapper {    
+.budget-wrapper {
     width: 100%vh;
     height: 200%;
     display: flex;
@@ -27,7 +27,6 @@
     align-items: center;
     justify-content: space-around;
     width: 60%;
-    
 }
 
 /* .inc-wrapper-wrapper {
@@ -36,23 +35,27 @@
 
 .income-cat-wrapper {
     display: flex;
-    border: 1px #b2c2bf solid;
+    border: 1px #3b3a30 solid; 
+    height: 28px;   
 }
 
 .dif-wrapper {
-    border-top: 0 none;
-    border-bottom: 0 none;
-    border-left: 0 none;    
+    font-size: 15px;
+    border-top: 0;
+    border-bottom: 0;
+    border-left: 0;
+    border-right: 0;
     width: 69px;
     display: flex;
-    height: 23px;
-    white-space: nowrap; 
+    line-height: 20px;
+    white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
 
 .projected-income-wrapper {
-    border: 2px #b2c2bf solid;
+    margin-bottom: 5px;    
+    border: 1px #3b3a30 solid;
     height: 90px;
     display: flex;
     justify-content: flex-start;
@@ -62,7 +65,7 @@
 }
 
 .actual-income-wrapper {
-    border: 2px #b2c2bf solid;
+    border: 1px #3b3a30 solid;
     height: 90px;
     display: flex;
     justify-content: flex-start;
@@ -81,7 +84,7 @@ h2 {
     flex-direction: column;
     margin: 0;
     background-image: linear-gradient(blue, #5581D3);
-    height: 100%;    
+    height: 100%;
     width: 100%;
 }
 
@@ -95,6 +98,7 @@ h2 {
 }
 
 h6 {
+    padding-left: 5px;
     width: 150px;
     height: 30px;
     font-size: 13px;
@@ -102,29 +106,27 @@ h6 {
     justify-content: center;
     flex-direction: column;
     margin: 0;
-    border: 1px #000077 solid;    
+    border-right: 1px #3b3a30 solid;
+    border-left: 1px #3b3a30 solid;
 }
 
-.pro-act-income-wrapper {
+
+.balance-section-wrapper {
+    border: 1px #b2c2bf solid;
     border: 2px solid #3b3a30;
 }
 
-.balance-section-wrapper {
-    border: 1px #b2c2bf solid;    
-    border: 2px solid #3b3a30;    
-}
-
 .bal-row-wrapper {
-    border: 1px #b2c2bf solid;    
+    border: 1px #b2c2bf solid;
     display: flex;
-    
 }
 
 .bal-discription-wrapper {
     border: 1px solid #3b3a30;
     border-top: 0 none;
     border-bottom: 0 none;
-    border-left: 0 none;    width: 200px;
+    border-left: 0 none;
+    width: 200px;
     height: 45px;
     font-size: 13px;
     display: flex;
@@ -134,7 +136,7 @@ h6 {
 }
 
 .bal-wrapper {
-    border: 1px #b2c2bf solid;    
+    border: 1px #b2c2bf solid;
     width: 90px;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -143,7 +145,6 @@ h6 {
     flex-direction: column;
     text-align: center;
 }
-
 
 .category-wrapper {
     width: 70%;
@@ -158,26 +159,26 @@ h6 {
     border-radius: 5px;
 }
 
-.entertainment-wrapper { 
+.entertainment-wrapper {
     border: 2px solid #000000;
     border-radius: 5px;
     height: 100%;
 }
 
-.transportation-wrapper { 
+.transportation-wrapper {
     border: 2px solid #000000;
     border-radius: 5px;
     margin-top: -40px;
-    }
+}
 
-.loans-wrapper {  
+.loans-wrapper {
     margin-top: 20px;
     border: 2px solid #000000;
     border-radius: 5px;
     height: 100%;
 }
 
-.button-wrapper {  
+.button-wrapper {
     margin-top: 30px;
     display: flex;
     justify-content: center;
@@ -186,13 +187,14 @@ h6 {
     width: 100%;
     height: 40px;
 }
+
 .button {
-    background-color: white; 
-    color: #3b3a30; 
+    background-color: white;
+    color: #3b3a30;
     border: 2px solid #008CBA;
     font-size: 24px;
     width: 50%;
-    cursor: pointer;    
+    cursor: pointer;
 }
 
 .button:hover {
@@ -209,13 +211,13 @@ h6 {
 }
 
 .category-name {
-    border-right: 1px solid #3b3a30;        
+    border-right: 1px solid #3b3a30;
     width: 146px;
     /* border: 1px #b2c2bf solid; */
 }
 
 .projected-input {
-    width: 61px;    
+    width: 61px;
     color: #3b3a30;
     border: 0;
     outline: 0;
@@ -237,7 +239,7 @@ h6 {
 h5 {
     width: 62px;
     margin: 0;
-    white-space: nowrap; 
+    white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
@@ -269,3 +271,14 @@ h1 {
     color: white;
 }
 
+.income-dollar-sign {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.total-diff-wrapper {
+    width: 80px;
+    border-left: 0;
+}

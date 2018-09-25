@@ -97,7 +97,7 @@ class Budget extends Component {
                                 <div className='inc-wrapper-wrapper'>
                                     <div className="income-cat-wrapper">
                                         <h6>Income</h6>
-                                        <span>$</span>
+                                        <span className='income-dollar-sign'>$</span>
                                         <input
                                             name="income"
                                             className="dif-wrapper"
@@ -108,7 +108,7 @@ class Budget extends Component {
                                     </div>
                                     <div className="income-cat-wrapper">
                                         <h6>Extra Income</h6>
-                                        <span>$</span>
+                                        <span className='income-dollar-sign'>$</span>
                                         <input
                                             name="extraIncome"
                                             className="dif-wrapper"
@@ -119,7 +119,7 @@ class Budget extends Component {
                                     </div>
                                     <div className="income-cat-wrapper">
                                         <h6>Total monthly income</h6>
-                                        <div className='dif-wrapper' style={budget.income.projected + budget.extraIncome.projected >= 0 ? { color: "black" } : { color: "red" }}>${((budget.income.projected + budget.extraIncome.projected)).toFixed(2)}</div>
+                                        <div className='dif-wrapper' className='total-diff-wrapper' style={budget.income.projected + budget.extraIncome.projected >= 0 ? { color: "black" } : { color: "red" }}>${((budget.income.projected + budget.extraIncome.projected)).toFixed(2)}</div>
                                     </div>
                                 </div>
                             </div>
@@ -130,7 +130,7 @@ class Budget extends Component {
                                 <div className='inc-wrapper-wrapper'>
                                     <div className="income-cat-wrapper">
                                         <h6>Income</h6>
-                                        <span>$</span>
+                                        <span className='income-dollar-sign'>$</span>
                                         <input
                                             name="income"
                                             className="dif-wrapper"
@@ -141,7 +141,7 @@ class Budget extends Component {
                                     </div>
                                     <div className="income-cat-wrapper">
                                         <h6>Extra Income</h6>
-                                        <span>$</span>
+                                        <span className='income-dollar-sign'>$</span>
                                         <input
                                             name="extraIncome"
                                             className="dif-wrapper"
@@ -152,7 +152,7 @@ class Budget extends Component {
                                     </div>
                                     <div className="income-cat-wrapper">
                                         <h6>Total monthly income</h6>
-                                        <div className='dif-wrapper' style={budget.income.actual + budget.extraIncome.actual > 0 ? { color: "green" } : { color: "red" }}>${((budget.income.actual + budget.extraIncome.actual)).toFixed(2)}</div>
+                                        <div className='dif-wrapper' className='total-diff-wrapper' style={budget.income.actual + budget.extraIncome.actual > 0 ? { color: "green" } : { color: "red" }}>${((budget.income.actual + budget.extraIncome.actual)).toFixed(2)}</div>
                                     </div>
                                 </div>
                             </div>
