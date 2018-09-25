@@ -22,7 +22,7 @@ class App extends Component {
     }
 
     render() {
-        const {isAuthenticated, loading} = this.props
+        const {isAuthenticated, loading} = this.props;
         return (
             !loading ?
             <div className="app-wrapper">

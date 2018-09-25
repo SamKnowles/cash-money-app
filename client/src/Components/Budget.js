@@ -817,7 +817,10 @@ class Budget extends Component {
                         <button className='button' onClick={this.handleSubmit}>UPDATE</button>
                     </div>
                 </div>
-                : <div>loading...</div>
+                : <div>loading...
+                                        <div className="nav-link"><button onClick={this.props.logout}>Logout</button></div>
+
+                </div>
         )
     }
 }
