@@ -13,11 +13,11 @@ class TransportationForm extends Component {
                 <div className='form-title-wrapper'>
                     <h1>Transportation</h1>
                 </div>
-                <div class="progress-light-grey">
+                {/* <div class="progress-light-grey">
                     <div class="progress-grey" style={{ "height": "24px", "width": "40%" }}>40%</div>
-                </div>
+                </div> */}
+                <div className='cat-form-instructions'>Fill out this form then click the "Loans" button at the bottom.</div>
                 <div className='mid-section-wrapper'>
-                    <div className='cat-form-instructions'>Fill out this form then click the "Loans" button at the bottom.</div>
                     <div className='cat-form-wrapper'>
                         <div className='form-category-wrapper'>
                             <label className="form-category-name">Vehicle Payment</label>
@@ -52,7 +52,7 @@ class TransportationForm extends Component {
                 <div className='link-wrapper'>
                     <Link className='a-link' to="/form/loans">Loans</Link>
                 </div>
-            </div>
+-            </div>
         )
     }
 }

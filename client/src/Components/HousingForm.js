@@ -13,11 +13,11 @@ class HousingForm extends Component {
                 <div className='form-title-wrapper'>
                     <h1>Housing</h1>
                 </div>
-                <div class="progress-light-grey">
+                {/* <div class="progress-light-grey">
                     <div class="progress-grey" style={{ "height": "24px", "width": "20%" }}>20%</div>
-                </div>
+                </div> */}
+                <div className='cat-form-instructions'>Fill out this form then click the "Transportation" button at the bottom.</div>
                 <div className='mid-section-wrapper'>
-                    <div className='cat-form-instructions'>Fill out this form then click the "Transportation" button at the bottom.</div>
                     <div className='cat-form-wrapper'>
                         <div className='form-category-wrapper'>
                             <label className="form-category-name">Mortgage/ Rent</label>
@@ -64,6 +64,7 @@ class HousingForm extends Component {
                 <div className='link-wrapper'>
                     <Link className='a-link' to="/form/transportation">Transportation</Link>
                 </div>
+                {/* <footer className='cat-form-footer'></footer> */}
             </div>
         )
     }

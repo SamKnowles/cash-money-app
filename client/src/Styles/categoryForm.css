@@ -1,27 +1,59 @@
 .form-container {
     width: 100%;
     height: 100vh;
-    border: 1px red solid;
     justify-content: center;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
 }
 
-.cat-form-wrapper {
-    margin: 60px;
-}
-
-.form-title-wrapper {
-    border: 1px blue solid;
+.mid-section-wrapper {
     width: 100%;
+    height: 75%;
+    border-bottom: 1px solid blue;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
+.cat-form-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cat-form-instructions {
+    font-weight: bold;
+    width: 60%;
+    height: 30px;
+    font-size: 25px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.form-title-wrapper {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-image: linear-gradient(silver, blue);
+    align-items: center;
+}
+
 .form-category-wrapper {
-    border-radius: 6px;    
+    border-radius: 6px;
     border: 1px blue solid;
     display: flex;
     justify-content: flex-start;
@@ -50,9 +82,8 @@
 }
 
 .link-wrapper {
-    border: 1px blue solid;
     width: 100%;
-    height: 100px;
+    height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -65,20 +96,24 @@
 }
 
 .a-link {
-    color: black;
-    border: 1px blue solid;
+    height: 100%;
     width: 200px;
+    font-size: 25px;
     display: flex;
     justify-content: center;
     align-items: center;
+    color: white;
+    background-image: linear-gradient(silver, blue);
     text-decoration: none;
     cursor: pointer;
+    transition-timing-function: linear;
+    margin-bottom: 60px;
 }
 
-.a-link:active {
-    color: blue;
-    border: 1px blue solid;
-    background-color: white;
+.a-link:hover {
+    border: 1px solid black;
+    cursor: pointer;
+    color: #D2D3FC;
 }
 
 .form-dollar-sign {
@@ -88,7 +123,7 @@
 }
 
 .progress-light-grey {
-    margin: 25px; 
+    margin: 25px;
     width: 40%;
     height: 25px;
     background-color: lightgray;

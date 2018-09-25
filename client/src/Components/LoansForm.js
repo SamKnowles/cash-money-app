@@ -14,11 +14,11 @@ class LoansForm extends Component {
                 <div className='form-title-wrapper'>
                     <h1>Loans</h1>
                 </div>
-                <div class="progress-light-grey">
+                {/* <div class="progress-light-grey">
                     <div class="progress-grey" style={{ "height": "24px", "width": "60%" }}>60%</div>
-                </div>
+                </div> */}
+                <div className='cat-form-instructions'>Fill out this form then click the "Entertainment" button at the bottom.</div>
                 <div className='mid-section-wrapper'>
-                    <div className='cat-form-instructions'>Fill out this form then click the "Entertainment" button at the bottom.</div>
                 <div className='cat-form-wrapper'>
                     <div className='form-category-wrapper'>
                         <label className="form-category-name">Student</label>
@@ -41,6 +41,7 @@ class LoansForm extends Component {
                 <div className='link-wrapper'>
                     <Link className='a-link' to="/form/entertainment">Entertainment</Link>
                 </div>
+                {/* <footer className='cat-form-footer'></footer> */}
             </div>
         )
     }

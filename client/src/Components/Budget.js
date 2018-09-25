@@ -119,7 +119,7 @@ class Budget extends Component {
                                     </div>
                                     <div className="income-cat-wrapper">
                                         <h6>Total monthly income</h6>
-                                        <div className='dif-wrapper' style={budget.income.projected + budget.extraIncome.projected > 0 ? { color: "green" } : { color: "red" }}>${((budget.income.projected + budget.extraIncome.projected)).toFixed(2)}</div>
+                                        <div className='dif-wrapper' style={budget.income.projected + budget.extraIncome.projected >= 0 ? { color: "black" } : { color: "red" }}>${((budget.income.projected + budget.extraIncome.projected)).toFixed(2)}</div>
                                     </div>
                                 </div>
                             </div>
