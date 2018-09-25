@@ -174,7 +174,7 @@ class Budget extends Component {
                     </div>
                     <div className='category-wrapper'>
                         <div className="housing-wrapper">
-                            <div className="category">
+                            <div className="category"  className='category-banner-wrapper'>
                                 <p>Housing</p>
                                 <h4>Projected Cost</h4>
                                 <h4>Actual Cost</h4>
@@ -182,7 +182,8 @@ class Budget extends Component {
                             </div>
                             <div className="category">
                                 <label className="category-name">Mortgage/ Rent  </label>
-                                $<input
+                                <span>$</span>
+                                <input
                                     name="mortgageRent"
                                     className="projected-input"
                                     type='number'
@@ -385,15 +386,15 @@ class Budget extends Component {
                             </div>
                             <div className="category">
                                 <p>Subtotals</p>
-                                <h4 style={{ backgroundColor: "white" }}><span>$</span>{(budget.housing.mortgageRent.projected + budget.housing.phone.projected + budget.housing.electricity.projected + budget.housing.gas.projected + budget.housing.waterSewer.projected + budget.housing.internet.projected + budget.housing.wasteRemoval.projected + budget.housing.maintenance.projected + budget.housing.supplies.projected + budget.housing.other.projected).toFixed(2)}</h4>
-                                <h4 style={{ backgroundColor: "white" }}><span>$</span>{(budget.housing.mortgageRent.actual + budget.housing.phone.actual + budget.housing.electricity.actual + budget.housing.gas.actual + budget.housing.waterSewer.actual + budget.housing.internet.actual + budget.housing.wasteRemoval.actual + budget.housing.maintenance.actual + budget.housing.supplies.actual + budget.housing.other.actual).toFixed(2)}</h4>
-                                <h4 style={budget.housing.mortgageRent.projected + budget.housing.phone.projected + budget.housing.electricity.projected + budget.housing.gas.projected + budget.housing.waterSewer.projected + budget.housing.internet.projected + budget.housing.wasteRemoval.projected + budget.housing.maintenance.projected + budget.housing.supplies.projected + budget.housing.other.projected - (budget.housing.mortgageRent.actual + budget.housing.phone.actual + budget.housing.electricity.actual + budget.housing.gas.actual + budget.housing.waterSewer.actual + budget.housing.internet.actual + budget.housing.wasteRemoval.actual + budget.housing.maintenance.actual + budget.housing.supplies.actual + budget.housing.other.actual) > 0 ? { color: "green", backgroundColor: "white" } : { color: "red", backgroundColor: "white" }}><span>$</span>{(budget.housing.mortgageRent.projected + budget.housing.phone.projected + budget.housing.electricity.projected + budget.housing.gas.projected + budget.housing.waterSewer.projected + budget.housing.internet.projected + budget.housing.wasteRemoval.projected + budget.housing.maintenance.projected + budget.housing.supplies.projected + budget.housing.other.projected - (budget.housing.mortgageRent.actual + budget.housing.phone.actual + budget.housing.electricity.actual + budget.housing.gas.actual + budget.housing.waterSewer.actual + budget.housing.internet.actual + budget.housing.wasteRemoval.actual + budget.housing.maintenance.actual + budget.housing.supplies.actual + budget.housing.other.actual)).toFixed(2)}</h4>
+                                <h4 className='subtotals-wrapper'><span>$</span>{(budget.housing.mortgageRent.projected + budget.housing.phone.projected + budget.housing.electricity.projected + budget.housing.gas.projected + budget.housing.waterSewer.projected + budget.housing.internet.projected + budget.housing.wasteRemoval.projected + budget.housing.maintenance.projected + budget.housing.supplies.projected + budget.housing.other.projected).toFixed(2)}</h4>
+                                <h4 className='subtotals-wrapper'><span>$</span>{(budget.housing.mortgageRent.actual + budget.housing.phone.actual + budget.housing.electricity.actual + budget.housing.gas.actual + budget.housing.waterSewer.actual + budget.housing.internet.actual + budget.housing.wasteRemoval.actual + budget.housing.maintenance.actual + budget.housing.supplies.actual + budget.housing.other.actual).toFixed(2)}</h4>
+                                <h4 className='subtotals-wrapper' style={budget.housing.mortgageRent.projected + budget.housing.phone.projected + budget.housing.electricity.projected + budget.housing.gas.projected + budget.housing.waterSewer.projected + budget.housing.internet.projected + budget.housing.wasteRemoval.projected + budget.housing.maintenance.projected + budget.housing.supplies.projected + budget.housing.other.projected - (budget.housing.mortgageRent.actual + budget.housing.phone.actual + budget.housing.electricity.actual + budget.housing.gas.actual + budget.housing.waterSewer.actual + budget.housing.internet.actual + budget.housing.wasteRemoval.actual + budget.housing.maintenance.actual + budget.housing.supplies.actual + budget.housing.other.actual) > 0 ? { color: "green", backgroundColor: "white" } : { color: "red", backgroundColor: "white" }}><span>$</span>{(budget.housing.mortgageRent.projected + budget.housing.phone.projected + budget.housing.electricity.projected + budget.housing.gas.projected + budget.housing.waterSewer.projected + budget.housing.internet.projected + budget.housing.wasteRemoval.projected + budget.housing.maintenance.projected + budget.housing.supplies.projected + budget.housing.other.projected - (budget.housing.mortgageRent.actual + budget.housing.phone.actual + budget.housing.electricity.actual + budget.housing.gas.actual + budget.housing.waterSewer.actual + budget.housing.internet.actual + budget.housing.wasteRemoval.actual + budget.housing.maintenance.actual + budget.housing.supplies.actual + budget.housing.other.actual)).toFixed(2)}</h4>
                             </div>
                         </div>
 
                         <div className="entertainment-wrapper">
-                            <div className="category">
-                                <p>Entertainment</p>
+                            <div className="category"  className='category-banner-wrapper'>
+                                <p >Entertainment</p>
                                 <h4>Projected Cost</h4>
                                 <h4>Actual Cost</h4>
                                 <h4>Difference</h4>
@@ -479,7 +480,6 @@ class Budget extends Component {
                                     onChange={e => this.handleChangeActual(e, 'entertainment')} />
                                 <span>$</span>
                                 <h5 style={budget.entertainment.theater.projected - budget.entertainment.theater.actual > 0 ? { color: "green" } : { color: "red" }}>{(budget.entertainment.theater.projected - budget.entertainment.theater.actual).toFixed(2)}</h5>
-
                             </div>
                             <div className="category">
                                 <label className="category-name">Sports</label>
@@ -546,14 +546,13 @@ class Budget extends Component {
                             </div>
                             <div className="category">
                                 <p>Subtotals</p>
-                                <h4 style={{ backgroundColor: "white" }}><span>$</span>{(budget.entertainment.movies.projected + budget.entertainment.music.projected + budget.entertainment.vacation.projected + budget.entertainment.theater.projected + budget.entertainment.sports.projected + budget.entertainment.winterSports.projected + budget.entertainment.other.projected).toFixed(2)}</h4>
-                                <h4 style={{ backgroundColor: "white" }}><span>$</span>{(budget.entertainment.movies.actual + budget.entertainment.music.actual + budget.entertainment.vacation.actual + budget.entertainment.theater.actual + budget.entertainment.sports.actual + budget.entertainment.winterSports.actual + budget.entertainment.other.actual).toFixed(2)}</h4>
-                                <h4 style={budget.entertainment.movies.projected + budget.entertainment.music.projected + budget.entertainment.vacation.projected + budget.entertainment.theater.projected + budget.entertainment.sports.projected + budget.entertainment.winterSports.projected + budget.entertainment.other.projected - (budget.entertainment.movies.actual + budget.entertainment.music.actual + budget.entertainment.vacation.actual + budget.entertainment.theater.actual + budget.entertainment.sports.actual + budget.entertainment.winterSports.actual + budget.entertainment.other.actual) > 0 ? { color: "green", backgroundColor: "white" } : { color: "red", backgroundColor: "white" }}><span>$</span>{(budget.entertainment.movies.projected + budget.entertainment.music.projected + budget.entertainment.vacation.projected + budget.entertainment.theater.projected + budget.entertainment.sports.projected + budget.entertainment.winterSports.projected + budget.entertainment.other.projected - (budget.entertainment.movies.actual + budget.entertainment.music.actual + budget.entertainment.vacation.actual + budget.entertainment.theater.actual + budget.entertainment.sports.actual + budget.entertainment.winterSports.actual + budget.entertainment.other.actual)).toFixed(2)}</h4>
+                                <h4 className='subtotals-wrapper'><span>$</span>{(budget.entertainment.movies.projected + budget.entertainment.music.projected + budget.entertainment.vacation.projected + budget.entertainment.theater.projected + budget.entertainment.sports.projected + budget.entertainment.winterSports.projected + budget.entertainment.other.projected).toFixed(2)}</h4>
+                                <h4 className='subtotals-wrapper'><span>$</span>{(budget.entertainment.movies.actual + budget.entertainment.music.actual + budget.entertainment.vacation.actual + budget.entertainment.theater.actual + budget.entertainment.sports.actual + budget.entertainment.winterSports.actual + budget.entertainment.other.actual).toFixed(2)}</h4>
+                                <h4 className='subtotals-wrapper' style={budget.entertainment.movies.projected + budget.entertainment.music.projected + budget.entertainment.vacation.projected + budget.entertainment.theater.projected + budget.entertainment.sports.projected + budget.entertainment.winterSports.projected + budget.entertainment.other.projected - (budget.entertainment.movies.actual + budget.entertainment.music.actual + budget.entertainment.vacation.actual + budget.entertainment.theater.actual + budget.entertainment.sports.actual + budget.entertainment.winterSports.actual + budget.entertainment.other.actual) > 0 ? { color: "green", backgroundColor: "white" } : { color: "red", backgroundColor: "white" }}><span>$</span>{(budget.entertainment.movies.projected + budget.entertainment.music.projected + budget.entertainment.vacation.projected + budget.entertainment.theater.projected + budget.entertainment.sports.projected + budget.entertainment.winterSports.projected + budget.entertainment.other.projected - (budget.entertainment.movies.actual + budget.entertainment.music.actual + budget.entertainment.vacation.actual + budget.entertainment.theater.actual + budget.entertainment.sports.actual + budget.entertainment.winterSports.actual + budget.entertainment.other.actual)).toFixed(2)}</h4>
                             </div>
                         </div>
-
                         <div className="loans-wrapper">
-                            <div className="category">
+                            <div className="category"  className='category-banner-wrapper'>
                                 <p>Loans</p>
                                 <h4>Projected Cost</h4>
                                 <h4>Actual Cost</h4>
@@ -645,14 +644,13 @@ class Budget extends Component {
                             </div>
                             <div className="category">
                                 <p>Subtotals</p>
-                                <h4 style={{ backgroundColor: "white" }}><span>$</span>{(budget.loans.personal.projected + budget.loans.student.projected + budget.loans.credit.projected + budget.loans.other.projected).toFixed(2)}</h4>
-                                <h4 style={{ backgroundColor: "white" }}><span>$</span>{(budget.loans.personal.actual + budget.loans.student.actual + budget.loans.credit.actual + budget.loans.other.actual).toFixed(2)}</h4>
-                                <h4 style={budget.loans.personal.projected + budget.loans.student.projected + budget.loans.credit.projected + budget.loans.other.projected - (budget.loans.personal.actual + budget.loans.student.actual + budget.loans.credit.actual + budget.loans.other.actual) > 0 ? { color: "green", backgroundColor: "white" } : { color: "red", backgroundColor: "white" }}><span>$</span>{(budget.loans.personal.projected + budget.loans.student.projected + budget.loans.credit.projected + budget.loans.other.projected - (budget.loans.personal.actual + budget.loans.student.actual + budget.loans.credit.actual + budget.loans.other.actual)).toFixed(2)}</h4>
+                                <h4 className='subtotals-wrapper'><span>$</span>{(budget.loans.personal.projected + budget.loans.student.projected + budget.loans.credit.projected + budget.loans.other.projected).toFixed(2)}</h4>
+                                <h4 className='subtotals-wrapper'><span>$</span>{(budget.loans.personal.actual + budget.loans.student.actual + budget.loans.credit.actual + budget.loans.other.actual).toFixed(2)}</h4>
+                                <h4 className='subtotals-wrapper' style={budget.loans.personal.projected + budget.loans.student.projected + budget.loans.credit.projected + budget.loans.other.projected - (budget.loans.personal.actual + budget.loans.student.actual + budget.loans.credit.actual + budget.loans.other.actual) > 0 ? { color: "green", backgroundColor: "white" } : { color: "red", backgroundColor: "white" }}><span>$</span>{(budget.loans.personal.projected + budget.loans.student.projected + budget.loans.credit.projected + budget.loans.other.projected - (budget.loans.personal.actual + budget.loans.student.actual + budget.loans.credit.actual + budget.loans.other.actual)).toFixed(2)}</h4>
                             </div>
                         </div>
-
                         <div className="transportation-wrapper">
-                            <div className="category">
+                            <div className="category"  className='category-banner-wrapper'>
                                 <p>Transportation</p>
                                 <h4>Projected Cost</h4>
                                 <h4>Actual Cost</h4>
@@ -740,7 +738,6 @@ class Budget extends Component {
                                     onChange={e => this.handleChangeActual(e, 'transportation')} />
                                 <span>$</span>
                                 <h5 style={budget.transportation.licensing.projected - budget.transportation.licensing.actual > 0 ? { color: "green" } : { color: "red" }}>{budget.transportation.licensing.projected - budget.transportation.licensing.actual}</h5>
-
                             </div>
                             <div className="category">
                                 <label className="category-name">Fuel</label>
@@ -761,7 +758,6 @@ class Budget extends Component {
                                     onChange={e => this.handleChangeActual(e, 'transportation')} />
                                 <span>$</span>
                                 <h5 style={budget.transportation.fuel.projected - budget.transportation.fuel.actual > 0 ? { color: "green" } : { color: "red" }}>{budget.transportation.fuel.projected - budget.transportation.fuel.actual}</h5>
-
                             </div>
                             <div className="category">
                                 <label className="category-name">Maintenance</label>
@@ -807,9 +803,9 @@ class Budget extends Component {
                             </div>
                             <div className="category">
                                 <p>Subtotals</p>
-                                <h4 style={{ backgroundColor: "white" }}><span>$</span>{(budget.transportation.vehiclePayment.projected + budget.transportation.busTrainUber.projected + budget.transportation.insurance.projected + budget.transportation.licensing.projected + budget.transportation.fuel.projected + budget.transportation.maintenance.projected + budget.transportation.other.projected).toFixed(2)}</h4>
-                                <h4 style={{ backgroundColor: "white" }}><span>$</span>{(budget.transportation.vehiclePayment.actual + budget.transportation.busTrainUber.actual + budget.transportation.insurance.actual + budget.transportation.licensing.actual + budget.transportation.fuel.actual + budget.transportation.maintenance.actual + budget.transportation.other.actual).toFixed(2)}</h4>
-                                <h4 style={budget.transportation.vehiclePayment.projected + budget.transportation.busTrainUber.projected + budget.transportation.insurance.projected + budget.transportation.licensing.projected + budget.transportation.fuel.projected + budget.transportation.maintenance.projected + budget.transportation.other.projected - (budget.transportation.vehiclePayment.actual + budget.transportation.busTrainUber.actual + budget.transportation.insurance.actual + budget.transportation.licensing.actual + budget.transportation.fuel.actual + budget.transportation.maintenance.actual + budget.transportation.other.actual) > 0 ? { color: "green", backgroundColor: "white" } : { color: "red", backgroundColor: "white" }}><span>$</span>{(budget.transportation.vehiclePayment.projected + budget.transportation.busTrainUber.projected + budget.transportation.insurance.projected + budget.transportation.licensing.projected + budget.transportation.fuel.projected + budget.transportation.maintenance.projected + budget.transportation.other.projected - (budget.transportation.vehiclePayment.actual + budget.transportation.busTrainUber.actual + budget.transportation.insurance.actual + budget.transportation.licensing.actual + budget.transportation.fuel.actual + budget.transportation.maintenance.actual + budget.transportation.other.actual)).toFixed(2)}</h4>
+                                <h4 className='subtotals-wrapper'><span>$</span>{(budget.transportation.vehiclePayment.projected + budget.transportation.busTrainUber.projected + budget.transportation.insurance.projected + budget.transportation.licensing.projected + budget.transportation.fuel.projected + budget.transportation.maintenance.projected + budget.transportation.other.projected).toFixed(2)}</h4>
+                                <h4 className='subtotals-wrapper'><span>$</span>{(budget.transportation.vehiclePayment.actual + budget.transportation.busTrainUber.actual + budget.transportation.insurance.actual + budget.transportation.licensing.actual + budget.transportation.fuel.actual + budget.transportation.maintenance.actual + budget.transportation.other.actual).toFixed(2)}</h4>
+                                <h4 className='subtotals-wrapper' style={budget.transportation.vehiclePayment.projected + budget.transportation.busTrainUber.projected + budget.transportation.insurance.projected + budget.transportation.licensing.projected + budget.transportation.fuel.projected + budget.transportation.maintenance.projected + budget.transportation.other.projected - (budget.transportation.vehiclePayment.actual + budget.transportation.busTrainUber.actual + budget.transportation.insurance.actual + budget.transportation.licensing.actual + budget.transportation.fuel.actual + budget.transportation.maintenance.actual + budget.transportation.other.actual) > 0 ? { color: "green", backgroundColor: "white" } : { color: "red", backgroundColor: "white" }}><span>$</span>{(budget.transportation.vehiclePayment.projected + budget.transportation.busTrainUber.projected + budget.transportation.insurance.projected + budget.transportation.licensing.projected + budget.transportation.fuel.projected + budget.transportation.maintenance.projected + budget.transportation.other.projected - (budget.transportation.vehiclePayment.actual + budget.transportation.busTrainUber.actual + budget.transportation.insurance.actual + budget.transportation.licensing.actual + budget.transportation.fuel.actual + budget.transportation.maintenance.actual + budget.transportation.other.actual)).toFixed(2)}</h4>
                             </div>
                         </div>
                     </div>
