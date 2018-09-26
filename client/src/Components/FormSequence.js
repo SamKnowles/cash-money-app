@@ -16,7 +16,7 @@ class FormSequence extends Component {
         super(props);
         this.state = {
             income: {
-                projected: ''
+                projected: '',
             },
             housing: {
                 mortgageRent: {

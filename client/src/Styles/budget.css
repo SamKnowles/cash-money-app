@@ -125,9 +125,12 @@ h6 {
     height: 45px;
     font-size: 13px;
     display: flex;
+    text-align: center;
     justify-content: center;
     flex-direction: column;
     font-weight: bold;
+    background-image: linear-gradient(blue, #5581D3);
+    color: white;    
 }
 
 .bal-wrapper {
@@ -250,17 +253,24 @@ h4 {
     overflow: hidden;
     text-overflow: ellipsis;
     margin: 0;
-    width: 72px;
+    width: 71px;
+    display: flex;
+    justify-content: center; 
+    padding-top: 7px;
 }
 
 p {
-    width: 152px;
+    width: 151px;
     height: 30px;
     background-image: linear-gradient(blue, #5581D3);
     font-weight: bold;
     font-size: 20px;
     margin: 0;
     color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;   
+    text-indent: 3px; 
 }
 
 h1 {

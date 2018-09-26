@@ -103,7 +103,7 @@ class Budget extends Component {
                                             className="dif-wrapper"
                                             type='number'
                                             value={budget.income.projected}
-                                            placeholder={budget.income.projected}
+                                            placeholder={0}
                                             onChange={e => this.handleChangeIncomeProjected(e, 'budget')} />
                                     </div>
                                     <div className="income-cat-wrapper">
