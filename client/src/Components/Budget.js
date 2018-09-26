@@ -84,9 +84,9 @@ class Budget extends Component {
         return (
             budget ?
                 <div className="budget-wrapper">
-                <div className="logout-link">
-                    <div className="nav-link"><button onClick={this.props.logout}>Logout</button></div>
-                </div>
+                    <div className="logout-link">
+                        <div className="nav-link"><button onClick={this.props.logout}>Logout</button></div>
+                    </div>
                     <div className='budget-title-wrapper'>PULL YOUR LIFE TOGETHER</div>
                     <div className='income-wrapper'>
                         <div className='pro-act-income-wrapper'>
@@ -124,8 +124,8 @@ class Budget extends Component {
                                 </div>
                             </div>
                             <div className='actual-income-wrapper'>
-                            <div className="pmi-ami-wrapper">
-                                <h2 className='money-income'>Actual Monthly Income</h2>
+                                <div className="pmi-ami-wrapper">
+                                    <h2 className='money-income'>Actual Monthly Income</h2>
                                 </div>
                                 <div className='inc-wrapper-wrapper'>
                                     <div className="income-cat-wrapper">
@@ -174,7 +174,7 @@ class Budget extends Component {
                     </div>
                     <div className='category-wrapper'>
                         <div className="housing-wrapper">
-                            <div className="category"  className='category-banner-wrapper'>
+                            <div className="category" className='category-banner-wrapper'>
                                 <p>Housing</p>
                                 <h4>Projected Cost</h4>
                                 <h4>Actual Cost</h4>
@@ -393,7 +393,7 @@ class Budget extends Component {
                         </div>
 
                         <div className="entertainment-wrapper">
-                            <div className="category"  className='category-banner-wrapper'>
+                            <div className="category" className='category-banner-wrapper'>
                                 <p >Entertainment</p>
                                 <h4>Projected Cost</h4>
                                 <h4>Actual Cost</h4>
@@ -552,7 +552,7 @@ class Budget extends Component {
                             </div>
                         </div>
                         <div className="loans-wrapper">
-                            <div className="category"  className='category-banner-wrapper'>
+                            <div className="category" className='category-banner-wrapper'>
                                 <p>Loans</p>
                                 <h4>Projected Cost</h4>
                                 <h4>Actual Cost</h4>
@@ -650,7 +650,7 @@ class Budget extends Component {
                             </div>
                         </div>
                         <div className="transportation-wrapper">
-                            <div className="category"  className='category-banner-wrapper'>
+                            <div className="category" className='category-banner-wrapper'>
                                 <p>Transportation</p>
                                 <h4>Projected Cost</h4>
                                 <h4>Actual Cost</h4>
@@ -814,7 +814,7 @@ class Budget extends Component {
                     </div>
                 </div>
                 : <div>loading...
-                                        <div className="nav-link"><button onClick={this.props.logout}>Logout</button></div>
+                    <div className="nav-link"><button onClick={this.props.logout}>Logout</button></div>
 
                 </div>
         )
