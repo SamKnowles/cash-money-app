@@ -196,12 +196,21 @@ h6 {
     font-size: 24px;
     width: 50%;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-image: linear-gradient(blue, #5581D3);        
+    text-decoration: none;
+    cursor: pointer;
 }
 
 .button:hover {
-    background-color: #008CBA;
-    color: white;
+    background-image: linear-gradient(#5581d3, blue);        
+    border: 1px solid silver;
+    cursor: pointer;
 }
+
 
 .category {
     width: 100%;

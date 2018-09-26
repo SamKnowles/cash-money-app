@@ -70,12 +70,12 @@ class Budget extends Component {
 
     handleSubmit = (e) => {
         this.props.editBudget(this.state.budget, this.props.budget.data._id);
+        window.location.reload();
     }
 
     componentDidMount() {
         this.props.loadBudget().then(() => this.setState({ budget: this.props.budget.data }))
     }
-
 
     render() {
         console.log(this.state);
@@ -198,7 +198,7 @@ class Budget extends Component {
                                     value={budget.housing.mortgageRent.actual}
                                     onChange={e => this.handleChangeActual(e, 'housing')} />
                                 <span>$</span>
-                                <h5 style={budget.housing.mortgageRent.projected - budget.housing.mortgageRent.actual > 0 ? { color: "green" } : { color: "red" }}>{(budget.housing.mortgageRent.projected - budget.housing.mortgageRent.actual).toFixed(2)}</h5>
+                                <h5 style={budget.housing.mortgageRent.projected - budget.housing.mortgageRent.actual > 0 ? { color: "green" } : budget.housing.mortgageRent.projected - budget.housing.mortgageRent.actual < 0 ? { color: "red" } : {color: 'black'}}>{(budget.housing.mortgageRent.projected - budget.housing.mortgageRent.actual).toFixed(2)}</h5>
                             </div>
                             <div className="category">
                                 <label className="category-name">Phone</label>

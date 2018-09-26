@@ -17,13 +17,13 @@
     justify-content: center;
     align-items: center;
     color: white;
-    background-color: #3742fa;
+    background-image: linear-gradient(blue, #5581D3);        
     text-decoration: none;
     cursor: pointer;
 }
 
 .login-signup-link:hover {
-    background-color: #3D3DFF;
+    background-image: linear-gradient(#5581d3, blue);        
     border: 1px solid silver;
     cursor: pointer;
 }
@@ -35,7 +35,7 @@
     flex-direction: column;
     text-align: center;
     align-items: center;
-    background-color: white;
+    background-image: linear-gradient(blue, #5581D3);        
     border: 1px solid #2f3542;
 }
 
@@ -50,9 +50,19 @@
 }
 
 .cat-form-footer {
+    background-image: linear-gradient(blue, #5581D3);            
     width: 100%;
-    background-color: #3D3DFF;   
     height: 25px; 
+    position:fixed;
+    left:0px;
+    bottom:0px;
+}
+
+.selected {
+    background-image: none;
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+    border: 1px solid black;
 }
 
 /* .nav-link:hover:not(.active) {

@@ -16,10 +16,10 @@ class Navbar extends Component {
         return (
             <div className='nav-wrapper'>
                 <div className="navbar-item">
-                    {isAuthenticated ? null : <div className="nav-link" ><NavLink className='login-signup-link' activeClassName="selected" activeStyle={{backgroundColor:'#1e90ff', textShadow: '-1px 0 black, 0 1px black, 1px 0 black, 0 -1px black', border: '1px solid black' }} exact to="/login">Login</NavLink></div>}
+                    {isAuthenticated ? null : <div className="nav-link" ><NavLink className='login-signup-link' activeClassName="selected" exact to="/login">Login</NavLink></div>}
                 </div>
                 <div className="navbar-item">
-                    {isAuthenticated ? null : <div className="nav-link"><NavLink className='login-signup-link' activeClassName="selected" activeStyle={{backgroundColor:'#1e90ff', textShadow: '-1px 0 black, 0 1px black, 1px 0 black, 0 -1px black', border: '1px solid black' }} exact to="/signup">Sign Up</NavLink></div>}
+                    {isAuthenticated ? null : <div className="nav-link"><NavLink className='login-signup-link' activeClassName="selected" exact to="/signup">Sign Up</NavLink></div>}
                 </div>
                 {/* <div className="navbar-item">
                     {isAuthenticated ? <div className="nav-link"><Link to="/form/home">Home</Link></div> : null}
