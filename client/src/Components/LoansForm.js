@@ -17,7 +17,7 @@ class LoansForm extends Component {
                 {/* <div class="progress-light-grey">
                     <div class="progress-grey" style={{ "height": "24px", "width": "60%" }}>60%</div>
                 </div> */}
-                <div className='cat-form-instructions'>Fill out this form then click the "Entertainment" button at the bottom.</div>
+                <div className='cat-form-instructions' style={{marginTop: '100px'}}>Fill out this form then click the "Entertainment" button at the bottom.</div>
                 <div className='mid-section-wrapper'>
                 <div className='cat-form-wrapper'>
                     <div className='form-category-wrapper'>

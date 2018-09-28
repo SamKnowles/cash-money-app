@@ -18,7 +18,7 @@ class EntertainmentForm extends Component {
                 {/* <div class="progress-light-grey">
                     <div class="progress-grey" style={{ "height": "24px", "width": "80%" }}>80%</div>
                 </div> */}
-                <div className='cat-form-instructions'>Fill out this form then click the "Budget" button at the bottom.</div>
+                <div className='cat-form-instructions' style={{marginTop: '70px'}}>Fill out this form then click the "Budget" button at the bottom.</div>
                 <div className='mid-section-wrapper'>
                 <div className='cat-form-wrapper'>
                     <div className='form-category-wrapper'>
