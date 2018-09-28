@@ -9,7 +9,7 @@ const app = express();
 require("dotenv").config();
 
 mongoose.Promise = global.Promise;
-mongoose.connect("mongodb://localhost/budget",
+mongoose.connect("mongodb://localhost:27017/budget", {useNewUrlParser:true},
  (err) => {
     if (err) throw err;
     console.log("Connected to Mongo");
