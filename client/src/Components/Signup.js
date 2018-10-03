@@ -58,7 +58,7 @@ class Signup extends Component {
                     <footer className='cat-form-footer'></footer>
             </div>
         )
-    }
+    }www
 }
 
 export default connect(state => state.auth, { signup })(Signup);  
