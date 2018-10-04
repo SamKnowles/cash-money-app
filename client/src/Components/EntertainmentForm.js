@@ -54,7 +54,7 @@ class EntertainmentForm extends Component {
                 <div className='link-wrapper'>
                     <div className='a-link' to="/budget" onClick={handleSubmit}>Budget</div>
                 </div>
-                {/* <footer className='cat-form-footer'></footer> */}
+                <footer className='cat-form-footer'></footer>
             </div>
         )
     }

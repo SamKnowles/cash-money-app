@@ -41,7 +41,7 @@ class LoansForm extends Component {
                 <div className='link-wrapper'>
                     <Link className='a-link' to="/form/entertainment">Entertainment</Link>
                 </div>
-                {/* <footer className='cat-form-footer'></footer> */}
+                <footer className='cat-form-footer'></footer>
             </div>
         )
     }
