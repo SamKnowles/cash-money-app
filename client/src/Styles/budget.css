@@ -1,5 +1,5 @@
 .budget-wrapper {
-    width: 100%vh;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -21,8 +21,8 @@
 
 .income-wrapper {
     flex-wrap: wrap;
-    height: 300px;
-    width: 800px;
+    height: 100%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -316,4 +316,8 @@ h1 {
     display: flex;
     justify-content: flex-start;
     background-image: linear-gradient(blue, #5581D3);        
+}
+
+.pro-act-income-wrapper {
+    border-bottom: 20px;
 }
