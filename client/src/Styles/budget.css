@@ -147,10 +147,10 @@ h6 {
 
 .category-wrapper {
     width: 70%;
-    height: auto;
+    height: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .housing-wrapper {
@@ -318,6 +318,3 @@ h1 {
     background-image: linear-gradient(blue, #5581D3);        
 }
 
-.pro-act-income-wrapper {
-    border-bottom: 20px;
-}
