@@ -149,19 +149,30 @@ h6 {
     width: 70%;
     height: 100%;
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-around;
+}
+
+@media only screen and (max-width: 600px) {
+    .category-wrapper {
+        background-color: lightblue;
+    }
 }
 
 .housing-wrapper {
     border-radius: 5px;
     width: 370px;
+    height: 100%;
+    margin-top: 20px;
+    
 }
 
 .entertainment-wrapper {
     border-radius: 5px;
     height: 100%;
     width: 370px;
+    margin-top: 20px;    
 }
 
 .transportation-wrapper {
@@ -169,7 +180,7 @@ h6 {
     height: 100%;
     width: 370px;
     border-radius: 5px;
-    margin-top: -40px;
+    margin-top: 20px;
 }
 
 .loans-wrapper {
