@@ -814,7 +814,7 @@ class Budget extends Component {
                     </div>
                 </div>
                 : <div>loading...
-                    <div className="nav-link"><button onClick={this.props.logout}>Logout</button></div>
+                    <div className="logout-link"><button onClick={this.props.logout}>Logout</button></div>
 
                 </div>
         )

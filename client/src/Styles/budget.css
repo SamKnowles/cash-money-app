@@ -1,5 +1,5 @@
 .budget-wrapper {
-    width: 100%;
+    max-width: 1200px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -17,6 +17,10 @@
     text-align: center;
     border: 1px solid #3b3a30;
     border-radius: 5px;
+    background-image: linear-gradient(blue, #5581D3);
+    text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+    color: white;
+    margin-bottom: 20px;
 }
 
 .income-wrapper {
@@ -149,15 +153,8 @@ h6 {
     width: 70%;
     height: 100%;
     display: flex;
-    flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-around;
-}
-
-@media only screen and (max-width: 600px) {
-    .category-wrapper {
-        background-color: lightblue;
-    }
 }
 
 .housing-wrapper {
@@ -172,7 +169,8 @@ h6 {
     border-radius: 5px;
     height: 100%;
     width: 370px;
-    margin-top: 20px;    
+    margin-top: 20px;  
+    margin-left: 25px;  
 }
 
 .transportation-wrapper {
@@ -180,7 +178,8 @@ h6 {
     height: 100%;
     width: 370px;
     border-radius: 5px;
-    margin-top: 20px;
+    margin-top: -40px;
+    margin-left: 25px;
 }
 
 .loans-wrapper {
@@ -190,6 +189,32 @@ h6 {
     height: 100%;
     width: 370px;
 }
+
+@media (max-width: 1111px) {
+    .category-wrapper {
+        width: 60%;
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .transportation-wrapper {
+        margin-top: 20px;
+    }
+    .entertainment-wrapper {
+        margin-left: 0px;
+    }
+    .transportation-wrapper {
+        margin-left: 0px;
+    }
+    .income-wrapper {
+        margin-bottom: 0px;
+    }
+    .pro-act-income-wrapper {
+        margin-top: 25px;
+        margin-bottom: 20px;
+    }
+  }
 
 .button-wrapper {
     margin-top: 30px;
@@ -221,6 +246,16 @@ h6 {
     background-image: linear-gradient(#5581d3, blue);        
     border: 1px solid silver;
     cursor: pointer;
+}
+
+.button:active {
+    color: white;
+    text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+border: 2px solid rgba(0,0,0,0.6);
 }
 
 
