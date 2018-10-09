@@ -16,7 +16,7 @@ class TransportationForm extends Component {
                 {/* <div class="progress-light-grey">
                     <div class="progress-grey" style={{ "height": "24px", "width": "40%" }}>40%</div>
                 </div> */}
-                <div className='cat-form-instructions' style={{marginTop: '70px'}}>Fill out this form then click the "Loans" button at the bottom.</div>
+                <div className='cat-form-instructions' style={{marginTop:93, width:300}}>Fill out this form then click the "Loans" button at the bottom.</div>
                 <div className='mid-section-wrapper'>
                     <div className='cat-form-wrapper'>
                         <div className='form-category-wrapper'>

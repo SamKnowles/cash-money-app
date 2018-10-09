@@ -18,8 +18,8 @@ class EntertainmentForm extends Component {
                 {/* <div class="progress-light-grey">
                     <div class="progress-grey" style={{ "height": "24px", "width": "80%" }}>80%</div>
                 </div> */}
-                <div className='cat-form-instructions' style={{marginTop: '70px'}}>Fill out this form then click the "Budget" button at the bottom.</div>
-                <div className='mid-section-wrapper'>
+                <div className='cat-form-instructions' style={{marginTop: '83px'}}>Fill out this form then click the "Budget" button at the bottom.</div>
+                <div className='mid-section-wrapper' style={{marginBottom:52}}>
                 <div className='cat-form-wrapper'>
                     <div className='form-category-wrapper'>
                         <label className="form-category-name">Movies</label>
@@ -52,7 +52,7 @@ class EntertainmentForm extends Component {
                 </div>
                 </div>
                 <div className='link-wrapper'>
-                    <div className='a-link' to="/budget" onClick={handleSubmit}>Budget</div>
+                    <div className='a-link' to="/budget" style={{marginBottom:95, height:'93%'}} onClick={handleSubmit}>Budget</div>
                 </div>
                 <footer className='cat-form-footer'></footer>
             </div>
