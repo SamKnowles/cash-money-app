@@ -4,7 +4,11 @@
 
 .app-wrapper {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
 }
 
 .budget-wrapper {
@@ -13,7 +17,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    margin-right: none;
 }
 
 .budget-title-wrapper {
@@ -41,7 +44,7 @@
     justify-content: center;
     align-items: center;
     justify-content: space-around;
-    width: 60%;
+    width: 70%;
 }
 
 .income-cat-wrapper {
@@ -124,6 +127,7 @@ h6 {
 .balance-section-wrapper {
     border: 1px #b2c2bf solid;
     border: 1px solid #3b3a30;
+    margin-right: 62px;
 }
 
 .bal-row-wrapper {
@@ -200,6 +204,10 @@ h6 {
     width: 370px;
 }
 
+.pro-act-income-wrapper {
+margin-left: 39px;
+}
+
 @media (max-width: 1111px) {
     .category-wrapper {
         width: 60%;
@@ -221,8 +229,18 @@ h6 {
         margin-bottom: 0px;
     }
     .pro-act-income-wrapper {
-        margin-top: 25px;
         margin-bottom: 20px;
+        margin-left: 0px;
+    }
+    .balance-section-wrapper {
+        margin: 0px;
+    }
+    .income-wrapper {
+        width: 60%;
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
     }
   }
 
@@ -349,7 +367,7 @@ h1 {
     1px -1px 0 #000,
     -1px 1px 0 #000,
     1px 1px 0 #000; 
-   
+   max-width: 1200px;
 }
 
 .income-dollar-sign {

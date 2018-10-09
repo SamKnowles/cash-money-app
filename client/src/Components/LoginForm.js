@@ -25,7 +25,6 @@ function LoginForm(props) {
                 </div>
                 <button className='submit-button-wrapper' type="submit">Login</button>
             </form>
-            <footer className='cat-form-footer'></footer>
         </div>
         
     )
