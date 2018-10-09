@@ -83,11 +83,10 @@ class Budget extends Component {
         const { budget } = this.state;
         return (
             budget ?
-                <div className="budget-wrapper">
-                    <div className="logout-link">
+                <div className="budget-wrapper">                  
                         <div className="nav-link"><button className='logout-button' onClick={this.props.logout}>Logout</button></div>
+                    <div className='budget-title-wrapper'>PULL YOUR LIFE TOGETHER
                     </div>
-                    <div className='budget-title-wrapper'>PULL YOUR LIFE TOGETHER</div>
                     <div className='income-wrapper'>
                         <div className='pro-act-income-wrapper'>
                             <div className='projected-income-wrapper'>

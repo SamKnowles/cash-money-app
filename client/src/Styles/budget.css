@@ -234,7 +234,6 @@ h6 {
 .button {
     background-color: white;
     color: #3b3a30;
-    border: 1px solid #008CBA;
     font-size: 24px;
     width: 50%;
     cursor: pointer;
@@ -245,6 +244,8 @@ h6 {
     background-image: linear-gradient(blue, #5581D3);        
     text-decoration: none;
     cursor: pointer;
+    border-radius: 10px;
+    
 }
 
 .button:hover {
@@ -369,9 +370,27 @@ h1 {
     background-image: linear-gradient(blue, #5581D3);        
 }
 .logout-button {
-    color: rgba(0,0,0,0.6);
-    text-shadow: 2px 2px 3px rgba(255,255,255,0.1);
-    background: #222;
+    color: white;
+    text-shadow: 2px 4px 3px rgba(0,0,0,0.6);
+    background-image: linear-gradient(#033601, #23FD06);
     font-size: 30px;
+    border-radius: 10px;
+    margin-bottom: 2px;
 }
 
+.logout-button:hover {
+    background-image: linear-gradient(#23FD06, #033601);        
+    border: 1px solid silver;
+    cursor: pointer;
+}
+
+.logout-button:active {
+    color: white;
+    text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000; 
+    border: 1px black solid;
+    
+}
