@@ -52,7 +52,6 @@ class TransportationForm extends Component {
                 <div className='link-wrapper'>
                     <Link className='a-link' to="/form/loans">Loans</Link>
                 </div>
-                <footer className='cat-form-footer'></footer> 
 -            </div>
         )
     }

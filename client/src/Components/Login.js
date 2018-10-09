@@ -53,7 +53,6 @@ class Login extends Component {
                     handleChange={this.handleChange}
                     handleSubmit={this.handleSubmit}
                     {...this.state.inputs} />
-                    <footer className='cat-form-footer'></footer>
             </div>
         )
     }
