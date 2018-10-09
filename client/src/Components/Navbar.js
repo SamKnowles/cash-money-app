@@ -40,7 +40,7 @@ class Navbar extends Component {
                     {isAuthenticated ? <div className="nav-link"><Link to="/budget">Budget</Link></div> : null}
                 </div> */}
                 <div className="logout-link">
-                    {isAuthenticated ? <div className="nav-link"><button onClick={this.props.logout}>Logout</button></div> : null}
+                    {isAuthenticated ? <div className="nav-link"><button  className='logout-button' onClick={this.props.logout}>Logout</button></div> : null}
                 </div>
             </div>
         )

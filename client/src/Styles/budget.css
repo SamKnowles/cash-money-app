@@ -1,9 +1,17 @@
+.app-wrapper {
+    background-color: pink;
+    width: 80%;
+    margin: 0 auto;
+}
+
 .budget-wrapper {
     max-width: 1200px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+    width: 80%;
+    margin: 0 auto;
 }
 
 .budget-title-wrapper {
@@ -362,5 +370,11 @@ h1 {
     display: flex;
     justify-content: flex-start;
     background-image: linear-gradient(blue, #5581D3);        
+}
+.logout-button {
+    color: rgba(0,0,0,0.6);
+    text-shadow: 2px 2px 3px rgba(255,255,255,0.1);
+    background: #222;
+    font-size: 30px;
 }
 

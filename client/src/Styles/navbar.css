@@ -1,5 +1,5 @@
 .nav-wrapper {
-    width: 100%;
+    width: 1200px;
     height: 50px;
     display: flex;
     justify-content: center;
@@ -53,7 +53,7 @@
 
 .cat-form-footer {
     background-image: linear-gradient(blue, #5581D3);            
-    width: 100%;
+    max-width: 1200px;
     height: 25px; 
     position: absolute;
     right: 0;bottom:0;left:0;
