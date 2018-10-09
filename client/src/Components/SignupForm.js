@@ -24,6 +24,7 @@ function SignupForm(props) {
                 </div>
                 <button className='submit-button-wrapper' type="submit">Create Account</button>
             </form>
+            <footer className='cat-form-footer'></footer>
         </div>
     )
 }

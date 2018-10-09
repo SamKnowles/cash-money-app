@@ -2,6 +2,11 @@
     margin: 0;
 }
 
+.app-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
 .budget-wrapper {
     max-width: 1200px;
     display: flex;

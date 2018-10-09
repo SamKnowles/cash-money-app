@@ -55,10 +55,9 @@ class Signup extends Component {
                     handleChange={this.handleChange}
                     handleSubmit={this.handleSubmit}
                     {...this.state.inputs} />
-                    <footer className='cat-form-footer'></footer>
             </div>
         )
-    }www
+    }
 }
 
 export default connect(state => state.auth, { signup })(Signup);  
