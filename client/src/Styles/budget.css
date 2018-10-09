@@ -1,7 +1,5 @@
-.app-wrapper {
-    background-color: pink;
-    width: 80%;
-    margin: 0 auto;
+* {
+    margin: 0;
 }
 
 .budget-wrapper {
@@ -10,8 +8,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    width: 80%;
-    margin: 0 auto;
+    margin-right: none;
 }
 
 .budget-title-wrapper {
