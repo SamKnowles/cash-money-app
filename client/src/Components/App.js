@@ -50,7 +50,6 @@ class App extends Component {
                         <ProtectedRoute path="/loans" component={LoansForm} />
                         <ProtectedRoute path="/entertainment" component={EntertainmentForm} />
                     </Switch>
-                    <footer className='cat-form-footer'></footer> 
             </div>
             :
             <div>Loading user data...</div>

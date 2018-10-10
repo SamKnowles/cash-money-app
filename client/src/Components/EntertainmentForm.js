@@ -54,6 +54,7 @@ class EntertainmentForm extends Component {
                 <div className='link-wrapper'>
                     <div className='a-link' to="/budget" style={{marginBottom:95, height:'93%'}} onClick={handleSubmit}>Budget</div>
                 </div>
+                <footer className='cat-form-footer'></footer> 
             </div>
         )
     }

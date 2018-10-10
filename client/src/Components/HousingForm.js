@@ -64,6 +64,7 @@ class HousingForm extends Component {
                 <div className='link-wrapper'>
                     <Link className='a-link' to="/form/transportation">Transportation</Link>
                 </div>
+                <footer className='cat-form-footer'></footer> 
             </div>
         )
     }
