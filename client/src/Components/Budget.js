@@ -804,6 +804,7 @@ class Budget extends Component {
                     <div className='button-wrapper'>
                         <button className='button' onClick={this.handleSubmit}>UPDATE</button>
                     </div>
+                    <footer className='cat-form-footer'></footer> 
                 </div>
                 : <div>loading...
                     <button className='logout-button' onClick={this.props.logout}>Logout</button>
