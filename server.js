@@ -9,15 +9,17 @@ const PORT = process.env.PORT || 5001;
 
 const app = express();
 
+
+app.use(morgan("dev"));
+app.use(bodyParser.json());
+app.use(express.static(path.join(__dirname, "client", "build")))
+
+
 mongoose.connect("mongodb://localhost:27017/budget",
 (err) => {
     if (err) throw err;
     console.log("Connected to Mongo");
 });
-
-app.use(morgan("dev"));
-app.use(bodyParser.json());
-app.use(express.static(path.join(__dirname, "client", "build")))
 
 app.use("/api", expressJWT({secret: process.env.SECRET}))
 app.use("/api/profile", require("./routes/profile"));

@@ -79,7 +79,6 @@ class Budget extends Component {
 
     render() {
         console.log(this.state);
-        // let { loading } = this.props.budget;	
         const { budget } = this.state;
         return (
             budget ?
@@ -95,7 +94,7 @@ class Budget extends Component {
                                 </div>
                                 <div className='inc-wrapper-wrapper'>
                                     <div className="income-cat-wrapper">
-                                        <h6>Income</h6>
+                                        <h6>Projected Income</h6>
                                         <span className='income-dollar-sign'>$</span>
                                         <input
                                             name="income"
@@ -106,7 +105,7 @@ class Budget extends Component {
                                             onChange={e => this.handleChangeIncomeProjected(e, 'budget')} />
                                     </div>
                                     <div className="income-cat-wrapper">
-                                        <h6>Extra Income</h6>
+                                        <h6>Projected Extra Income</h6>
                                         <span className='income-dollar-sign'>$</span>
                                         <input
                                             name="extraIncome"
@@ -128,7 +127,7 @@ class Budget extends Component {
                                 </div>
                                 <div className='inc-wrapper-wrapper'>
                                     <div className="income-cat-wrapper">
-                                        <h6>Income</h6>
+                                        <h6>Actual Income</h6>
                                         <span className='income-dollar-sign'>$</span>
                                         <input
                                             name="income"
@@ -139,7 +138,7 @@ class Budget extends Component {
                                             onChange={e => this.handleChangeIncomeActual(e, 'budget')} />
                                     </div>
                                     <div className="income-cat-wrapper">
-                                        <h6>Extra Income</h6>
+                                        <h6>Actual Extra Income</h6>
                                         <span className='income-dollar-sign'>$</span>
                                         <input
                                             name="extraIncome"
@@ -166,8 +165,8 @@ class Budget extends Component {
                                 <div className='bal-wrapper'>${((budget.income.actual + budget.extraIncome.actual) - ((budget.loans.personal.actual + budget.loans.student.actual + budget.loans.credit.actual + budget.loans.other.actual + budget.housing.mortgageRent.actual + budget.housing.phone.actual + budget.housing.electricity.actual + budget.housing.gas.actual + budget.housing.waterSewer.actual + budget.housing.internet.actual + budget.housing.wasteRemoval.actual + budget.housing.maintenance.actual + budget.housing.supplies.actual + budget.housing.other.projected + budget.entertainment.movies.actual + budget.entertainment.music.actual + budget.entertainment.vacation.actual + budget.entertainment.theater.actual + budget.entertainment.sports.actual + budget.entertainment.winterSports.actual + budget.entertainment.other.actual + budget.transportation.vehiclePayment.actual + budget.transportation.busTrainUber.actual + budget.transportation.insurance.actual + budget.transportation.licensing.actual + budget.transportation.fuel.actual + budget.transportation.maintenance.actual + budget.transportation.other.actual))).toFixed(2)}</div>
                             </div>
                             <div className='bal-row-wrapper'>
-                                <div className='bal-discription-wrapper'>Difference (Actual Difference Minus Projected)</div>
-                                <div className='bal-wrapper' style={(((budget.income.projected + budget.extraIncome.projected) - ((budget.housing.mortgageRent.projected + budget.housing.phone.projected + budget.housing.electricity.projected + budget.housing.gas.projected + budget.housing.waterSewer.projected + budget.housing.internet.projected + budget.housing.wasteRemoval.projected + budget.housing.maintenance.projected + budget.housing.supplies.projected + budget.housing.other.projected + (budget.entertainment.movies.projected + budget.entertainment.music.projected + budget.entertainment.vacation.projected + budget.entertainment.theater.projected + budget.entertainment.sports.projected + budget.entertainment.winterSports.projected + budget.entertainment.other.projected) + (budget.loans.personal.projected + budget.loans.student.projected + budget.loans.credit.projected + budget.loans.other.projected) + (budget.transportation.vehiclePayment.projected + budget.transportation.busTrainUber.projected + budget.transportation.insurance.projected + budget.transportation.licensing.projected + budget.transportation.fuel.projected + budget.transportation.maintenance.projected + budget.transportation.other.projected)))) - ((budget.income.actual + budget.extraIncome.actual) - ((budget.loans.personal.actual + budget.loans.student.actual + budget.loans.credit.actual + budget.loans.other.actual + budget.housing.mortgageRent.actual + budget.housing.phone.actual + budget.housing.electricity.actual + budget.housing.gas.actual + budget.housing.waterSewer.actual + budget.housing.internet.actual + budget.housing.wasteRemoval.actual + budget.housing.maintenance.actual + budget.housing.supplies.actual + budget.housing.other.projected + budget.entertainment.movies.actual + budget.entertainment.music.actual + budget.entertainment.vacation.actual + budget.entertainment.theater.actual + budget.entertainment.sports.actual + budget.entertainment.winterSports.actual + budget.entertainment.other.actual + budget.transportation.vehiclePayment.actual + budget.transportation.busTrainUber.actual + budget.transportation.insurance.actual + budget.transportation.licensing.actual + budget.transportation.fuel.actual + budget.transportation.maintenance.actual + budget.transportation.other.actual)))) > 0 ? { color: "green" } : { color: "red" }} >${(((budget.income.projected + budget.extraIncome.projected) - ((budget.housing.mortgageRent.projected + budget.housing.phone.projected + budget.housing.electricity.projected + budget.housing.gas.projected + budget.housing.waterSewer.projected + budget.housing.internet.projected + budget.housing.wasteRemoval.projected + budget.housing.maintenance.projected + budget.housing.supplies.projected + budget.housing.other.projected + (budget.entertainment.movies.projected + budget.entertainment.music.projected + budget.entertainment.vacation.projected + budget.entertainment.theater.projected + budget.entertainment.sports.projected + budget.entertainment.winterSports.projected + budget.entertainment.other.projected) + (budget.loans.personal.projected + budget.loans.student.projected + budget.loans.credit.projected + budget.loans.other.projected) + (budget.transportation.vehiclePayment.projected + budget.transportation.busTrainUber.projected + budget.transportation.insurance.projected + budget.transportation.licensing.projected + budget.transportation.fuel.projected + budget.transportation.maintenance.projected + budget.transportation.other.projected)))) - ((budget.income.actual + budget.extraIncome.actual) - ((budget.loans.personal.actual + budget.loans.student.actual + budget.loans.credit.actual + budget.loans.other.actual + budget.housing.mortgageRent.actual + budget.housing.phone.actual + budget.housing.electricity.actual + budget.housing.gas.actual + budget.housing.waterSewer.actual + budget.housing.internet.actual + budget.housing.wasteRemoval.actual + budget.housing.maintenance.actual + budget.housing.supplies.actual + budget.housing.other.projected + budget.entertainment.movies.actual + budget.entertainment.music.actual + budget.entertainment.vacation.actual + budget.entertainment.theater.actual + budget.entertainment.sports.actual + budget.entertainment.winterSports.actual + budget.entertainment.other.actual + budget.transportation.vehiclePayment.actual + budget.transportation.busTrainUber.actual + budget.transportation.insurance.actual + budget.transportation.licensing.actual + budget.transportation.fuel.actual + budget.transportation.maintenance.actual + budget.transportation.other.actual)))).toFixed(2)}</div>
+                                <div className='bal-discription-wrapper'>Difference (Projected Difference Minus Actual)</div>
+                                <div className='bal-wrapper' style={((budget.income.actual + budget.extraIncome.actual) - ((budget.loans.personal.actual + budget.loans.student.actual + budget.loans.credit.actual + budget.loans.other.actual + budget.housing.mortgageRent.actual + budget.housing.phone.actual + budget.housing.electricity.actual + budget.housing.gas.actual + budget.housing.waterSewer.actual + budget.housing.internet.actual + budget.housing.wasteRemoval.actual + budget.housing.maintenance.actual + budget.housing.supplies.actual + budget.housing.other.projected + budget.entertainment.movies.actual + budget.entertainment.music.actual + budget.entertainment.vacation.actual + budget.entertainment.theater.actual + budget.entertainment.sports.actual + budget.entertainment.winterSports.actual + budget.entertainment.other.actual + budget.transportation.vehiclePayment.actual + budget.transportation.busTrainUber.actual + budget.transportation.insurance.actual + budget.transportation.licensing.actual + budget.transportation.fuel.actual + budget.transportation.maintenance.actual + budget.transportation.other.actual))) - (((budget.income.projected + budget.extraIncome.projected) - ((budget.housing.mortgageRent.projected + budget.housing.phone.projected + budget.housing.electricity.projected + budget.housing.gas.projected + budget.housing.waterSewer.projected + budget.housing.internet.projected + budget.housing.wasteRemoval.projected + budget.housing.maintenance.projected + budget.housing.supplies.projected + budget.housing.other.projected + (budget.entertainment.movies.projected + budget.entertainment.music.projected + budget.entertainment.vacation.projected + budget.entertainment.theater.projected + budget.entertainment.sports.projected + budget.entertainment.winterSports.projected + budget.entertainment.other.projected) + (budget.loans.personal.projected + budget.loans.student.projected + budget.loans.credit.projected + budget.loans.other.projected) + (budget.transportation.vehiclePayment.projected + budget.transportation.busTrainUber.projected + budget.transportation.insurance.projected + budget.transportation.licensing.projected + budget.transportation.fuel.projected + budget.transportation.maintenance.projected + budget.transportation.other.projected))))) > 0 ? { color: "green" } : { color: "red" }} >${((budget.income.actual + budget.extraIncome.actual) - ((budget.loans.personal.actual + budget.loans.student.actual + budget.loans.credit.actual + budget.loans.other.actual + budget.housing.mortgageRent.actual + budget.housing.phone.actual + budget.housing.electricity.actual + budget.housing.gas.actual + budget.housing.waterSewer.actual + budget.housing.internet.actual + budget.housing.wasteRemoval.actual + budget.housing.maintenance.actual + budget.housing.supplies.actual + budget.housing.other.projected + budget.entertainment.movies.actual + budget.entertainment.music.actual + budget.entertainment.vacation.actual + budget.entertainment.theater.actual + budget.entertainment.sports.actual + budget.entertainment.winterSports.actual + budget.entertainment.other.actual + budget.transportation.vehiclePayment.actual + budget.transportation.busTrainUber.actual + budget.transportation.insurance.actual + budget.transportation.licensing.actual + budget.transportation.fuel.actual + budget.transportation.maintenance.actual + budget.transportation.other.actual))) - (((budget.income.projected + budget.extraIncome.projected) - ((budget.housing.mortgageRent.projected + budget.housing.phone.projected + budget.housing.electricity.projected + budget.housing.gas.projected + budget.housing.waterSewer.projected + budget.housing.internet.projected + budget.housing.wasteRemoval.projected + budget.housing.maintenance.projected + budget.housing.supplies.projected + budget.housing.other.projected + (budget.entertainment.movies.projected + budget.entertainment.music.projected + budget.entertainment.vacation.projected + budget.entertainment.theater.projected + budget.entertainment.sports.projected + budget.entertainment.winterSports.projected + budget.entertainment.other.projected) + (budget.loans.personal.projected + budget.loans.student.projected + budget.loans.credit.projected + budget.loans.other.projected) + (budget.transportation.vehiclePayment.projected + budget.transportation.busTrainUber.projected + budget.transportation.insurance.projected + budget.transportation.licensing.projected + budget.transportation.fuel.projected + budget.transportation.maintenance.projected + budget.transportation.other.projected))))).toFixed(2)}</div>
                             </div>
                         </div>
                     </div>
@@ -613,9 +612,7 @@ class Budget extends Component {
                                     value={budget.loans.credit.actual}
                                     onChange={e => this.handleChangeActual(e, 'loans')} />
                                 <span>$</span>
-                                <h5 style={budget.loans.credit.projected - budget.loans.credit.actual > 0 ? { color: "green" } : budget.loans.credit.projected - budget.loans.credit.actual < 0 ? {color: 'red'} : { color: "black" }}>{(budget.loans.credit.projected - budget.loans.credit.actual).toFixed(2
-                                )}</h5>
-
+                                <h5 style={budget.loans.credit.projected - budget.loans.credit.actual > 0 ? { color: "green" } : budget.loans.credit.projected - budget.loans.credit.actual < 0 ? {color: 'red'} : { color: "black" }}>{(budget.loans.credit.projected - budget.loans.credit.actual).toFixed(2)}</h5>
                             </div>
                             <div className="category">
                                 <label className="category-name">Other</label>
@@ -669,7 +666,7 @@ class Budget extends Component {
                                     value={budget.transportation.vehiclePayment.actual}
                                     onChange={e => this.handleChangeActual(e, 'transportation')} />
                                 <span>$</span>
-                                <h5 style={budget.transportation.vehiclePayment.projected - budget.transportation.vehiclePayment.actual > 0 ? { color: "green" } : budget.transportation.vehiclePayment.projected - budget.transportation.vehiclePayment.actual < 0 ? {color: 'red'} : { color: "black" }}>{(budget.transportation.vehiclePayment.projected - budget.transportation.vehiclePayment.actual)}</h5>
+                                <h5 style={budget.transportation.vehiclePayment.projected - budget.transportation.vehiclePayment.actual > 0 ? { color: "green" } : budget.transportation.vehiclePayment.projected - budget.transportation.vehiclePayment.actual < 0 ? {color: 'red'} : { color: "black" }}>{(budget.transportation.vehiclePayment.projected - budget.transportation.vehiclePayment.actual).toFixed(2)}</h5>
                             </div>
                             <div className="category">
                                 <label className="category-name">Train/ Uber</label>
@@ -689,7 +686,7 @@ class Budget extends Component {
                                     value={budget.transportation.busTrainUber.actual}
                                     onChange={e => this.handleChangeActual(e, 'transportation')} />
                                 <span>$</span>
-                                <h5 style={budget.transportation.busTrainUber.projected - budget.transportation.busTrainUber.actual > 0 ? { color: "green" } : budget.transportation.busTrainUber.projected - budget.transportation.busTrainUber.actual < 0 ? {color: 'red'} : { color: "black" }}>{budget.transportation.busTrainUber.projected - budget.transportation.busTrainUber.actual}</h5>
+                                <h5 style={budget.transportation.busTrainUber.projected - budget.transportation.busTrainUber.actual > 0 ? { color: "green" } : budget.transportation.busTrainUber.projected - budget.transportation.busTrainUber.actual < 0 ? {color: 'red'} : { color: "black" }}>{(budget.transportation.busTrainUber.projected - budget.transportation.busTrainUber.actual).toFixed(2)}</h5>
                             </div>
                             <div className="category">
                                 <label className="category-name">Insurance</label>
@@ -709,7 +706,7 @@ class Budget extends Component {
                                     value={budget.transportation.insurance.actual}
                                     onChange={e => this.handleChangeActual(e, 'transportation')} />
                                 <span>$</span>
-                                <h5 style={budget.transportation.insurance.projected - budget.transportation.insurance.actual > 0 ? { color: "green" } : budget.transportation.insurance.projected - budget.transportation.insurance.actual < 0 ? {color: 'red'} : { color: "black" }}>{budget.transportation.insurance.projected - budget.transportation.insurance.actual}</h5>
+                                <h5 style={budget.transportation.insurance.projected - budget.transportation.insurance.actual > 0 ? { color: "green" } : budget.transportation.insurance.projected - budget.transportation.insurance.actual < 0 ? {color: 'red'} : { color: "black" }}>{(budget.transportation.insurance.projected - budget.transportation.insurance.actual).toFixed(2)}</h5>
                             </div>
                             <div className="category">
                                 <label className="category-name">Licensing</label>
@@ -729,7 +726,7 @@ class Budget extends Component {
                                     value={budget.transportation.licensing.actual}
                                     onChange={e => this.handleChangeActual(e, 'transportation')} />
                                 <span>$</span>
-                                <h5 style={budget.transportation.licensing.projected - budget.transportation.licensing.actual > 0 ? { color: "green" } : budget.transportation.licensing.projected - budget.transportation.licensing.actual < 0 ? {color: 'red'} : { color: "black" }}>{budget.transportation.licensing.projected - budget.transportation.licensing.actual}</h5>
+                                <h5 style={budget.transportation.licensing.projected - budget.transportation.licensing.actual > 0 ? { color: "green" } : budget.transportation.licensing.projected - budget.transportation.licensing.actual < 0 ? {color: 'red'} : { color: "black" }}>{(budget.transportation.licensing.projected - budget.transportation.licensing.actual).toFixed(2)}</h5>
                             </div>
                             <div className="category">
                                 <label className="category-name">Fuel</label>
@@ -749,7 +746,7 @@ class Budget extends Component {
                                     value={budget.transportation.fuel.actual}
                                     onChange={e => this.handleChangeActual(e, 'transportation')} />
                                 <span>$</span>
-                                <h5 style={budget.transportation.fuel.projected - budget.transportation.fuel.actual > 0 ? { color: "green" } : budget.transportation.fuel.projected - budget.transportation.fuel.actual < 0 ? {color: 'red'} : { color: "black" }}>{budget.transportation.fuel.projected - budget.transportation.fuel.actual}</h5>
+                                <h5 style={budget.transportation.fuel.projected - budget.transportation.fuel.actual > 0 ? { color: "green" } : budget.transportation.fuel.projected - budget.transportation.fuel.actual < 0 ? {color: 'red'} : { color: "black" }}>{(budget.transportation.fuel.projected - budget.transportation.fuel.actual).toFixed(2)}</h5>
                             </div>
                             <div className="category">
                                 <label className="category-name">Maintenance</label>
@@ -769,7 +766,7 @@ class Budget extends Component {
                                     value={budget.transportation.maintenance.actual}
                                     onChange={e => this.handleChangeActual(e, 'transportation')} />
                                 <span>$</span>
-                                <h5 style={budget.transportation.maintenance.projected - budget.transportation.maintenance.actual > 0 ? { color: "green" } : budget.transportation.maintenance.projected - budget.transportation.maintenance.actual < 0 ? {color: 'red'} : { color: "black" }}>{budget.transportation.maintenance.projected - budget.transportation.maintenance.actual}</h5>
+                                <h5 style={budget.transportation.maintenance.projected - budget.transportation.maintenance.actual > 0 ? { color: "green" } : budget.transportation.maintenance.projected - budget.transportation.maintenance.actual < 0 ? {color: 'red'} : { color: "black" }}>{(budget.transportation.maintenance.projected - budget.transportation.maintenance.actual).toFixed(2)}</h5>
 
                             </div>
                             <div className="category">
@@ -790,7 +787,7 @@ class Budget extends Component {
                                     value={budget.transportation.other.actual}
                                     onChange={e => this.handleChangeActual(e, 'transportation')} />
                                 <span>$</span>
-                                <h5 style={budget.transportation.other.projected - budget.transportation.other.actual > 0 ? { color: "green" } : budget.transportation.other.projected - budget.transportation.other.actual < 0 ? {color: 'red'} : { color: "black" }}>{budget.transportation.other.projected - budget.transportation.other.actual}</h5>
+                                <h5 style={budget.transportation.other.projected - budget.transportation.other.actual > 0 ? { color: "green" } : budget.transportation.other.projected - budget.transportation.other.actual < 0 ? {color: 'red'} : { color: "black" }}>{(budget.transportation.other.projected - budget.transportation.other.actual).toFixed(2)}</h5>
 
                             </div>
                             <div className="category">
