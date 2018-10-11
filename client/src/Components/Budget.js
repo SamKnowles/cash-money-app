@@ -803,7 +803,7 @@ class Budget extends Component {
                     </div>
                     <footer className='cat-form-footer'  style={{position:'unset'}}></footer> 
                 </div>
-                : <div>loading...
+                : <div>Ugh.  Clearly you broke something.  Click the button and try again
                     <button className='logout-button' onClick={this.props.logout}>Logout</button>
                 </div>
         )
