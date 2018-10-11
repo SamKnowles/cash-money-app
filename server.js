@@ -15,7 +15,7 @@ app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, "client", "build")))
 
 
-mongoose.connect("mongodb://localhost:27017/budget",
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost:27017/budget",
 (err) => {
     if (err) throw err;
     console.log("Connected to Mongo");
