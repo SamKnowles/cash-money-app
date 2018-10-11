@@ -30,7 +30,7 @@ class App extends Component {
                         <Route exact path="/" render={(props) => {
                             return isAuthenticated ?
                                 <Redirect to="/budget" /> :
-                                <Signup {...props} />
+                                <Redirect to="/signup" />
                         }} />
                         <Route path="/login" render={(props) => {
                             return isAuthenticated ?
