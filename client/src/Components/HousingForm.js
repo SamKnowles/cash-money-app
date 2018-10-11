@@ -16,8 +16,8 @@ class HousingForm extends Component {
                 {/* <div class="progress-light-grey">
                     <div class="progress-grey" style={{ "height": "24px", "width": "20%" }}>20%</div>
                 </div> */}
-                <div style={{marginTop:'50px'}} className='cat-form-instructions'>Fill out this form then click the "Transportation" button at the bottom.</div>
-                <div className='mid-section-wrapper'>
+                <div style={{marginTop:20}} className='cat-form-instructions'>Fill out this form then click the "Transportation" button at the bottom.</div>
+                <div className='mid-section-wrapper' style={{marginTop:-30}}>
                     <div className='cat-form-wrapper'>
                         <div className='form-category-wrapper'>
                             <label className="form-category-name">Mortgage/ Rent</label>
