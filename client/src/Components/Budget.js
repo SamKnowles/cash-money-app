@@ -85,8 +85,8 @@ class Budget extends Component {
             budget ?
                 <div className="budget-wrapper">                  
                         <div className="nav-link"><button className='logout-button' onClick={this.props.logout}>Logout</button></div>
-                    <div className='budget-title-wrapper'>PULL YOUR LIFE TOGETHER
-                    </div>
+                    <div className='budget-title-wrapper'>PULL YOUR LIFE TOGETHER</div>
+                    <div className='budget-instructions'>Fill out any needed fields, update any inputs that need updating, then click the 'UPDATE' button to save your updated budget.</div>
                     <div className='income-wrapper'>
                         <div className='pro-act-income-wrapper'>
                             <div className='projected-income-wrapper'>
@@ -804,7 +804,7 @@ class Budget extends Component {
                     <div className='button-wrapper'>
                         <button className='button' onClick={this.handleSubmit}>UPDATE</button>
                     </div>
-                    <footer className='cat-form-footer'></footer> 
+                    <footer className='cat-form-footer'  style={{position:'unset'}}></footer> 
                 </div>
                 : <div>loading...
                     <button className='logout-button' onClick={this.props.logout}>Logout</button>

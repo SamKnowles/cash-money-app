@@ -65,9 +65,10 @@
     border-radius: 25px; 
     border: 2px solid black;   
     height: 25px; 
-    position: relative;
+    position: absolute;
     right: 0;bottom:0;left:0;
-    margin-top: 8px;    
+    margin-top: 8px; 
+    margin: auto;   
 }
 
 /* .nav-link:hover:not(.active) {

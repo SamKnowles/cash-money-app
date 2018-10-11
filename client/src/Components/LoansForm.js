@@ -39,7 +39,7 @@ class LoansForm extends Component {
                 </div>
                 </div>
                 <div className='link-wrapper'>
-                    <Link className='a-link' style={{height:'93%'}} to="/form/entertainment">Entertainment</Link>
+                    <Link className='a-link' style={{height:'93%', marginTop:-133}} to="/form/entertainment">Entertainment</Link>
                 </div>
                 <footer className='cat-form-footer'></footer> 
             </div>

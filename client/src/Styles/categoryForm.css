@@ -1,5 +1,6 @@
 .form-container {
     max-width: 1200px;
+    width: 100vw;
     height: 100vh;
     justify-content: center;
     display: flex;
@@ -43,7 +44,7 @@
 .form-title-wrapper {
     height: 60px;
     max-width: 1200px;
-    width: 1200px;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -98,7 +99,7 @@
 }
 
 .a-link {
-    height: 66%;
+    height: 96%;
     width: 500px;
     font-size: 25px;
     display: flex;
@@ -111,6 +112,7 @@
     transition-timing-function: linear;
     margin-bottom: 60px;
     border-radius: 2em / 5em;
+    border: 2px black solid;
 }
 
 .a-link:hover {

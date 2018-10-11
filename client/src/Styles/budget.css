@@ -31,11 +31,11 @@
     flex-direction: column;
     text-align: center;
     border: 1px solid #3b3a30;
+    border: 2px black solid;
     border-radius: 5px;
     background-image: linear-gradient(blue, #5581D3);
     text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
     color: white;
-    margin-bottom: 30px;
 }
 
 .income-wrapper {
@@ -407,7 +407,7 @@ h1 {
     background-image: linear-gradient(#033601, #23FD06);
     font-size: 30px;
     border-radius: 10px;
-    margin-bottom: 2px;
+    border: 1px solid white;
 }
 
 .logout-button:hover {
@@ -425,3 +425,17 @@ h1 {
     1px 1px 0 #000; 
     border: 1px black solid;
 }
+
+.budget-instructions {
+    font-size: 17px;
+    margin-bottom: 15px;
+    height: 40px;
+    width: 100%;
+    border: 1px solid white;  
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;  
+    color: black;
+}
+
