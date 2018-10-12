@@ -35,7 +35,7 @@ export function signup(userInfo) {
             })
             .catch(err => {
                 console.error(err);
-               alert('That user name seems to have been taken.  Please be more creative and try again')
+               alert('That user name seems to have been taken.  Please be more creative and try again.')
             });
     }
 }
