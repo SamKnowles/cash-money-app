@@ -35,7 +35,7 @@ export function signup(userInfo) {
             })
             .catch(err => {
                 console.error(err);
-                // dispatch(authError("signup", err.response.status));
+               alert('That user name seems to have been taken.  Please be more creative and try again')
             });
     }
 }
@@ -51,7 +51,7 @@ export function login(credentials) {
             })
             .catch((err) => {
                 console.error(err);
-                // dispatch(authError("login", err.response.status));
+                alert('That user name and or password does not mactch anything in our system.  Please try again. I\'m sure you\'ll do great this time.');
             });
     }
 }
