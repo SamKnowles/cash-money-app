@@ -59,7 +59,7 @@
     border: 1px solid black;
 }
 
-.cat-form-footer {
+/* .cat-form-footer {
     background-image: linear-gradient(blue, #5581D3);            
     max-width: 1200px;
     width: 100%;
@@ -70,7 +70,7 @@
     right: 0;bottom:0;left:0;
     margin-top: 8px; 
     margin: auto;   
-}
+} */
 
 /* .nav-link:hover:not(.active) {
     background-color: #111;    
