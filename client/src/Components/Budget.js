@@ -12,6 +12,7 @@ class Budget extends Component {
         this.state = {
             budget: null
         }
+        this.onUnload = this.onUnload.bind(this);
     }
 
     handleChangeActual = (e, category) => {
@@ -74,7 +75,12 @@ class Budget extends Component {
     }
 
     componentDidMount() {
-        this.props.loadBudget().then(() => this.setState({ budget: this.props.budget.data }))
+        this.props.loadBudget().then(() => this.setState({ budget: this.props.budget.data }));
+        window.addEventListener("beforeunload", this.onUnload);        
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener("beforeunload", this.onUnload);
     }
 
     render() {
@@ -803,7 +809,7 @@ class Budget extends Component {
                     </div>
                     <footer className='cat-form-footer'  style={{position:'unset'}}></footer> 
                 </div>
-                : <div>Ugh.  Clearly you've broken something. Please try signing up before logging in please. Click the button and try again, and hopefully you'll never see this comment again.  
+                : <div>Something went wrong on my end. Click the logout button to try again and hopefully you'll never see this comment again.  
                     <button className='logout-button' onClick={this.props.logout}>Logout</button>
                 </div>
         )
