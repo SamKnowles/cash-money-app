@@ -12,7 +12,6 @@ class Budget extends Component {
         this.state = {
             budget: null
         }
-        this.onUnload = this.onUnload.bind(this);
     }
 
     handleChangeActual = (e, category) => {
@@ -76,11 +75,6 @@ class Budget extends Component {
 
     componentDidMount() {
         this.props.loadBudget().then(() => this.setState({ budget: this.props.budget.data }));
-        window.addEventListener("beforeunload", this.onUnload);        
-    }
-
-    componentWillUnmount() {
-        window.removeEventListener("beforeunload", this.onUnload);
     }
 
     render() {
